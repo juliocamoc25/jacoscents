@@ -1,0 +1,34 @@
+CÓMO FUNCIONAN LAS FOTOS DE PERFUMES
+=====================================
+
+Cada perfume del catálogo ya tiene asignada una ruta de imagen local
+(campo "imagenUrl" en el JSON), con este patrón:
+
+    /img/perfumes/<marca>-<nombre>.jpg
+
+Para que la foto aparezca, solo tienes que:
+
+1. Conseguir/editar la foto del perfume (recomendado: cuadrada o 4:5,
+   menos de 1MB para que cargue rápido).
+2. Nombrar el archivo EXACTAMENTE como dice la columna "Nombre de
+   archivo requerido" en lista_fotos_necesarias.csv (junto a este
+   archivo).
+3. Copiar ese archivo aquí, dentro de esta misma carpeta:
+   JACO_SCENTS_estructura/public/img/perfumes/
+4. Volver a publicar/subir el sitio (build + deploy).
+
+Mientras no exista el archivo, el perfume simplemente muestra su
+inicial sobre un fondo de color — no se rompe nada, no aparece un
+ícono de imagen rota.
+
+PARA PERFUMES NUEVOS QUE AGREGUES A FUTURO:
+En el panel de administración, al editar o crear un perfume, el
+campo de foto tiene una pestaña "Ruta local". En cuanto escribas la
+Marca y el Nombre del perfume, aparecerá un botón "Usar ruta local
+sugerida" — te arma automáticamente el nombre de archivo correcto
+(mismo patrón de siempre) para que solo tengas que guardar tu foto
+con ese nombre y subirla a esta carpeta. Ya no tienes que inventar
+ni escribir la ruta a mano.
+
+Los accesorios funcionan igual, pero en la carpeta:
+JACO_SCENTS_estructura/public/img/accesorios/
