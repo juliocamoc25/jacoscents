@@ -6,7 +6,7 @@ import { money } from "../utils";
 // que basta con reemplazar esos 3 archivos (mismos nombres) para actualizar
 // las fotos sin tocar código.
 const HERO_SLIDES = [
-  { src: "/img/hero/hero-1.jpg", alt: "Decants JACO SCENTS junto a frascos originales" },
+  { src: "/img/hero/hero-1.jpeg", alt: "Decants JACO SCENTS junto a frascos originales" },
   { src: "/img/hero/hero-2.jpg", alt: "Selección de perfumes originales JACO SCENTS" },
   { src: "/img/hero/hero-3.jpg", alt: "Decants de diseñador y nicho JACO SCENTS" },
 ];
