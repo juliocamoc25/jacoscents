@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Inter", Arial, system-ui, sans-serif;
+  color: #171412;
+  background-color: #fdfbf7;
+  background-image: url("/img/fondo/fondo-marmol.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+/* En pantallas muy altas (mucho scroll) repetimos verticalmente en vez de
+   estirar una sola copia, para que el patrón de mármol no se vea deformado. */
+@media (min-height: 1400px) {
+  body {
+    background-size: 1400px auto;
+    background-repeat: repeat;
+  }
+}
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.jaco-display { font-family: "Quicksand", Arial, sans-serif; font-weight: 700; }
+.jaco-serif { font-family: "Quicksand", Arial, sans-serif; font-weight: 600; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #e2d3b3; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #c9a55c; }
+
+button, a, input, select, textarea {
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, opacity .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
+.jaco-fade-in { animation: fadeIn .35s ease both; }
+
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.jaco-shimmer {
+  background: linear-gradient(110deg, #c9a55c 30%, #f0dfb8 45%, #c9a55c 60%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.jaco-hero-noise {
+  background-image: radial-gradient(circle at 20% 20%, rgba(201,165,92,0.10), transparent 40%),
+                     radial-gradient(circle at 85% 60%, rgba(122,18,32,0.18), transparent 45%);
+}
+
+.jaco-scrollbar-hide::-webkit-scrollbar { display: none; }
+.jaco-scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }

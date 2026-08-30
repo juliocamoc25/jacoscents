@@ -1,0 +1,6349 @@
+{
+  "perfumes": [
+    {
+      "id": "jc000000xaji0y",
+      "nombre": "Cloud EDP",
+      "casaPerfumera": "",
+      "marca": "Ariana Grande",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/ariana-grande-cloud-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc0000016dpbhs",
+      "nombre": "Ari",
+      "casaPerfumera": "",
+      "marca": "Ariana Grande",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/ariana-grande-ari.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000002ahxthv",
+      "nombre": "La Rosa Pour Femme (La Vie Est Belle)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-la-rosa-pour-femme-la-vie-est-belle.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 60,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc0000033a3zmf",
+      "nombre": "212 Heroes Woman",
+      "casaPerfumera": "",
+      "marca": "Carolina Herrera",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/carolina-herrera-212-heroes-woman.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 280,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 28.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 100,
+          "5": 160,
+          "10": 280
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 280
+        }
+      ]
+    },
+    {
+      "id": "jc0000048mdd4v",
+      "nombre": "GOOD GIRL EDP",
+      "casaPerfumera": "",
+      "marca": "Carolina Herrera",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/carolina-herrera-good-girl-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 330,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 33.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 120,
+          "5": 170,
+          "10": 330
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 330
+        }
+      ]
+    },
+    {
+      "id": "jc00000530t9nt",
+      "nombre": "L'IMPERATRICE",
+      "casaPerfumera": "",
+      "marca": "D&C",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/d-c-l-imperatrice.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 70,
+          "5": 120,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc0000063w5uzb",
+      "nombre": "Light Blue EDT",
+      "casaPerfumera": "",
+      "marca": "D&C",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/d-c-light-blue-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc000007ikcidk",
+      "nombre": "1981 Women",
+      "casaPerfumera": "",
+      "marca": "Guess",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/guess-1981-women.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 650,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 650
+        }
+      ]
+    },
+    {
+      "id": "jc000008wnnhj7",
+      "nombre": "HAYA EDP",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-haya-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc000009xvg0fn",
+      "nombre": "RAVE NOW PINK (Burberry Her)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-rave-now-pink-burberry-her.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc00000a9xuy41",
+      "nombre": "Rave Now White",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-rave-now-white.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 700,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 700
+        }
+      ]
+    },
+    {
+      "id": "jc00000bibljh7",
+      "nombre": "Mayar Natural Intense EDP",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-mayar-natural-intense-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 140,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 140
+        }
+      ]
+    },
+    {
+      "id": "jc00000c5lxo6q",
+      "nombre": "Eclaire EDP (Bianco Latte)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-eclaire-edp-bianco-latte.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc00000djiujv6",
+      "nombre": "Yara EDP",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-yara-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 750,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 750
+        }
+      ]
+    },
+    {
+      "id": "jc00000eoh9sdb",
+      "nombre": "Yara Candy",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-yara-candy.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc00000fdw2pcn",
+      "nombre": "COMO MOISELLE (Coco Mademoiselle)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-como-moiselle-coco-mademoiselle.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc0000109t84az",
+      "nombre": "Delilah Pour Femme",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-delilah-pour-femme.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc000011ytjxep",
+      "nombre": "B.A.D. FEMME (CH God Girl EDP)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-b-a-d-femme-ch-god-girl-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 140,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 140
+        }
+      ]
+    },
+    {
+      "id": "jc000012q85jsg",
+      "nombre": "Leonie EDP (LIBRE YSL)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-leonie-edp-libre-ysl.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc00001365kxvf",
+      "nombre": "Signature",
+      "casaPerfumera": "",
+      "marca": "Mont Blanc",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/mont-blanc-signature.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 110,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc0000141t2tal",
+      "nombre": "Toy 2 Pearl",
+      "casaPerfumera": "",
+      "marca": "Moschino",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/moschino-toy-2-pearl.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 220,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 22.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 130,
+          "10": 220
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 220
+        }
+      ]
+    },
+    {
+      "id": "jc000015a753lc",
+      "nombre": "Toy 2",
+      "casaPerfumera": "",
+      "marca": "Moschino",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/moschino-toy-2.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 70,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc00001658drc1",
+      "nombre": "Bright Crystal",
+      "casaPerfumera": "",
+      "marca": "Versace",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/versace-bright-crystal.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 1350,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 1350
+        }
+      ]
+    },
+    {
+      "id": "jc0000171ertj5",
+      "nombre": "Eros Pour Femme EDT",
+      "casaPerfumera": "",
+      "marca": "Versace",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/versace-eros-pour-femme-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 140,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc000018pht0hl",
+      "nombre": "Libre EDT",
+      "casaPerfumera": "",
+      "marca": "Yves Saint Laurent",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/yves-saint-laurent-libre-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 340,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 34.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 120,
+          "5": 170,
+          "10": 340
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 340
+        }
+      ]
+    },
+    {
+      "id": "jc0000199xpsei",
+      "nombre": "Club De Nuit Sillage (Silver Mountain Water)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-club-de-nuit-sillage-silver-mountain-water.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00001amvihcw",
+      "nombre": "Club De Nuit Untold",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-club-de-nuit-untold.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00001bi64ciy",
+      "nombre": "CK Everyone EDT",
+      "casaPerfumera": "",
+      "marca": "Calvin klein",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/calvin-klein-ck-everyone-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 70,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc00001che7ur2",
+      "nombre": "CK One",
+      "casaPerfumera": "",
+      "marca": "Calvin klein",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/calvin-klein-ck-one.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 9.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 30,
+          "5": 50,
+          "10": 90
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc00001d3gdppq",
+      "nombre": "Khamrah Qahwa",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-khamrah-qahwa.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 85,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00001e0y9dom",
+      "nombre": "Opulent Dubai (God Of Fire)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-opulent-dubai-god-of-fire.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 60,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc00001f5igqpk",
+      "nombre": "Jean Lowe Azure (LV Afternoon Swim)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-jean-lowe-azure-lv-afternoon-swim.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc000020i7p5tb",
+      "nombre": "Jean Lowe Vibe(LV Pacific Chill)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-jean-lowe-vibe-lv-pacific-chill.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc00002194874f",
+      "nombre": "Sceptre Malachite (God Of Fire)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Unisex",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-sceptre-malachite-god-of-fire.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc000022rhocn9",
+      "nombre": "Amber Oud Gold Edition Extreme",
+      "casaPerfumera": "",
+      "marca": "Al Haramain",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/al-haramain-amber-oud-gold-edition-extreme.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 240,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 24.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 240
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 240
+        }
+      ]
+    },
+    {
+      "id": "jc000023j2qp89",
+      "nombre": "L´Aventure (Creed Aventus)",
+      "casaPerfumera": "",
+      "marca": "Al Haramain",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/al-haramain-l-aventure-creed-aventus.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 180,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 18.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 90,
+          "10": 180
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 180
+        }
+      ]
+    },
+    {
+      "id": "jc000024uzfk8u",
+      "nombre": "Turathi Blue (Bvlgari Tygar)",
+      "casaPerfumera": "",
+      "marca": "Afnan",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/afnan-turathi-blue-bvlgari-tygar.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000025t0cvs4",
+      "nombre": "9pm (JPG Ultra Male)",
+      "casaPerfumera": "",
+      "marca": "Afnan",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/afnan-9pm-jpg-ultra-male.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 750,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 11.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 60,
+          "10": 110
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 750
+        }
+      ]
+    },
+    {
+      "id": "jc000026f8cgvy",
+      "nombre": "9pm rebel",
+      "casaPerfumera": "",
+      "marca": "Afnan",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/afnan-9pm-rebel.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000027ie6ivw",
+      "nombre": "9am Dive",
+      "casaPerfumera": "",
+      "marca": "Afnan",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/afnan-9am-dive.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc000028pvs7hz",
+      "nombre": "Odyssey Artisto (JPG LE BEAU EDP)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-odyssey-artisto-jpg-le-beau-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 850,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 850
+        }
+      ]
+    },
+    {
+      "id": "jc000029ioykl1",
+      "nombre": "Odyssey Mega ( YSL Y EDP)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-odyssey-mega-ysl-y-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc00002acq99ch",
+      "nombre": "Mandarin Sky (SCANDAL EDT)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-mandarin-sky-scandal-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 850,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 850
+        }
+      ]
+    },
+    {
+      "id": "jc00002bj755nf",
+      "nombre": "Odyssey Limoni",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-odyssey-limoni.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc00002c4zw9xa",
+      "nombre": "Odyssey Homme White (SWY EDT)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-odyssey-homme-white-swy-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc00002d3kx7ee",
+      "nombre": "Club De Nuit Iconic (Bleu de Channel)",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-club-de-nuit-iconic-bleu-de-channel.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00002edtjvzh",
+      "nombre": "Urban Man Elixir",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-urban-man-elixir.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00002fwjr64d",
+      "nombre": "Ventana Marine",
+      "casaPerfumera": "",
+      "marca": "Armaf",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/armaf-ventana-marine.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 700,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 80,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 700
+        }
+      ]
+    },
+    {
+      "id": "jc000030pja1wj",
+      "nombre": "Most Wanted Intense EDT",
+      "casaPerfumera": "",
+      "marca": "Azzaro",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/azzaro-most-wanted-intense-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc0000310tpac5",
+      "nombre": "Most Wanted Intense EDP",
+      "casaPerfumera": "",
+      "marca": "Azzaro",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/azzaro-most-wanted-intense-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 1400,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 1400
+        }
+      ]
+    },
+    {
+      "id": "jc0000326t4ufe",
+      "nombre": "Wanted By Night",
+      "casaPerfumera": "",
+      "marca": "Azzaro",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/azzaro-wanted-by-night.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000033l6246h",
+      "nombre": "Cypress Cedar",
+      "casaPerfumera": "",
+      "marca": "Banana Republic",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/banana-republic-cypress-cedar.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 85,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000034id25ow",
+      "nombre": "212 VIP BLACK",
+      "casaPerfumera": "",
+      "marca": "Carolina Herrera",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/carolina-herrera-212-vip-black.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 250,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 25.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 250
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 250
+        }
+      ]
+    },
+    {
+      "id": "jc000035f75935",
+      "nombre": "BADBOY COBALT",
+      "casaPerfumera": "",
+      "marca": "Carolina Herrera",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/carolina-herrera-badboy-cobalt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc000036a0l725",
+      "nombre": "Sauvage Dior Parfum",
+      "casaPerfumera": "",
+      "marca": "Dior",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/dior-sauvage-dior-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 220,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 22.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 70,
+          "5": 120,
+          "10": 220
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 220
+        }
+      ]
+    },
+    {
+      "id": "jc0000373j2d54",
+      "nombre": "Nitro Red",
+      "casaPerfumera": "",
+      "marca": "Dumont",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/dumont-nitro-red.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 110,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 11.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 60,
+          "10": 110
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 110
+        }
+      ]
+    },
+    {
+      "id": "jc000038i3qk2i",
+      "nombre": "Intimation",
+      "casaPerfumera": "",
+      "marca": "Emper",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/emper-intimation.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 35,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc000039agl58k",
+      "nombre": "Stallion 53 (Santal 33)",
+      "casaPerfumera": "",
+      "marca": "Emper",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/emper-stallion-53-santal-33.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 85,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00003axo9t7e",
+      "nombre": "Imperium",
+      "casaPerfumera": "",
+      "marca": "Fragance World",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/fragance-world-imperium.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 750,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 750
+        }
+      ]
+    },
+    {
+      "id": "jc00003b8g8jdp",
+      "nombre": "Liquid Brun (PDM Althair)",
+      "casaPerfumera": "",
+      "marca": "French Avenue",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/french-avenue-liquid-brun-pdm-althair.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc00003c0lvsnu",
+      "nombre": "JPG Le male Fraiche",
+      "casaPerfumera": "",
+      "marca": "Fraiche",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/fraiche-jpg-le-male-fraiche.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 90,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 9.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 30,
+          "5": 50,
+          "10": 90
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 90
+        }
+      ]
+    },
+    {
+      "id": "jc00003djza7tz",
+      "nombre": "Acqua Di Gio EDP",
+      "casaPerfumera": "",
+      "marca": "Giorgio Armani",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/giorgio-armani-acqua-di-gio-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc00003e0yncxl",
+      "nombre": "Acqua Di Gio Absolu",
+      "casaPerfumera": "",
+      "marca": "Giorgio Armani",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/giorgio-armani-acqua-di-gio-absolu.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00003fl4zklo",
+      "nombre": "Stronger With You EDT",
+      "casaPerfumera": "",
+      "marca": "Giorgio Armani",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/giorgio-armani-stronger-with-you-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 230,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 23.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 230
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 230
+        }
+      ]
+    },
+    {
+      "id": "jc000040okep7y",
+      "nombre": "Stronger With You Intensly",
+      "casaPerfumera": "",
+      "marca": "Giorgio Armani",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/giorgio-armani-stronger-with-you-intensly.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 350,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 35.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 130,
+          "5": 180,
+          "10": 350
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 350
+        }
+      ]
+    },
+    {
+      "id": "jc0000416wktak",
+      "nombre": "L´Homme Ideal",
+      "casaPerfumera": "",
+      "marca": "Guerlain",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/guerlain-l-homme-ideal.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 220,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 22.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 130,
+          "10": 220
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 220
+        }
+      ]
+    },
+    {
+      "id": "jc000042puxqph",
+      "nombre": "1981 Men",
+      "casaPerfumera": "",
+      "marca": "Guess",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/guess-1981-men.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc000043r62gds",
+      "nombre": "Le Beau Le Parfum",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-le-beau-le-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 2450,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 32.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 130,
+          "5": 180,
+          "10": 320
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 2450
+        }
+      ]
+    },
+    {
+      "id": "jc000044wm31yi",
+      "nombre": "Le Beau Paradise Garden",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-le-beau-paradise-garden.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 330,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 33.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 130,
+          "5": 180,
+          "10": 330
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 330
+        }
+      ]
+    },
+    {
+      "id": "jc000045hair4c",
+      "nombre": "Le Beau EDT",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-le-beau-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 2000,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 2,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 30.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 120,
+          "5": 170,
+          "10": 300
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 2000
+        }
+      ]
+    },
+    {
+      "id": "jc000046owgzri",
+      "nombre": "Le Male EDT",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-le-male-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 230,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 23.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 230
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 230
+        }
+      ]
+    },
+    {
+      "id": "jc000047xa11dp",
+      "nombre": "Ultra Male",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-ultra-male.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 220,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 22.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 220
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 220
+        }
+      ]
+    },
+    {
+      "id": "jc000048g8sbi4",
+      "nombre": "Le Male Elixir",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-le-male-elixir.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 2500,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 34.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 130,
+          "5": 180,
+          "10": 340
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 2500
+        }
+      ]
+    },
+    {
+      "id": "jc000049q2y9v8",
+      "nombre": "Le Male Le Parfum",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-le-male-le-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 2500,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 32.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 130,
+          "5": 180,
+          "10": 320
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 2500
+        }
+      ]
+    },
+    {
+      "id": "jc00004a6wzs3t",
+      "nombre": "Scandal Parfum",
+      "casaPerfumera": "",
+      "marca": "Jean Paul Gaultier",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/jean-paul-gaultier-scandal-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 230,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 23.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 230
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 230
+        }
+      ]
+    },
+    {
+      "id": "jc00004b60rjiw",
+      "nombre": "Blanc EDT",
+      "casaPerfumera": "",
+      "marca": "Lacoste",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lacoste-blanc-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00004c1swjck",
+      "nombre": "Vintage Radio",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-vintage-radio.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc00004djlteiy",
+      "nombre": "Liam Blue Shine",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-liam-blue-shine.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 140,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 140
+        }
+      ]
+    },
+    {
+      "id": "jc00004ezcotoh",
+      "nombre": "Ramz Silver EDP (9pm)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-ramz-silver-edp-9pm.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 600,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 9.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 30,
+          "5": 50,
+          "10": 90
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 600
+        }
+      ]
+    },
+    {
+      "id": "jc00004fp6vz41",
+      "nombre": "Fakhar Black (Y YSL)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-fakhar-black-y-ysl.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 11.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 60,
+          "10": 110
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc000050nam148",
+      "nombre": "Asad (Sauvage Elixir)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-asad-sauvage-elixir.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 130,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 130
+        }
+      ]
+    },
+    {
+      "id": "jc000051p0tvhh",
+      "nombre": "Asad Bourbon",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-asad-bourbon.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc000052pbmyof",
+      "nombre": "Pisa (LV Afternoon Swim)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-pisa-lv-afternoon-swim.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000053qewaou",
+      "nombre": "Najdia Intense (JPG Le Beau Paradise Garden)",
+      "casaPerfumera": "",
+      "marca": "Lattafa",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/lattafa-najdia-intense-jpg-le-beau-paradise-garden.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 700,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 2,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 11.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 60,
+          "10": 110
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 700
+        }
+      ]
+    },
+    {
+      "id": "jc000054axeqbn",
+      "nombre": "Jean Lowe Immortel (LV L´Immensité)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-jean-lowe-immortel-lv-l-immensite.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc000055hl1n13",
+      "nombre": "MINDSET EDP",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-mindset-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 110,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc000056jcat9m",
+      "nombre": "Yeah! Man ( YSL Y EDP)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-yeah-man-ysl-y-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc000057x2x18h",
+      "nombre": "Yeah! Man Parfum ( YSL Y Parfum)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-yeah-man-parfum-ysl-y-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 140,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 140
+        }
+      ]
+    },
+    {
+      "id": "jc000058afeyuh",
+      "nombre": "Victorioso Myth (Invictus Legend)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-victorioso-myth-invictus-legend.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 650,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 2,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 14.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 140
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 650
+        }
+      ]
+    },
+    {
+      "id": "jc000059z1gv0e",
+      "nombre": "Salvo EDP (Sauvage EDT)",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-salvo-edp-sauvage-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 700,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 11.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 60,
+          "10": 110
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 700
+        }
+      ]
+    },
+    {
+      "id": "jc00005a38daly",
+      "nombre": "Rome Pour Homme (Valentino BIR)",
+      "casaPerfumera": "",
+      "marca": "Mast Perfumes",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/mast-perfumes-rome-pour-homme-valentino-bir.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 110,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc00005b8ozcyw",
+      "nombre": "Legend EDP",
+      "casaPerfumera": "",
+      "marca": "Mont Blanc",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/mont-blanc-legend-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 110,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc00005cd14ve9",
+      "nombre": "Legend Spirit",
+      "casaPerfumera": "",
+      "marca": "Mont Blanc",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/mont-blanc-legend-spirit.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 150,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 15.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 50,
+          "5": 80,
+          "10": 150
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 150
+        }
+      ]
+    },
+    {
+      "id": "jc00005d2mpnsm",
+      "nombre": "Explorer (Creed Aventus)",
+      "casaPerfumera": "",
+      "marca": "Mont Blanc",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/mont-blanc-explorer-creed-aventus.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 110,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc00005e43d8w3",
+      "nombre": "Voyage",
+      "casaPerfumera": "",
+      "marca": "Nautica",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/nautica-voyage.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 450,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 8.5,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 30,
+          "5": 50,
+          "10": 85
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 450
+        }
+      ]
+    },
+    {
+      "id": "jc00005fzp08j3",
+      "nombre": "Invictus EDT",
+      "casaPerfumera": "",
+      "marca": "Paco Rabane",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/paco-rabane-invictus-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc000060trp0j4",
+      "nombre": "Invictus Parfum",
+      "casaPerfumera": "",
+      "marca": "Paco Rabane",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/paco-rabane-invictus-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 240,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 24.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 140,
+          "10": 240
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 240
+        }
+      ]
+    },
+    {
+      "id": "jc0000613d5iqv",
+      "nombre": "One Million Lucky",
+      "casaPerfumera": "",
+      "marca": "Paco Rabane",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/paco-rabane-one-million-lucky.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 130,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc000062nb4gh2",
+      "nombre": "Polo Blue EDT",
+      "casaPerfumera": "",
+      "marca": "Ralph Lauren",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/ralph-lauren-polo-blue-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 220,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 22.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 130,
+          "10": 220
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 220
+        }
+      ]
+    },
+    {
+      "id": "jc000063m5zja8",
+      "nombre": "Hawas",
+      "casaPerfumera": "",
+      "marca": "Rasasi",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/rasasi-hawas.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 800,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 13.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 45,
+          "5": 70,
+          "10": 130
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 800
+        }
+      ]
+    },
+    {
+      "id": "jc000064dzr1yx",
+      "nombre": "Hawas Ice",
+      "casaPerfumera": "",
+      "marca": "Rasasi",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/rasasi-hawas-ice.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 180,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 18.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 100,
+          "10": 180
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 180
+        }
+      ]
+    },
+    {
+      "id": "jc000065r2dhyl",
+      "nombre": "Hawas Fire",
+      "casaPerfumera": "",
+      "marca": "Rasasi",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/rasasi-hawas-fire.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 240,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 24.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 240
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 240
+        }
+      ]
+    },
+    {
+      "id": "jc000066urtp0l",
+      "nombre": "Hawas Elixir (JPG Le Male Elixir)",
+      "casaPerfumera": "",
+      "marca": "Rasasi",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/rasasi-hawas-elixir-jpg-le-male-elixir.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 170,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 17.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 90,
+          "10": 170
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 170
+        }
+      ]
+    },
+    {
+      "id": "jc000067zjjege",
+      "nombre": "Hawas Kobra (LV Imagination)",
+      "casaPerfumera": "",
+      "marca": "Rasasi",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/rasasi-hawas-kobra-lv-imagination.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc000068t1ghr0",
+      "nombre": "Hawas Malibu (JPG Le Beau EDT)",
+      "casaPerfumera": "",
+      "marca": "Rasasi",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/rasasi-hawas-malibu-jpg-le-beau-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc0000699skdgi",
+      "nombre": "Uomo Born in Roma",
+      "casaPerfumera": "",
+      "marca": "Valentino",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/valentino-uomo-born-in-roma.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 300,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 30.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 120,
+          "5": 170,
+          "10": 300
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 300
+        }
+      ]
+    },
+    {
+      "id": "jc00006agatj9t",
+      "nombre": "Born in Roma Intense",
+      "casaPerfumera": "",
+      "marca": "Valentino",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/valentino-born-in-roma-intense.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 420,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 42.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 160,
+          "5": 220,
+          "10": 420
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 420
+        }
+      ]
+    },
+    {
+      "id": "jc00006bze5r5u",
+      "nombre": "Green Stravaganza",
+      "casaPerfumera": "",
+      "marca": "Valentino",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/valentino-green-stravaganza.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 300,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 30.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 120,
+          "5": 170,
+          "10": 300
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 300
+        }
+      ]
+    },
+    {
+      "id": "jc00006cqpgb7r",
+      "nombre": "Eros EDT",
+      "casaPerfumera": "",
+      "marca": "Versace",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/versace-eros-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 140,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc00006d3ocwbf",
+      "nombre": "Eros Flame",
+      "casaPerfumera": "",
+      "marca": "Versace",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/versace-eros-flame.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 250,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 25.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 90,
+          "5": 150,
+          "10": 250
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 250
+        }
+      ]
+    },
+    {
+      "id": "jc00006euk9e1v",
+      "nombre": "Dylan Blue Pour Homme",
+      "casaPerfumera": "",
+      "marca": "Versace",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/versace-dylan-blue-pour-homme.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "Suspendido (sin stock para decants)",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 80,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc00006f2isqp4",
+      "nombre": "Pour Homme",
+      "casaPerfumera": "",
+      "marca": "Versace",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/versace-pour-homme.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 210,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 21.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 70,
+          "5": 120,
+          "10": 210
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 210
+        }
+      ]
+    },
+    {
+      "id": "jc0000709kwv08",
+      "nombre": "Myslf EDP",
+      "casaPerfumera": "",
+      "marca": "Yves Saint Laurent",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/yves-saint-laurent-myslf-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 320,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 32.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 130,
+          "5": 180,
+          "10": 320
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 320
+        }
+      ]
+    },
+    {
+      "id": "jc000071hhxfgc",
+      "nombre": "Y EDP",
+      "casaPerfumera": "",
+      "marca": "Yves Saint Laurent",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/yves-saint-laurent-y-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 320,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "Sin stock (sin stock para decants)",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 32.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 120,
+          "5": 170,
+          "10": 320
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 320
+        }
+      ]
+    },
+    {
+      "id": "jc000072aqvkiz",
+      "nombre": "Y EDT",
+      "casaPerfumera": "",
+      "marca": "Yves Saint Laurent",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/yves-saint-laurent-y-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 280,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 300,
+        "precioPorMl": 28.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 110,
+          "5": 150,
+          "10": 280
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 280
+        }
+      ]
+    },
+    {
+      "id": "jc000073zqy72w",
+      "nombre": "King Of Seduction EDT",
+      "casaPerfumera": "",
+      "marca": "Antonio Banderas",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/antonio-banderas-king-of-seduction-edt.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 100,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "Agotado (sin stock para decants)",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 10.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 70,
+          "10": 100
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 100
+        }
+      ]
+    },
+    {
+      "id": "jc000074x7ptx6",
+      "nombre": "Azzaro Chrome Parfum",
+      "casaPerfumera": "",
+      "marca": "Azzaro",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/azzaro-azzaro-chrome-parfum.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 200,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "Agotado (sin stock para decants)",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 20.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 60,
+          "5": 110,
+          "10": 200
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 200
+        }
+      ]
+    },
+    {
+      "id": "jc0000753cfl0u",
+      "nombre": "Olivia EDP",
+      "casaPerfumera": "",
+      "marca": "Maison Alhambra",
+      "genero": "Femenino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/maison-alhambra-olivia-edp.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 120,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 0,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "Agotado (sin stock para decants)",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": false,
+      "decant": {
+        "habilitado": true,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 12.0,
+        "tamanos": [
+          3,
+          5,
+          10
+        ],
+        "preciosPorTamano": {
+          "3": 40,
+          "5": 65,
+          "10": 120
+        }
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 120
+        }
+      ]
+    },
+    {
+      "id": "jc000076keyz7s",
+      "nombre": "Nautica Voyage 200ml",
+      "casaPerfumera": "",
+      "marca": "",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/nautica-voyage-200ml.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 750,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": false,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 0,
+        "tamanos": [],
+        "preciosPorTamano": {}
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 750
+        }
+      ]
+    },
+    {
+      "id": "jc000077rcbplj",
+      "nombre": "Acqua Di Gio EDT Set 2pz",
+      "casaPerfumera": "",
+      "marca": "",
+      "genero": "Masculino",
+      "tipo": "",
+      "concentracion": "",
+      "presentacionMl": "",
+      "imagenUrl": "/img/perfumes/acqua-di-gio-edt-set-2pz.jpg",
+      "sku": "",
+      "codigoBarras": "",
+      "notas": "",
+      "descripcion": "",
+      "inspiracion": "",
+      "temporada": "",
+      "precioCompra": "",
+      "precioVenta": 1950,
+      "costoPromedio": "",
+      "proveedor": "",
+      "fechaCompra": "",
+      "cantidadDisponible": 1,
+      "cantidadMinima": 1,
+      "activo": true,
+      "ubicacionFisica": "",
+      "observaciones": "",
+      "destacado": false,
+      "calificacion": 0,
+      "tieneFrascoCompleto": true,
+      "decant": {
+        "habilitado": false,
+        "mlTotalAbierto": 0,
+        "mlDisponible": 0,
+        "precioPorMl": 0,
+        "tamanos": [],
+        "preciosPorTamano": {}
+      },
+      "historialPrecios": [
+        {
+          "fecha": "2026-08-28T00:00:00.000Z",
+          "precioCompra": 0,
+          "precioVenta": 1950
+        }
+      ]
+    }
+  ],
+  "accesorios": []
+}
