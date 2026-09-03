@@ -18,7 +18,7 @@ export default function PerfumesPublicView({ perfumes, onAddToCart }) {
     return perfumes.filter((p) => {
       if (p.activo === false) return false;
       if (!p.tieneFrascoCompleto) return false; // este catálogo es solo frascos completos; el resto vive en Decants
-      const matchQ = !q || [p.nombre, p.marca, p.casaPerfumera, p.notas].filter(Boolean).some((f) => String(f).toLowerCase().includes(q));
+      const matchQ = !q || [p.nombre, p.marca, p.casaPerfumera, p.notas, p.notasSalida, p.notasCorazon, p.notasFondo].filter(Boolean).some((f) => String(f).toLowerCase().includes(q));
       const matchGenero = !genero || p.genero === genero;
       return matchQ && matchGenero && filters.apply(p);
     });
@@ -81,6 +81,9 @@ export default function PerfumesPublicView({ perfumes, onAddToCart }) {
           title: seleccionado.nombre,
           description: seleccionado.descripcion,
           notas: seleccionado.notas,
+          notasSalida: seleccionado.notasSalida,
+          notasCorazon: seleccionado.notasCorazon,
+          notasFondo: seleccionado.notasFondo,
           price: seleccionado.precioVenta,
           meta: [seleccionado.tipo, seleccionado.concentracion, seleccionado.presentacionMl ? `${seleccionado.presentacionMl} ml` : null].filter(Boolean).join(" · "),
           calificacion: seleccionado.calificacion,

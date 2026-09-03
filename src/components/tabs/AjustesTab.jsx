@@ -52,13 +52,16 @@ export default function AjustesTab({ perfumes, clientes, ventas, movimientos, ac
     if (!file) return;
     setImportError("");
     const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = async () => {
       try {
         const parsed = JSON.parse(String(reader.result));
         const confirmar = window.confirm(
           "Esto reemplazará TODOS los datos actuales (perfumes, clientes, ventas, movimientos, accesorios) con los del archivo. ¿Continuar?"
         );
-        if (confirmar) onImportar(parsed);
+        if (confirmar) {
+          const ok = await onImportar(parsed);
+          if (!ok) setImportError("No se pudo restaurar el respaldo. Revisa tu conexión e intenta de nuevo.");
+        }
       } catch {
         setImportError("El archivo no es un JSON válido de respaldo de JACO SCENTS.");
       }
@@ -132,7 +135,7 @@ export default function AjustesTab({ perfumes, clientes, ventas, movimientos, ac
       <SectionCard title="Zona de riesgo">
         <div className="flex items-start gap-3 mb-4">
           <AlertTriangle size={18} className="text-red-600 mt-0.5 shrink-0" />
-          <p className="text-sm text-neutral-600">Borra permanentemente todo lo guardado en este navegador: perfumes, accesorios, clientes, ventas y movimientos. No se puede deshacer.</p>
+          <p className="text-sm text-neutral-600">Borra permanentemente todo lo guardado en tu base de datos: perfumes, accesorios, clientes, ventas y movimientos. No se puede deshacer.</p>
         </div>
         {!confirmandoBorrado ? (
           <button onClick={() => setConfirmandoBorrado(true)} className="px-4 py-2.5 rounded-lg border border-red-300 text-red-600 text-sm font-medium hover:bg-red-50">
@@ -141,7 +144,7 @@ export default function AjustesTab({ perfumes, clientes, ventas, movimientos, ac
         ) : (
           <div className="flex flex-col sm:flex-row gap-3">
             <button
-              onClick={() => { onBorrarTodo(); setConfirmandoBorrado(false); }}
+              onClick={async () => { await onBorrarTodo(); setConfirmandoBorrado(false); }}
               className="flex-1 py-2.5 rounded-lg bg-red-600 text-white text-sm font-medium hover:bg-red-700"
             >
               Sí, borrar todo permanentemente

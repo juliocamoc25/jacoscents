@@ -56,8 +56,8 @@ export default function StoreLayout({ page, onNavigate, onRequestAdmin, onSearch
             <button onClick={() => setSearchOpen((v) => !v)} title="Buscar" aria-label="Buscar" className="p-2 rounded-full text-neutral-300 hover:text-white hover:bg-white/5">
               <Search size={18} />
             </button>
-            <button onClick={onOpenCart} title="Mi pedido" aria-label="Mi pedido" className="relative p-2 rounded-full text-neutral-300 hover:text-white hover:bg-white/5">
-              <ShoppingBag size={18} />
+            <button onClick={onOpenCart} title="Mi pedido" aria-label="Mi pedido" className="relative p-2 rounded-full text-neutral-100 hover:text-white hover:bg-white/5">
+              <ShoppingBag size={21} strokeWidth={2.1} />
               {cartCount > 0 && (
                 <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-gold-400 text-ink text-[9px] font-bold flex items-center justify-center">
                   {cartCount > 9 ? "9+" : cartCount}

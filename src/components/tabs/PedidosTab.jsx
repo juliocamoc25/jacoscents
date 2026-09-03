@@ -39,7 +39,11 @@ export default function PedidosTab({ pedidosWeb, onMarcarAtendido, onEliminar })
 
       <div className="space-y-1 text-xs text-neutral-500 mb-3">
         <p className="flex items-center gap-1.5"><Phone size={12} /> {p.envio?.telefono}</p>
-        <p className="flex items-center gap-1.5"><MapPin size={12} /> {p.envio?.direccion}{p.envio?.ciudad ? `, ${p.envio.ciudad}` : ""}</p>
+        <p className="flex items-center gap-1.5">
+          <MapPin size={12} />
+          {[p.envio?.direccion, p.envio?.colonia, p.envio?.ciudad, p.envio?.codigoPostal].filter(Boolean).join(", ")}
+        </p>
+        {p.envio?.referencias && <p className="pl-[18px] text-neutral-400">Referencias: {p.envio.referencias}</p>}
         <p className="flex items-center gap-1.5"><CreditCard size={12} /> {p.envio?.metodoPago}</p>
         {p.envio?.notas && <p className="italic">"{p.envio.notas}"</p>}
       </div>

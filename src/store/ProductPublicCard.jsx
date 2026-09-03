@@ -69,9 +69,10 @@ export default function ProductPublicCard({ imagenUrl, eyebrow, title, descripti
                 target="_blank"
                 rel="noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-1.5 text-xs font-semibold text-white bg-ink hover:bg-wine-600 px-3 py-2 rounded-full transition-colors"
+                title="Consultar por WhatsApp"
+                className="flex items-center justify-center gap-1.5 text-xs font-semibold text-white bg-ink hover:bg-wine-600 w-8 h-8 sm:w-auto sm:px-3 sm:py-2 rounded-full transition-colors shrink-0"
               >
-                <MessageCircle size={13} /> Consultar
+                <MessageCircle size={13} className="shrink-0" /> <span className="hidden sm:inline">Consultar</span>
               </a>
             </div>
           )}

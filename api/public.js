@@ -6,7 +6,8 @@ import { store } from "./_lib/store.js";
 
 const CAMPOS_PUBLICOS_PERFUME = [
   "id", "nombre", "casaPerfumera", "marca", "genero", "tipo", "concentracion",
-  "presentacionMl", "imagenUrl", "notas", "descripcion", "inspiracion", "temporada",
+  "presentacionMl", "imagenUrl", "notas", "notasSalida", "notasCorazon", "notasFondo",
+  "descripcion", "inspiracion", "temporada",
   "precioVenta", "cantidadDisponible", "cantidadMinima", "activo", "destacado",
   "calificacion", "tieneFrascoCompleto", "decant",
 ];

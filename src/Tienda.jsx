@@ -39,7 +39,8 @@ export default function Tienda({ perfumes, accesorios, onRequestAdmin, crearPedi
       "",
       "Datos de envío:",
       `${envio.nombre} · ${envio.telefono}`,
-      envio.direccion + (envio.ciudad ? `, ${envio.ciudad}` : ""),
+      [envio.direccion, envio.colonia, envio.ciudad, envio.codigoPostal].filter(Boolean).join(", "),
+      envio.referencias ? `Referencias: ${envio.referencias}` : "",
       envio.notas ? `Notas: ${envio.notas}` : "",
     ].filter(Boolean).join("\n");
   };

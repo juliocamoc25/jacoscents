@@ -1,7 +1,7 @@
 export function defaultPerfumeForm() {
   return {
     nombre: "", casaPerfumera: "", marca: "", genero: "", tipo: "", concentracion: "",
-    presentacionMl: "", imagenUrl: "", sku: "", codigoBarras: "", notas: "", descripcion: "",
+    presentacionMl: "", imagenUrl: "", sku: "", codigoBarras: "", notas: "", notasSalida: "", notasCorazon: "", notasFondo: "", descripcion: "",
     inspiracion: "", temporada: "", precioCompra: "", precioVenta: "", costoPromedio: "",
     proveedor: "", fechaCompra: "", cantidadDisponible: 0, cantidadMinima: 1, activo: true,
     ubicacionFisica: "", observaciones: "", destacado: false, calificacion: 0,

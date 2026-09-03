@@ -144,6 +144,9 @@ export function PerfumeFormModal({ open, onClose, onSave, initial }) {
       codigoBarras: sanitizeText(form.codigoBarras, 60),
       proveedor: sanitizeText(form.proveedor, 120),
       notas: sanitizeText(form.notas, 600),
+      notasSalida: sanitizeText(form.notasSalida, 300),
+      notasCorazon: sanitizeText(form.notasCorazon, 300),
+      notasFondo: sanitizeText(form.notasFondo, 300),
       descripcion: sanitizeText(form.descripcion, 600),
       inspiracion: sanitizeText(form.inspiracion, 120),
       ubicacionFisica: sanitizeText(form.ubicacionFisica, 120),
@@ -304,9 +307,18 @@ export function PerfumeFormModal({ open, onClose, onSave, initial }) {
               )}
             </FormSection>
 
+            <FormSection title="Pirámide olfativa">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <Field label="Notas de salida"><TextArea value={form.notasSalida} onChange={set("notasSalida")} rows={2} placeholder="Bergamota, limón, pimienta rosa..." /></Field>
+                <Field label="Notas de corazón"><TextArea value={form.notasCorazon} onChange={set("notasCorazon")} rows={2} placeholder="Jazmín, geranio, lavanda..." /></Field>
+                <Field label="Notas de fondo"><TextArea value={form.notasFondo} onChange={set("notasFondo")} rows={2} placeholder="Ámbar, almizcle, madera de cedro..." /></Field>
+              </div>
+              <p className="text-[11px] text-neutral-400 mt-1">Sepáralas con comas — así se muestran como etiquetas en la ficha del perfume. Si dejas esto en blanco, se usa el campo "Notas" de abajo como respaldo.</p>
+            </FormSection>
+
             <FormSection title="Descripciones">
               <div className="grid grid-cols-1 gap-4">
-                <Field label="Notas aromáticas"><TextArea value={form.notas} onChange={set("notas")} rows={2} placeholder="Bergamota, pimienta rosa, ámbar..." /></Field>
+                <Field label="Notas (texto libre, respaldo)"><TextArea value={form.notas} onChange={set("notas")} rows={2} placeholder="Se usa solo si no llenaste la pirámide olfativa de arriba" /></Field>
                 <Field label="Descripción"><TextArea value={form.descripcion} onChange={set("descripcion")} rows={2} /></Field>
                 <Field label="Observaciones"><TextArea value={form.observaciones} onChange={set("observaciones")} rows={2} /></Field>
               </div>

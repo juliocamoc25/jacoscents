@@ -4,6 +4,7 @@ import { money, whatsappLink, precioDecant } from "../utils";
 import { WHATSAPP_NUMBER, TAMANOS_DECANT, GENEROS } from "../constants";
 import { EmptyState } from "../components/common";
 import { ProductFilters, useProductFilters } from "./ProductFilters";
+import ProductDetailModal from "./ProductDetailModal";
 import RatingStars from "../components/RatingStars";
 
 const SUBTABS = [
@@ -12,7 +13,7 @@ const SUBTABS = [
   { id: "Unisex", label: "Unisex" },
 ];
 
-function DecantPublicCard({ perfume, onAddToCart }) {
+function DecantPublicCard({ perfume, onAddToCart, onOpenDetail }) {
   const tamanos = perfume.decant.tamanos?.length ? perfume.decant.tamanos : TAMANOS_DECANT;
   const precioMin = tamanos.length ? precioDecant(perfume.decant, Math.min(...tamanos)) : null;
   const mlDisponible = perfume.decant.mlDisponible || 0;
@@ -20,7 +21,13 @@ function DecantPublicCard({ perfume, onAddToCart }) {
 
   return (
     <div className="bg-white border border-bone-300 rounded-2xl overflow-hidden shadow-lux-sm hover:shadow-lux hover:-translate-y-1 transition-all duration-300">
-      <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-ink via-neutral-900 to-wine-700 flex items-center justify-center jaco-hero-noise">
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => onOpenDetail?.(perfume)}
+        onKeyDown={(e) => e.key === "Enter" && onOpenDetail?.(perfume)}
+        className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-ink via-neutral-900 to-wine-700 flex items-center justify-center jaco-hero-noise cursor-pointer"
+      >
         {perfume.imagenUrl ? (
           <img src={perfume.imagenUrl} alt={perfume.nombre} className={`w-full h-full object-cover absolute inset-0 ${agotado ? "opacity-40 grayscale" : ""}`} onError={(e) => { e.currentTarget.style.display = "none"; }} />
         ) : (
@@ -39,7 +46,15 @@ function DecantPublicCard({ perfume, onAddToCart }) {
       </div>
       <div className="p-4">
         <p className="text-[11px] text-gold-700 uppercase tracking-widest font-semibold truncate">{perfume.marca || perfume.casaPerfumera}</p>
-        <h3 className="jaco-serif text-xl font-semibold text-ink truncate mt-0.5">{perfume.nombre}</h3>
+        <h3
+          role="button"
+          tabIndex={0}
+          onClick={() => onOpenDetail?.(perfume)}
+          onKeyDown={(e) => e.key === "Enter" && onOpenDetail?.(perfume)}
+          className="jaco-serif text-xl font-semibold text-ink truncate mt-0.5 cursor-pointer hover:text-wine-700"
+        >
+          {perfume.nombre}
+        </h3>
         {perfume.calificacion > 0 && <div className="mt-1"><RatingStars value={perfume.calificacion} /></div>}
         {agotado ? (
           <p className="text-xs text-neutral-500 mt-3">Sin mililitros disponibles por ahora.</p>
@@ -54,13 +69,14 @@ function DecantPublicCard({ perfume, onAddToCart }) {
                       href={whatsappLink(WHATSAPP_NUMBER, `Hola, quiero un decant de ${t}ml de "${perfume.nombre}"`)}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-[11px] font-medium text-neutral-600 hover:text-ink"
                     >
                       {t}ml · {money(precioDecant(perfume.decant, t))}
                     </a>
                     {onAddToCart && (
                       <button
-                        onClick={() => onAddToCart({ kind: "perfume", id: perfume.id, tipo: "decant", ml: t, cantidad: 1, nombre: `${perfume.nombre} (decant ${t}ml)`, precioUnitario: precioDecant(perfume.decant, t), imagenUrl: perfume.imagenUrl })}
+                        onClick={(e) => { e.stopPropagation(); onAddToCart({ kind: "perfume", id: perfume.id, tipo: "decant", ml: t, cantidad: 1, nombre: `${perfume.nombre} (decant ${t}ml)`, precioUnitario: precioDecant(perfume.decant, t), imagenUrl: perfume.imagenUrl }); }}
                         title="Agregar al pedido"
                         aria-label="Agregar al pedido"
                         className="w-5 h-5 flex items-center justify-center rounded-full text-neutral-400 hover:bg-ink hover:text-white transition-colors"
@@ -88,6 +104,7 @@ function DecantPublicCard({ perfume, onAddToCart }) {
 
 export default function DecantsPublicView({ perfumes, onAddToCart }) {
   const [tab, setTab] = useState("Masculino");
+  const [seleccionado, setSeleccionado] = useState(null);
   const filters = useProductFilters(perfumes);
 
   const habilitados = useMemo(
@@ -128,9 +145,29 @@ export default function DecantsPublicView({ perfumes, onAddToCart }) {
         <EmptyState icon={Droplet} title="Aún no hay decants en esta categoría" subtitle="Vuelve pronto, estamos actualizando el catálogo constantemente." />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {visibles.map((p) => <DecantPublicCard key={p.id} perfume={p} onAddToCart={onAddToCart} />)}
+          {visibles.map((p) => <DecantPublicCard key={p.id} perfume={p} onAddToCart={onAddToCart} onOpenDetail={setSeleccionado} />)}
         </div>
       )}
+
+      <ProductDetailModal
+        open={!!seleccionado}
+        onClose={() => setSeleccionado(null)}
+        product={seleccionado ? {
+          icon: Droplet,
+          imagenUrl: seleccionado.imagenUrl,
+          eyebrow: seleccionado.marca || seleccionado.casaPerfumera,
+          title: seleccionado.nombre,
+          description: seleccionado.descripcion,
+          notas: seleccionado.notas,
+          notasSalida: seleccionado.notasSalida,
+          notasCorazon: seleccionado.notasCorazon,
+          notasFondo: seleccionado.notasFondo,
+          price: seleccionado.decant?.tamanos?.length ? precioDecant(seleccionado.decant, Math.min(...seleccionado.decant.tamanos)) : null,
+          meta: seleccionado.decant?.tamanos?.length ? `Decant desde ${Math.min(...seleccionado.decant.tamanos)}ml` : "Decant",
+          calificacion: seleccionado.calificacion,
+          whatsappMessage: `Hola, me interesa un decant de "${seleccionado.nombre}"`,
+        } : null}
+      />
     </div>
   );
 }

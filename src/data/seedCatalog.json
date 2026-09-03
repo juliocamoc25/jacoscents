@@ -51,7 +51,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Praliné de pera, coco",
+      "notasCorazon": "Orquídea cremosa, jazmín",
+      "notasFondo": "Vainilla de cacahuate, almizcle, madera de cachemira"
     },
     {
       "id": "jc0000016dpbhs",
@@ -104,7 +107,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Frambuesa, pera",
+      "notasCorazon": "Rosa, flor de azahar",
+      "notasFondo": "Almizcle, vainilla, sándalo"
     },
     {
       "id": "jc000002ahxthv",
@@ -157,7 +163,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "Grosella negra, pera",
+      "notasCorazon": "Iris, jazmín, azahar",
+      "notasFondo": "Praliné, vainilla, pachulí"
     },
     {
       "id": "jc0000033a3zmf",
@@ -210,7 +219,10 @@
           "precioCompra": 0,
           "precioVenta": 280
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc0000048mdd4v",
@@ -263,7 +275,10 @@
           "precioCompra": 0,
           "precioVenta": 330
         }
-      ]
+      ],
+      "notasSalida": "Almendra, café",
+      "notasCorazon": "Jazmín sambac, tuberosa",
+      "notasFondo": "Haba tonka, cacao, sándalo"
     },
     {
       "id": "jc00000530t9nt",
@@ -316,7 +331,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc0000063w5uzb",
@@ -369,7 +387,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Manzana siciliana, limón, cedro",
+      "notasCorazon": "Jazmín, rosa blanca, bambú",
+      "notasFondo": "Cedro, almizcle blanco, ámbar"
     },
     {
       "id": "jc000007ikcidk",
@@ -422,7 +443,10 @@
           "precioCompra": 0,
           "precioVenta": 650
         }
-      ]
+      ],
+      "notasSalida": "Melocotón, frambuesa",
+      "notasCorazon": "Peonía, jazmín",
+      "notasFondo": "Almizcle, sándalo"
     },
     {
       "id": "jc000008wnnhj7",
@@ -475,7 +499,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "Pimienta rosa, bergamota",
+      "notasCorazon": "Rosa, jazmín",
+      "notasFondo": "Vainilla, almizcle, pachulí"
     },
     {
       "id": "jc000009xvg0fn",
@@ -528,7 +555,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "Grosella negra, frambuesa",
+      "notasCorazon": "Violeta, peonía",
+      "notasFondo": "Almizcle, madera, caramelo"
     },
     {
       "id": "jc00000a9xuy41",
@@ -581,7 +611,10 @@
           "precioCompra": 0,
           "precioVenta": 700
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00000bibljh7",
@@ -634,7 +667,10 @@
           "precioCompra": 0,
           "precioVenta": 140
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00000c5lxo6q",
@@ -687,7 +723,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00000djiujv6",
@@ -740,7 +779,10 @@
           "precioCompra": 0,
           "precioVenta": 750
         }
-      ]
+      ],
+      "notasSalida": "Orquídea, heliotropo, mandarina",
+      "notasCorazon": "Acorde gourmand, frutas tropicales",
+      "notasFondo": "Vainilla, almizcle, sándalo"
     },
     {
       "id": "jc00000eoh9sdb",
@@ -793,7 +835,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00000fdw2pcn",
@@ -846,7 +891,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "Naranja, bergamota",
+      "notasCorazon": "Rosa, jazmín, lichi",
+      "notasFondo": "Pachulí, vainilla, vetiver, ámbar"
     },
     {
       "id": "jc0000109t84az",
@@ -899,7 +947,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000011ytjxep",
@@ -952,7 +1003,10 @@
           "precioCompra": 0,
           "precioVenta": 140
         }
-      ]
+      ],
+      "notasSalida": "Almendra, café",
+      "notasCorazon": "Jazmín sambac, tuberosa",
+      "notasFondo": "Haba tonka, cacao, sándalo"
     },
     {
       "id": "jc000012q85jsg",
@@ -1005,7 +1059,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, mandarina",
+      "notasCorazon": "Flor de azahar, jazmín",
+      "notasFondo": "Almizcle, cedro, vainilla"
     },
     {
       "id": "jc00001365kxvf",
@@ -1058,7 +1115,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, pimienta rosa",
+      "notasCorazon": "Iris, jazmín, ylang-ylang",
+      "notasFondo": "Sándalo, almizcle, vainilla"
     },
     {
       "id": "jc0000141t2tal",
@@ -1111,7 +1171,10 @@
           "precioCompra": 0,
           "precioVenta": 220
         }
-      ]
+      ],
+      "notasSalida": "Pera, bergamota",
+      "notasCorazon": "Jazmín, flor de azahar",
+      "notasFondo": "Almizcle blanco, madera clara"
     },
     {
       "id": "jc000015a753lc",
@@ -1164,7 +1227,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Flor de manzano, bergamota",
+      "notasCorazon": "Jazmín sambac, flor de durazno",
+      "notasFondo": "Almizcle, madera de ámbar"
     },
     {
       "id": "jc00001658drc1",
@@ -1217,7 +1283,10 @@
           "precioCompra": 0,
           "precioVenta": 1350
         }
-      ]
+      ],
+      "notasSalida": "Granada, yuzu",
+      "notasCorazon": "Peonía, magnolia, loto",
+      "notasFondo": "Almizcle, ámbar, caoba"
     },
     {
       "id": "jc0000171ertj5",
@@ -1270,7 +1339,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Limón siciliano, granada",
+      "notasCorazon": "Jazmín, peonía, sándalo",
+      "notasFondo": "Almizcle, vainilla, akigalawood"
     },
     {
       "id": "jc000018pht0hl",
@@ -1323,7 +1395,10 @@
           "precioCompra": 0,
           "precioVenta": 340
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, mandarina",
+      "notasCorazon": "Flor de azahar, jazmín",
+      "notasFondo": "Almizcle, cedro, vainilla"
     },
     {
       "id": "jc0000199xpsei",
@@ -1376,7 +1451,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Manzana verde, grosella negra, bergamota, mandarina",
+      "notasCorazon": "Té verde, jazmín, muguete",
+      "notasFondo": "Almizcle, sándalo"
     },
     {
       "id": "jc00001amvihcw",
@@ -1429,7 +1507,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Piña, bergamota",
+      "notasCorazon": "Abedul, pachulí",
+      "notasFondo": "Almizcle, musgo de roble"
     },
     {
       "id": "jc00001bi64ciy",
@@ -1482,7 +1563,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, pimienta rosa, cardamomo",
+      "notasCorazon": "Iris, hojas de violeta, ambrette",
+      "notasFondo": "Almizcle, cedro, vetiver"
     },
     {
       "id": "jc00001che7ur2",
@@ -1535,7 +1619,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, limón, piña, mandarina, cardamomo",
+      "notasCorazon": "Violeta, nuez moscada, freesia, rosa, jazmín",
+      "notasFondo": "Almizcle, ámbar, sándalo, musgo de roble, té verde"
     },
     {
       "id": "jc00001d3gdppq",
@@ -1588,7 +1675,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Canela, cardamomo, jengibre",
+      "notasCorazon": "Praliné, frutas confitadas, flores blancas",
+      "notasFondo": "Café, vainilla, haba tonka, benjuí, almizcle"
     },
     {
       "id": "jc00001e0y9dom",
@@ -1641,7 +1731,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "Azafrán, cardamomo",
+      "notasCorazon": "Oud, rosa",
+      "notasFondo": "Ámbar, almizcle, sándalo"
     },
     {
       "id": "jc00001f5igqpk",
@@ -1694,7 +1787,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, mandarina",
+      "notasCorazon": "Agua de coco, jazmín",
+      "notasFondo": "Almizcle, ámbar gris"
     },
     {
       "id": "jc000020i7p5tb",
@@ -1747,7 +1843,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, pimienta rosa",
+      "notasCorazon": "Higo, jazmín",
+      "notasFondo": "Almizcle, cedro"
     },
     {
       "id": "jc00002194874f",
@@ -1800,7 +1899,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "Azafrán, cardamomo",
+      "notasCorazon": "Oud, rosa",
+      "notasFondo": "Ámbar, almizcle, sándalo"
     },
     {
       "id": "jc000022rhocn9",
@@ -1853,7 +1955,10 @@
           "precioCompra": 0,
           "precioVenta": 240
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000023j2qp89",
@@ -1906,7 +2011,10 @@
           "precioCompra": 0,
           "precioVenta": 180
         }
-      ]
+      ],
+      "notasSalida": "Piña, bergamota, grosella negra, manzana",
+      "notasCorazon": "Abedul, pachulí, jazmín, rosa",
+      "notasFondo": "Almizcle, musgo de roble, ámbar gris, vainilla"
     },
     {
       "id": "jc000024uzfk8u",
@@ -1959,7 +2067,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000025t0cvs4",
@@ -2012,7 +2123,10 @@
           "precioCompra": 0,
           "precioVenta": 750
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, menta",
+      "notasCorazon": "Canela, cardamomo, caramelo",
+      "notasFondo": "Vainilla, haba tonka, pachulí"
     },
     {
       "id": "jc000026f8cgvy",
@@ -2065,7 +2179,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000027ie6ivw",
@@ -2118,7 +2235,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000028pvs7hz",
@@ -2171,7 +2291,10 @@
           "precioCompra": 0,
           "precioVenta": 850
         }
-      ]
+      ],
+      "notasSalida": "Hoja de higuera, manzana",
+      "notasCorazon": "Salvia, iris",
+      "notasFondo": "Vainilla, cedro, haba tonka"
     },
     {
       "id": "jc000029ioykl1",
@@ -2224,7 +2347,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "Manzana, jengibre, bergamota",
+      "notasCorazon": "Salvia, geranio",
+      "notasFondo": "Madera de ámbar, vetiver, haba tonka"
     },
     {
       "id": "jc00002acq99ch",
@@ -2277,7 +2403,10 @@
           "precioCompra": 0,
           "precioVenta": 850
         }
-      ]
+      ],
+      "notasSalida": "Mandarina sanguina, miel",
+      "notasCorazon": "Gardenia, miel",
+      "notasFondo": "Pachulí, cera de abeja"
     },
     {
       "id": "jc00002bj755nf",
@@ -2330,7 +2459,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00002c4zw9xa",
@@ -2383,7 +2515,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00002d3kx7ee",
@@ -2436,7 +2571,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Toronja, limón, menta, pimienta rosa",
+      "notasCorazon": "Jengibre, nuez moscada, jazmín",
+      "notasFondo": "Incienso, vetiver, cedro, sándalo, labdanum"
     },
     {
       "id": "jc00002edtjvzh",
@@ -2489,7 +2627,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00002fwjr64d",
@@ -2542,7 +2683,10 @@
           "precioCompra": 0,
           "precioVenta": 700
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000030pja1wj",
@@ -2595,7 +2739,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Cardamomo, romero",
+      "notasCorazon": "Miel, madera de cachemira",
+      "notasFondo": "Haba tonka, pachulí, vainilla"
     },
     {
       "id": "jc0000310tpac5",
@@ -2648,7 +2795,10 @@
           "precioCompra": 0,
           "precioVenta": 1400
         }
-      ]
+      ],
+      "notasSalida": "Cardamomo, romero",
+      "notasCorazon": "Miel, madera de cachemira",
+      "notasFondo": "Haba tonka, pachulí, vainilla, ámbar"
     },
     {
       "id": "jc0000326t4ufe",
@@ -2701,7 +2851,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Cardamomo, romero, comino",
+      "notasCorazon": "Miel, madera de cachemira",
+      "notasFondo": "Fava tonka, pachulí, vainilla"
     },
     {
       "id": "jc000033l6246h",
@@ -2754,7 +2907,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000034id25ow",
@@ -2807,7 +2963,10 @@
           "precioCompra": 0,
           "precioVenta": 250
         }
-      ]
+      ],
+      "notasSalida": "Café, ron",
+      "notasCorazon": "Especias, cuero",
+      "notasFondo": "Haba tonka, ámbar, madera"
     },
     {
       "id": "jc000035f75935",
@@ -2860,7 +3019,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000036a0l725",
@@ -2913,7 +3075,10 @@
           "precioCompra": 0,
           "precioVenta": 220
         }
-      ]
+      ],
+      "notasSalida": "Bergamota de Calabria, pimienta de Sichuan",
+      "notasCorazon": "Lavanda, geranio, elemí",
+      "notasFondo": "Ambroxan, haba tonka, vetiver"
     },
     {
       "id": "jc0000373j2d54",
@@ -2966,7 +3131,10 @@
           "precioCompra": 0,
           "precioVenta": 110
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000038i3qk2i",
@@ -3019,7 +3187,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000039agl58k",
@@ -3072,7 +3243,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00003axo9t7e",
@@ -3125,7 +3299,10 @@
           "precioCompra": 0,
           "precioVenta": 750
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00003b8g8jdp",
@@ -3178,7 +3355,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00003c0lvsnu",
@@ -3231,7 +3411,10 @@
           "precioCompra": 0,
           "precioVenta": 90
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00003djza7tz",
@@ -3284,7 +3467,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, notas marinas, sal marina",
+      "notasCorazon": "Jazmín, salvia, romero",
+      "notasFondo": "Almizcle blanco, incienso, pachulí, musgo de roble"
     },
     {
       "id": "jc00003e0yncxl",
@@ -3337,7 +3523,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, sal marina, romero",
+      "notasCorazon": "Salvia, geranio",
+      "notasFondo": "Vetiver, cedro, incienso"
     },
     {
       "id": "jc00003fl4zklo",
@@ -3390,7 +3579,10 @@
           "precioCompra": 0,
           "precioVenta": 230
         }
-      ]
+      ],
+      "notasSalida": "Cardamomo, pimienta rosa, pomelo",
+      "notasCorazon": "Salvia, castaña, lavanda",
+      "notasFondo": "Vainilla, ámbar, cachemira, haba tonka"
     },
     {
       "id": "jc000040okep7y",
@@ -3443,7 +3635,10 @@
           "precioCompra": 0,
           "precioVenta": 350
         }
-      ]
+      ],
+      "notasSalida": "Cardamomo, pimienta rosa",
+      "notasCorazon": "Salvia, lavanda",
+      "notasFondo": "Vainilla, ámbar, haba tonka"
     },
     {
       "id": "jc0000416wktak",
@@ -3496,7 +3691,10 @@
           "precioCompra": 0,
           "precioVenta": 220
         }
-      ]
+      ],
+      "notasSalida": "Almendra, bergamota",
+      "notasCorazon": "Cedro, sándalo",
+      "notasFondo": "Haba tonka, cuero, vainilla"
     },
     {
       "id": "jc000042puxqph",
@@ -3549,7 +3747,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "Manzana verde, hierbas aromáticas",
+      "notasCorazon": "Lavanda, geranio",
+      "notasFondo": "Almizcle, ámbar, madera"
     },
     {
       "id": "jc000043r62gds",
@@ -3602,7 +3803,10 @@
           "precioCompra": 0,
           "precioVenta": 2450
         }
-      ]
+      ],
+      "notasSalida": "Hoja de higuera, coco",
+      "notasCorazon": "Iris, salvia",
+      "notasFondo": "Vainilla, madera de cachemira"
     },
     {
       "id": "jc000044wm31yi",
@@ -3655,7 +3859,10 @@
           "precioCompra": 0,
           "precioVenta": 330
         }
-      ]
+      ],
+      "notasSalida": "Piña, coco",
+      "notasCorazon": "Flor de ylang-ylang",
+      "notasFondo": "Sándalo, algodón de azúcar"
     },
     {
       "id": "jc000045hair4c",
@@ -3708,7 +3915,10 @@
           "precioCompra": 0,
           "precioVenta": 2000
         }
-      ]
+      ],
+      "notasSalida": "Hoja de higuera, bergamota",
+      "notasCorazon": "Salvia, notas verdes",
+      "notasFondo": "Cedro, ámbar claro"
     },
     {
       "id": "jc000046owgzri",
@@ -3761,7 +3971,10 @@
           "precioCompra": 0,
           "precioVenta": 230
         }
-      ]
+      ],
+      "notasSalida": "Menta, lavanda, bergamota, anís",
+      "notasCorazon": "Canela, comino, cardamomo",
+      "notasFondo": "Vainilla, madera de cachemira, ámbar, haba tonka"
     },
     {
       "id": "jc000047xa11dp",
@@ -3814,7 +4027,10 @@
           "precioCompra": 0,
           "precioVenta": 220
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, mandarina",
+      "notasCorazon": "Canela, caramelo",
+      "notasFondo": "Vainilla, pachulí, haba tonka"
     },
     {
       "id": "jc000048g8sbi4",
@@ -3867,7 +4083,10 @@
           "precioCompra": 0,
           "precioVenta": 2500
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, ciruela",
+      "notasCorazon": "Canela, cacao",
+      "notasFondo": "Vainilla, haba tonka, pachulí, benjuí"
     },
     {
       "id": "jc000049q2y9v8",
@@ -3920,7 +4139,10 @@
           "precioCompra": 0,
           "precioVenta": 2500
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, casis",
+      "notasCorazon": "Vainilla, canela",
+      "notasFondo": "Haba tonka, ámbar, madera de cachemira"
     },
     {
       "id": "jc00004a6wzs3t",
@@ -3973,7 +4195,10 @@
           "precioCompra": 0,
           "precioVenta": 230
         }
-      ]
+      ],
+      "notasSalida": "Mandarina sanguina, miel",
+      "notasCorazon": "Gardenia, miel",
+      "notasFondo": "Pachulí, cera de abeja, almizcle"
     },
     {
       "id": "jc00004b60rjiw",
@@ -4026,7 +4251,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Cardamomo, pimienta rosa",
+      "notasCorazon": "Iris, jazmín",
+      "notasFondo": "Almizcle, cedro, haba tonka"
     },
     {
       "id": "jc00004c1swjck",
@@ -4079,7 +4307,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00004djlteiy",
@@ -4132,7 +4363,10 @@
           "precioCompra": 0,
           "precioVenta": 140
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00004ezcotoh",
@@ -4185,7 +4419,10 @@
           "precioCompra": 0,
           "precioVenta": 600
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, menta",
+      "notasCorazon": "Canela, cardamomo, caramelo",
+      "notasFondo": "Vainilla, haba tonka, pachulí"
     },
     {
       "id": "jc00004fp6vz41",
@@ -4238,7 +4475,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "Manzana, bergamota, jengibre",
+      "notasCorazon": "Salvia, geranio",
+      "notasFondo": "Madera de ámbar, vetiver, haba tonka"
     },
     {
       "id": "jc000050nam148",
@@ -4291,7 +4531,10 @@
           "precioCompra": 0,
           "precioVenta": 130
         }
-      ]
+      ],
+      "notasSalida": "Especias, bergamota",
+      "notasCorazon": "Lavanda, canela",
+      "notasFondo": "Haba tonka, cacao, vainilla"
     },
     {
       "id": "jc000051p0tvhh",
@@ -4344,7 +4587,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000052pbmyof",
@@ -4397,7 +4643,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, mandarina",
+      "notasCorazon": "Agua de coco, jazmín",
+      "notasFondo": "Almizcle, ámbar gris"
     },
     {
       "id": "jc000053qewaou",
@@ -4450,7 +4699,10 @@
           "precioCompra": 0,
           "precioVenta": 700
         }
-      ]
+      ],
+      "notasSalida": "Piña, coco",
+      "notasCorazon": "Flor de ylang-ylang",
+      "notasFondo": "Sándalo, algodón de azúcar"
     },
     {
       "id": "jc000054axeqbn",
@@ -4503,7 +4755,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, jengibre",
+      "notasCorazon": "Nuez moscada",
+      "notasFondo": "Vetiver, cedro"
     },
     {
       "id": "jc000055hl1n13",
@@ -4556,7 +4811,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000056jcat9m",
@@ -4609,7 +4867,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "Manzana, jengibre, bergamota",
+      "notasCorazon": "Salvia, geranio",
+      "notasFondo": "Madera de ámbar, vetiver"
     },
     {
       "id": "jc000057x2x18h",
@@ -4662,7 +4923,10 @@
           "precioCompra": 0,
           "precioVenta": 140
         }
-      ]
+      ],
+      "notasSalida": "Manzana, salvia, bergamota",
+      "notasCorazon": "Geranio, jengibre",
+      "notasFondo": "Madera de ámbar, pachulí, vetiver"
     },
     {
       "id": "jc000058afeyuh",
@@ -4715,7 +4979,10 @@
           "precioCompra": 0,
           "precioVenta": 650
         }
-      ]
+      ],
+      "notasSalida": "Especias, pomelo",
+      "notasCorazon": "Laurel, salvia",
+      "notasFondo": "Ámbar de guayaco, cuero"
     },
     {
       "id": "jc000059z1gv0e",
@@ -4768,7 +5035,10 @@
           "precioCompra": 0,
           "precioVenta": 700
         }
-      ]
+      ],
+      "notasSalida": "Bergamota de Calabria, pimienta de Sichuan",
+      "notasCorazon": "Lavanda, geranio, elemí",
+      "notasFondo": "Ambroxan, haba tonka, vetiver"
     },
     {
       "id": "jc00005a38daly",
@@ -4821,7 +5091,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, nuez moscada",
+      "notasCorazon": "Salvia de fruta, café",
+      "notasFondo": "Haba tonka, cuero, vetiver"
     },
     {
       "id": "jc00005b8ozcyw",
@@ -4874,7 +5147,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, lavanda, manzana",
+      "notasCorazon": "Geranio, salvia de miel, coumarina",
+      "notasFondo": "Haba tonka, cuero, madera de sándalo"
     },
     {
       "id": "jc00005cd14ve9",
@@ -4927,7 +5203,10 @@
           "precioCompra": 0,
           "precioVenta": 150
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, manzana verde, lavanda",
+      "notasCorazon": "Geranio, albahaca",
+      "notasFondo": "Almizcle blanco, cedro, haba tonka"
     },
     {
       "id": "jc00005d2mpnsm",
@@ -4980,7 +5259,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Piña, bergamota, grosella negra, manzana",
+      "notasCorazon": "Abedul, pachulí, jazmín",
+      "notasFondo": "Almizcle, musgo de roble, ámbar gris, vainilla"
     },
     {
       "id": "jc00005e43d8w3",
@@ -5033,7 +5315,10 @@
           "precioCompra": 0,
           "precioVenta": 450
         }
-      ]
+      ],
+      "notasSalida": "Manzana verde, notas marinas",
+      "notasCorazon": "Jazmín acuático, romero",
+      "notasFondo": "Almizcle, roble, sándalo"
     },
     {
       "id": "jc00005fzp08j3",
@@ -5086,7 +5371,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Toronja, mandarina marina",
+      "notasCorazon": "Laurel, jazmín",
+      "notasFondo": "Ámbar de guayaco, musgo de roble, pachulí"
     },
     {
       "id": "jc000060trp0j4",
@@ -5139,7 +5427,10 @@
           "precioCompra": 0,
           "precioVenta": 240
         }
-      ]
+      ],
+      "notasSalida": "Especias, laurel",
+      "notasCorazon": "Salvia, romero",
+      "notasFondo": "Ámbar de guayaco, cuero, pachulí"
     },
     {
       "id": "jc0000613d5iqv",
@@ -5192,7 +5483,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Manzana, pomelo rosa",
+      "notasCorazon": "Miel de flores, canela",
+      "notasFondo": "Cuero, ámbar"
     },
     {
       "id": "jc000062nb4gh2",
@@ -5245,7 +5539,10 @@
           "precioCompra": 0,
           "precioVenta": 220
         }
-      ]
+      ],
+      "notasSalida": "Melón, pepino",
+      "notasCorazon": "Geranio, albahaca, salvia",
+      "notasFondo": "Almizcle, musgo de roble, madera de sándalo"
     },
     {
       "id": "jc000063m5zja8",
@@ -5298,7 +5595,10 @@
           "precioCompra": 0,
           "precioVenta": 800
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, pimienta negra",
+      "notasCorazon": "Salvia, elemí",
+      "notasFondo": "Ámbar, vainilla, cachemira"
     },
     {
       "id": "jc000064dzr1yx",
@@ -5351,7 +5651,10 @@
           "precioCompra": 0,
           "precioVenta": 180
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, menta",
+      "notasCorazon": "Salvia, notas acuáticas",
+      "notasFondo": "Ámbar, almizcle, cachemira"
     },
     {
       "id": "jc000065r2dhyl",
@@ -5404,7 +5707,10 @@
           "precioCompra": 0,
           "precioVenta": 240
         }
-      ]
+      ],
+      "notasSalida": "Pimienta negra, cardamomo",
+      "notasCorazon": "Especias, salvia",
+      "notasFondo": "Ámbar, vainilla, cuero"
     },
     {
       "id": "jc000066urtp0l",
@@ -5457,7 +5763,10 @@
           "precioCompra": 0,
           "precioVenta": 170
         }
-      ]
+      ],
+      "notasSalida": "Lavanda, ciruela",
+      "notasCorazon": "Canela, cacao",
+      "notasFondo": "Vainilla, haba tonka, pachulí, benjuí"
     },
     {
       "id": "jc000067zjjege",
@@ -5510,7 +5819,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Mandarina, lavanda",
+      "notasCorazon": "Hoja de violeta",
+      "notasFondo": "Almizcle, haba tonka"
     },
     {
       "id": "jc000068t1ghr0",
@@ -5563,7 +5875,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Hoja de higuera, bergamota",
+      "notasCorazon": "Salvia, notas verdes",
+      "notasFondo": "Cedro, ámbar claro"
     },
     {
       "id": "jc0000699skdgi",
@@ -5616,7 +5931,10 @@
           "precioCompra": 0,
           "precioVenta": 300
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, nuez moscada",
+      "notasCorazon": "Salvia de fruta, café",
+      "notasFondo": "Haba tonka, cuero, vetiver"
     },
     {
       "id": "jc00006agatj9t",
@@ -5669,7 +5987,10 @@
           "precioCompra": 0,
           "precioVenta": 420
         }
-      ]
+      ],
+      "notasSalida": "Bergamota, nuez moscada",
+      "notasCorazon": "Salvia de fruta, café",
+      "notasFondo": "Haba tonka, cuero, vainilla"
     },
     {
       "id": "jc00006bze5r5u",
@@ -5722,7 +6043,10 @@
           "precioCompra": 0,
           "precioVenta": 300
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc00006cqpgb7r",
@@ -5775,7 +6099,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Menta, manzana verde, limón",
+      "notasCorazon": "Geranio, salvia, canela",
+      "notasFondo": "Vainilla, haba tonka, madera de cedro, musgo de roble, ámbar"
     },
     {
       "id": "jc00006d3ocwbf",
@@ -5828,7 +6155,10 @@
           "precioCompra": 0,
           "precioVenta": 250
         }
-      ]
+      ],
+      "notasSalida": "Toronja, mandarina, pimienta negra",
+      "notasCorazon": "Geranio, salvia ardiente, canela",
+      "notasFondo": "Haba tonka, vainilla de Madagascar, madera de olíbano"
     },
     {
       "id": "jc00006euk9e1v",
@@ -5881,7 +6211,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Toronja, manzana, bergamota calabresa",
+      "notasCorazon": "Violeta, geranio, ámbar de Papúa",
+      "notasFondo": "Musgo de roble, pachulí, madera de cedro, haba tonka"
     },
     {
       "id": "jc00006f2isqp4",
@@ -5934,7 +6267,10 @@
           "precioCompra": 0,
           "precioVenta": 210
         }
-      ]
+      ],
+      "notasSalida": "Limón, bergamota, cítricos",
+      "notasCorazon": "Geranio, romero, madera de cedro",
+      "notasFondo": "Almizcle, musgo de roble, madera ambarina"
     },
     {
       "id": "jc0000709kwv08",
@@ -5987,7 +6323,10 @@
           "precioCompra": 0,
           "precioVenta": 320
         }
-      ]
+      ],
+      "notasSalida": "Bergamota",
+      "notasCorazon": "Flor de azahar, haba tonka",
+      "notasFondo": "Cedro de Virginia, almizcle"
     },
     {
       "id": "jc000071hhxfgc",
@@ -6040,7 +6379,10 @@
           "precioCompra": 0,
           "precioVenta": 320
         }
-      ]
+      ],
+      "notasSalida": "Manzana, jengibre, bergamota",
+      "notasCorazon": "Salvia, geranio",
+      "notasFondo": "Madera de ámbar, vetiver, haba tonka"
     },
     {
       "id": "jc000072aqvkiz",
@@ -6093,7 +6435,10 @@
           "precioCompra": 0,
           "precioVenta": 280
         }
-      ]
+      ],
+      "notasSalida": "Manzana, bergamota, jengibre",
+      "notasCorazon": "Salvia, geranio",
+      "notasFondo": "Madera de ámbar, vetiver"
     },
     {
       "id": "jc000073zqy72w",
@@ -6146,7 +6491,10 @@
           "precioCompra": 0,
           "precioVenta": 100
         }
-      ]
+      ],
+      "notasSalida": "Limón, manzana",
+      "notasCorazon": "Cedro, lavanda",
+      "notasFondo": "Pachulí, haba tonka, incienso"
     },
     {
       "id": "jc000074x7ptx6",
@@ -6199,7 +6547,10 @@
           "precioCompra": 0,
           "precioVenta": 200
         }
-      ]
+      ],
+      "notasSalida": "Limón, menta, piña, bergamota",
+      "notasCorazon": "Jazmín, romero, iso e super",
+      "notasFondo": "Sándalo, ámbar, musgo de roble, almizcle"
     },
     {
       "id": "jc0000753cfl0u",
@@ -6252,7 +6603,10 @@
           "precioCompra": 0,
           "precioVenta": 120
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000076keyz7s",
@@ -6297,7 +6651,10 @@
           "precioCompra": 0,
           "precioVenta": 750
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     },
     {
       "id": "jc000077rcbplj",
@@ -6342,7 +6699,10 @@
           "precioCompra": 0,
           "precioVenta": 1950
         }
-      ]
+      ],
+      "notasSalida": "",
+      "notasCorazon": "",
+      "notasFondo": ""
     }
   ],
   "accesorios": []

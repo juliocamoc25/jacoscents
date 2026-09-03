@@ -31,6 +31,7 @@ export default function ImportarExcelModal({ open, onClose, onImport }) {
   const [colMap, setColMap] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [importando, setImportando] = useState(false);
 
   const reset = () => { setFileName(""); setRows(null); setColMap(null); setError(""); };
 
@@ -82,7 +83,7 @@ export default function ImportarExcelModal({ open, onClose, onImport }) {
       })).filter((r) => r.nombre)
     : [];
 
-  const confirmar = () => {
+  const confirmar = async () => {
     const lista = preview.map((p) => ({
       nombre: p.nombre, marca: p.marca, casaPerfumera: "", genero: p.genero, tipo: "", concentracion: "",
       presentacionMl: "", imagenUrl: p.imagenUrl, sku: "", codigoBarras: "", notas: "", descripcion: "",
@@ -92,9 +93,16 @@ export default function ImportarExcelModal({ open, onClose, onImport }) {
       decant: { habilitado: false, mlTotalAbierto: 0, mlDisponible: 0, precioPorMl: "", tamanos: [], preciosPorTamano: {} },
       tieneFrascoCompleto: false,
     }));
-    onImport(lista);
-    reset();
-    onClose();
+    setImportando(true);
+    setError("");
+    const ok = await onImport(lista);
+    setImportando(false);
+    if (ok) {
+      reset();
+      onClose();
+    } else {
+      setError("No se pudo completar la importación. Revisa tu conexión e intenta de nuevo — no se perdió tu archivo, puedes reintentar.");
+    }
   };
 
   return (
@@ -146,9 +154,9 @@ export default function ImportarExcelModal({ open, onClose, onImport }) {
             <p className="text-xs text-amber-600 mt-2">{rows.length - preview.length} fila(s) se omitieron por no tener nombre.</p>
           )}
           <div className="flex gap-3 mt-4 pt-4 border-t border-neutral-200">
-            <button onClick={reset} className="flex-1 py-2.5 rounded-lg border border-neutral-300 text-neutral-700 font-medium hover:bg-neutral-50">Elegir otro archivo</button>
-            <button onClick={confirmar} className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-black text-white font-medium hover:bg-neutral-800">
-              <CheckCircle2 size={16} /> Importar {preview.length}
+            <button onClick={reset} disabled={importando} className="flex-1 py-2.5 rounded-lg border border-neutral-300 text-neutral-700 font-medium hover:bg-neutral-50 disabled:opacity-50">Elegir otro archivo</button>
+            <button onClick={confirmar} disabled={importando} className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-60">
+              <CheckCircle2 size={16} /> {importando ? "Importando..." : `Importar ${preview.length}`}
             </button>
           </div>
         </div>

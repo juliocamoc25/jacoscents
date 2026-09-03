@@ -51,7 +51,7 @@ function CartStep({ cart, onClose, onCheckout }) {
 }
 
 function CheckoutStep({ cart, onBack, onConfirm }) {
-  const [form, setForm] = useState({ nombre: "", telefono: "", direccion: "", ciudad: "", metodoPago: METODOS_PAGO[0], notas: "" });
+  const [form, setForm] = useState({ nombre: "", telefono: "", direccion: "", colonia: "", ciudad: "", codigoPostal: "", referencias: "", metodoPago: METODOS_PAGO[0], notas: "" });
   const [error, setError] = useState("");
   const set = (k) => (e) => setForm((prev) => ({ ...prev, [k]: e.target.value }));
 
@@ -59,11 +59,14 @@ function CheckoutStep({ cart, onBack, onConfirm }) {
     const nombre = sanitizeText(form.nombre, 100);
     const telefono = sanitizeText(form.telefono, 30);
     const direccion = sanitizeText(form.direccion, 200);
+    const colonia = sanitizeText(form.colonia, 100);
+    const codigoPostal = sanitizeText(form.codigoPostal, 10);
+    const referencias = sanitizeText(form.referencias, 200);
     if (!nombre || !telefono || !direccion) {
       setError("Nombre, teléfono y dirección son necesarios para poder enviarte tu pedido.");
       return;
     }
-    onConfirm({ ...form, nombre, telefono, direccion });
+    onConfirm({ ...form, nombre, telefono, direccion, colonia, codigoPostal, referencias });
   };
 
   return (
@@ -78,12 +81,24 @@ function CheckoutStep({ cart, onBack, onConfirm }) {
           <input value={form.telefono} onChange={set("telefono")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
         </div>
         <div>
+          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Código postal</label>
+          <input value={form.codigoPostal} onChange={set("codigoPostal")} inputMode="numeric" placeholder="Ej. 58000" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+        </div>
+        <div className="sm:col-span-2">
+          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Dirección de envío</label>
+          <input value={form.direccion} onChange={set("direccion")} placeholder="Calle y número" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Colonia</label>
+          <input value={form.colonia} onChange={set("colonia")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+        </div>
+        <div>
           <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Ciudad</label>
           <input value={form.ciudad} onChange={set("ciudad")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
         </div>
         <div className="sm:col-span-2">
-          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Dirección de envío</label>
-          <input value={form.direccion} onChange={set("direccion")} placeholder="Calle, número, colonia, C.P." className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Entre calles / referencias</label>
+          <input value={form.referencias} onChange={set("referencias")} placeholder="Ej. entre calle X y Y, casa de portón negro" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
         </div>
         <div className="sm:col-span-2">
           <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Método de pago</label>

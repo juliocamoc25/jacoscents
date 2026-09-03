@@ -52,41 +52,50 @@ export default function AdminPanel({ data, onExit, onLogout }) {
   const [ticketModal, setTicketModal] = useState(null);
   const [confirmDialog, setConfirmDialog] = useState(null);
 
-  const onGuardarPerfume = (formData) => {
-    guardarPerfume(formData, perfumeModal?.mode === "edit" ? perfumeModal.perfume.id : null);
-    setPerfumeModal(null);
+  const onGuardarPerfume = async (formData) => {
+    const ok = await guardarPerfume(formData, perfumeModal?.mode === "edit" ? perfumeModal.perfume.id : null);
+    if (ok) setPerfumeModal(null);
   };
-  const onGuardarCliente = (formData) => {
-    guardarCliente(formData, clienteModal?.mode === "edit" ? clienteModal.cliente.id : null);
-    setClienteModal(null);
+  const onGuardarCliente = async (formData) => {
+    const ok = await guardarCliente(formData, clienteModal?.mode === "edit" ? clienteModal.cliente.id : null);
+    if (ok) setClienteModal(null);
   };
-  const onGuardarAccesorio = (formData) => {
-    guardarAccesorio(formData, accesorioModal?.mode === "edit" ? accesorioModal.accesorio.id : null);
-    setAccesorioModal(null);
+  const onGuardarAccesorio = async (formData) => {
+    const ok = await guardarAccesorio(formData, accesorioModal?.mode === "edit" ? accesorioModal.accesorio.id : null);
+    if (ok) setAccesorioModal(null);
   };
-  const onAjustarInventario = (...args) => { ajustarInventario(...args); setAjusteModal(null); };
-  const onAbrirDecant = (...args) => { abrirFrascoDecant(...args); setAbrirModal(null); };
-  const onCompletarVenta = (payload) => { const v = completarVenta(payload); if (v) setTicketModal(v); };
+  const onAjustarInventario = async (...args) => {
+    const ok = await ajustarInventario(...args);
+    if (ok) setAjusteModal(null);
+  };
+  const onAbrirDecant = async (...args) => {
+    const ok = await abrirFrascoDecant(...args);
+    if (ok) setAbrirModal(null);
+  };
+  const onCompletarVenta = async (payload) => {
+    const v = await completarVenta(payload);
+    if (v) setTicketModal(v);
+  };
 
   const pedirEliminarPerfume = (perfume) => {
     setConfirmDialog({
       title: "Eliminar perfume",
       message: `¿Seguro que quieres eliminar "${perfume.nombre}"? Esta acción no se puede deshacer.`,
-      onConfirm: () => { eliminarPerfume(perfume.id); setConfirmDialog(null); },
+      onConfirm: async () => { await eliminarPerfume(perfume.id); setConfirmDialog(null); },
     });
   };
   const pedirEliminarCliente = (cliente) => {
     setConfirmDialog({
       title: "Eliminar cliente",
       message: `¿Seguro que quieres eliminar a "${cliente.nombre}"?`,
-      onConfirm: () => { eliminarCliente(cliente.id); setConfirmDialog(null); },
+      onConfirm: async () => { await eliminarCliente(cliente.id); setConfirmDialog(null); },
     });
   };
   const pedirEliminarAccesorio = (accesorio) => {
     setConfirmDialog({
       title: "Eliminar accesorio",
       message: `¿Seguro que quieres eliminar "${accesorio.nombre}"?`,
-      onConfirm: () => { eliminarAccesorio(accesorio.id); setConfirmDialog(null); },
+      onConfirm: async () => { await eliminarAccesorio(accesorio.id); setConfirmDialog(null); },
     });
   };
 
