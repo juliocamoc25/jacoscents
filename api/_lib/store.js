@@ -181,54 +181,133 @@ function precioDecant(decant, tamanoMl) {
   return Math.round((decant.precioPorMl || 0) * tamanoMl);
 }
 
-// `items` = el carrito armado del lado del cliente: [{ perfumeId, tipo, cantidad, precioUnitario, subtotal, nombrePerfume, marca }]
-async function completarVenta({ items, clienteId, descuento, cupon, costoEnvio, metodoPago, estado }) {
-  const { perfumes, ventas, movimientos } = await getCollections();
+// Descuenta el inventario de UN item del carrito de venta (perfume en
+// frasco, decant, o accesorio) de forma atómica — la condición de stock va
+// en el mismo filtro del update, así dos ventas simultáneas nunca dejan el
+// inventario en negativo. Regresa el item con su costo de referencia
+// (para calcular ganancia) o { error } si no había suficiente disponible.
+async function resolverItemVenta(item, collections) {
+  const { perfumes, accesorios } = collections;
+
+  if (item.kind === "accesorio") {
+    const res = await accesorios.findOneAndUpdate(
+      { _id: item.perfumeId, cantidadDisponible: { $gte: item.cantidad } },
+      { $inc: { cantidadDisponible: -item.cantidad } },
+      { returnDocument: "before" }
+    );
+    const a = res?.value || res;
+    if (!a) return { error: `Sin stock suficiente de "${item.nombrePerfume}"` };
+    // Los accesorios todavía no capturan un costo de compra en el panel;
+    // si en el futuro se agrega (costoPromedio/precioCompra), esto ya lo
+    // toma en cuenta automáticamente para la ganancia.
+    const costoUnit = a.costoPromedio || a.precioCompra || 0;
+    return { item: { ...item, costoUnitarioSnapshot: costoUnit, costoTotalSnapshot: costoUnit * item.cantidad } };
+  }
+
+  if (item.tipo === "frasco") {
+    const res = await perfumes.findOneAndUpdate(
+      { _id: item.perfumeId, cantidadDisponible: { $gte: item.cantidad } },
+      { $inc: { cantidadDisponible: -item.cantidad } },
+      { returnDocument: "before" }
+    );
+    const p = res?.value || res;
+    if (!p) return { error: `Sin stock suficiente de "${item.nombrePerfume}"` };
+    const costoUnit = p.costoPromedio || p.precioCompra || 0;
+    return { item: { ...item, costoUnitarioSnapshot: costoUnit, costoTotalSnapshot: costoUnit * item.cantidad } };
+  }
+
+  // Decant
+  const res = await perfumes.findOneAndUpdate(
+    { _id: item.perfumeId, "decant.mlDisponible": { $gte: item.cantidad } },
+    { $inc: { "decant.mlDisponible": -item.cantidad } },
+    { returnDocument: "before" }
+  );
+  const p = res?.value || res;
+  if (!p) return { error: `No hay suficiente ml disponible de "${item.nombrePerfume}"` };
+  const costoPorMl = (p.costoPromedio || p.precioCompra || 0) / (p.presentacionMl || 1);
+  return { item: { ...item, costoUnitarioSnapshot: costoPorMl, costoTotalSnapshot: costoPorMl * item.cantidad } };
+}
+
+// `items` = el carrito armado del lado del cliente:
+// [{ kind: "perfume"|"accesorio", perfumeId, tipo, cantidad, precioUnitario, subtotal, nombrePerfume, marca }]
+async function completarVenta({ items, clienteId, clienteInvitado, descuento, cupon, costoEnvio, metodoPago, estado, pedidoOrigenId }) {
+  const collections = await getCollections();
+  const { ventas, movimientos } = collections;
   if (!items || items.length === 0) return { error: "El carrito está vacío" };
 
   const itemsFinal = [];
   for (const item of items) {
-    if (item.tipo === "frasco") {
-      const res = await perfumes.findOneAndUpdate(
-        { _id: item.perfumeId, cantidadDisponible: { $gte: item.cantidad } },
-        { $inc: { cantidadDisponible: -item.cantidad } },
-        { returnDocument: "before" }
-      );
-      const p = res?.value || res;
-      if (!p) return { error: `Sin stock suficiente de "${item.nombrePerfume}"` };
-      const costoUnit = p.costoPromedio || p.precioCompra || 0;
-      itemsFinal.push({ ...item, costoUnitarioSnapshot: costoUnit, costoTotalSnapshot: costoUnit * item.cantidad });
-    } else {
-      const res = await perfumes.findOneAndUpdate(
-        { _id: item.perfumeId, "decant.mlDisponible": { $gte: item.cantidad } },
-        { $inc: { "decant.mlDisponible": -item.cantidad } },
-        { returnDocument: "before" }
-      );
-      const p = res?.value || res;
-      if (!p) return { error: `No hay suficiente ml disponible de "${item.nombrePerfume}"` };
-      const costoPorMl = (p.costoPromedio || p.precioCompra || 0) / (p.presentacionMl || 1);
-      itemsFinal.push({ ...item, costoUnitarioSnapshot: costoPorMl, costoTotalSnapshot: costoPorMl * item.cantidad });
-    }
+    const resultado = await resolverItemVenta(item, collections);
+    if (resultado.error) return { error: resultado.error };
+    itemsFinal.push(resultado.item);
   }
 
   const subtotal = itemsFinal.reduce((s, i) => s + i.subtotal, 0);
   const costoTotal = itemsFinal.reduce((s, i) => s + i.costoTotalSnapshot, 0);
   const total = Math.max(0, subtotal - (descuento || 0) + (costoEnvio || 0));
-  const ganancia = subtotal - costoTotal - (descuento || 0);
+  // Ganancia bruta: lo que deja la venta antes de descuentos (ingreso - costo
+  // de lo vendido). Ganancia neta: lo que realmente queda después de aplicar
+  // el descuento otorgado (el envío no cuenta como costo propio porque se le
+  // cobra aparte al cliente).
+  const gananciaBruta = subtotal - costoTotal;
+  const ganancia = gananciaBruta - (descuento || 0); // neta — se mantiene el nombre "ganancia" por compatibilidad con Dashboard/Asistente IA
   const nuevaVenta = {
-    _id: uid(), fecha: nowIso(), clienteId, items: itemsFinal,
+    _id: uid(), fecha: nowIso(), clienteId: clienteId || null, clienteInvitado: clienteInvitado || null, items: itemsFinal,
     descuento: descuento || 0, cupon: cupon || "", costoEnvio: costoEnvio || 0,
-    metodoPago, estado, subtotal, total, ganancia,
+    metodoPago, estado, subtotal, total, gananciaBruta, ganancia,
+    pedidoOrigenId: pedidoOrigenId || null,
   };
   await ventas.insertOne(nuevaVenta);
   for (const i of itemsFinal) {
     await crearMovimiento(movimientos, {
       perfumeId: i.perfumeId, nombrePerfume: i.nombrePerfume, tipo: "salida", cantidad: i.cantidad,
-      motivo: `Venta ${i.tipo === "decant" ? "(decant " + i.cantidad + "ml)" : "(" + i.cantidad + " frasco(s))"}`,
+      motivo: `Venta ${i.tipo === "decant" ? "(decant " + i.cantidad + "ml)" : "(" + i.cantidad + (i.kind === "accesorio" ? " accesorio(s))" : " frasco(s))")}`,
     });
   }
   const { _id, ...rest } = nuevaVenta;
   return { ok: true, venta: { id: _id, ...rest } };
+}
+
+// Convierte un pedido de la tienda pública en una venta registrada de una
+// sola vez: traduce sus items al formato del carrito de venta, descuenta
+// inventario, y marca el pedido como atendido enlazándolo a la venta.
+async function convertirPedidoEnVenta(pedidoId, { metodoPago, estado }) {
+  const { pedidos } = await getCollections();
+  const pedido = await pedidos.findOne({ _id: pedidoId });
+  if (!pedido) return { error: "Ese pedido ya no existe." };
+  if (pedido.ventaId) return { error: "Este pedido ya se había convertido en una venta." };
+
+  const items = (pedido.items || []).map((it) => {
+    const esDecant = it.tipo === "decant";
+    const cantidadTotal = esDecant ? (it.ml || 0) * (it.cantidad || 0) : (it.cantidad || 0);
+    const precioUnitario = esDecant ? (it.precioUnitario || 0) / (it.ml || 1) : (it.precioUnitario || 0);
+    return {
+      kind: it.kind === "accesorio" ? "accesorio" : "perfume",
+      perfumeId: it.id,
+      nombrePerfume: it.nombre,
+      marca: "",
+      tipo: it.tipo || "frasco",
+      cantidad: cantidadTotal,
+      precioUnitario,
+      subtotal: (it.precioUnitario || 0) * (it.cantidad || 0),
+    };
+  });
+
+  const resultado = await completarVenta({
+    items,
+    clienteId: null,
+    clienteInvitado: { nombre: pedido.envio?.nombre || "", telefono: pedido.envio?.telefono || "" },
+    descuento: 0,
+    cupon: "",
+    costoEnvio: 0,
+    metodoPago: metodoPago || pedido.envio?.metodoPago || "Efectivo",
+    estado: estado || "Pagado",
+    pedidoOrigenId: pedidoId,
+  });
+  if (resultado.error) return resultado;
+
+  await pedidos.updateOne({ _id: pedidoId }, { $set: { estado: "atendido", ventaId: resultado.venta.id } });
+  return resultado;
 }
 
 /* ---------------- Pedidos web (tienda pública) ----------------
@@ -290,7 +369,7 @@ export const store = {
   guardarPerfume, eliminarPerfume, importarPerfumes, duplicarPerfume, ajustarInventario, abrirFrascoDecant,
   guardarCliente, eliminarCliente,
   guardarAccesorio, eliminarAccesorio,
-  completarVenta,
+  completarVenta, convertirPedidoEnVenta,
   crearPedidoWeb, actualizarEstadoPedidoWeb, eliminarPedidoWeb,
   restaurarDatos, borrarTodo,
   precioDecant,

@@ -57,6 +57,12 @@ export default async function handler(req, res) {
         const data = await store.getAllData();
         return res.status(200).json({ ...data, ventaCompletada: r.venta });
       }
+      case "convertir-pedido-en-venta": {
+        const r = await store.convertirPedidoEnVenta(payload.pedidoId, { metodoPago: payload.metodoPago, estado: payload.estado });
+        if (r?.error) return res.status(400).json({ error: r.error });
+        const data = await store.getAllData();
+        return res.status(200).json({ ...data, ventaCompletada: r.venta });
+      }
       case "actualizar-estado-pedido":
         await store.actualizarEstadoPedidoWeb(payload.id, payload.estado);
         break;

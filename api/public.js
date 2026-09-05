@@ -11,7 +11,7 @@ const CAMPOS_PUBLICOS_PERFUME = [
   "precioVenta", "cantidadDisponible", "cantidadMinima", "activo", "destacado",
   "calificacion", "tieneFrascoCompleto", "decant",
 ];
-const CAMPOS_PUBLICOS_ACCESORIO = ["id", "nombre", "categoria", "descripcion", "imagenUrl", "precioVenta", "cantidadDisponible", "activo"];
+const CAMPOS_PUBLICOS_ACCESORIO = ["id", "nombre", "categoria", "descripcion", "imagenUrl", "precio", "cantidadDisponible", "activo"];
 
 function pick(obj, campos) {
   const out = {};
