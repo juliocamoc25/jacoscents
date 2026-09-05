@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { X, Download, TrendingUp } from "lucide-react";
-import { money, fmtDate } from "../../utils";
-import { METODOS_PAGO, ESTADOS_VENTA } from "../../constants";
+import React, { useState, useMemo } from "react";
+import { X, Download, TrendingUp, Search } from "lucide-react";
+import { money, fmtDate, precioDecant } from "../../utils";
+import { METODOS_PAGO, ESTADOS_VENTA, TAMANOS_DECANT } from "../../constants";
 import { SectionCard, Field, NumberInput, TextInput, Badge, inputClass } from "../UI";
 
 // Estimado del lado del cliente para mostrar "ganancia bruta/neta" mientras
@@ -26,7 +26,7 @@ function costoDeItem(item, perfumes, accesorios) {
   return costoPorMl * item.cantidad;
 }
 
-export default function VentasTab({ carrito, clientes, perfumes, accesorios, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket }) {
+export default function VentasTab({ carrito, clientes, perfumes, accesorios, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket, addToCartFrasco, addToCartDecant, addToCartAccesorio }) {
   const [clienteId, setClienteId] = useState("");
   const [agregandoCliente, setAgregandoCliente] = useState(false);
   const [clienteNuevoNombre, setClienteNuevoNombre] = useState("");
@@ -43,6 +43,29 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
   const [manualCantidad, setManualCantidad] = useState("1");
   const [manualPrecio, setManualPrecio] = useState("");
   const [manualCosto, setManualCosto] = useState("");
+
+  const [modoAgregar, setModoAgregar] = useState("catalogo"); // "catalogo" | "manual"
+  const [busqueda, setBusqueda] = useState("");
+
+  const resultadosBusqueda = useMemo(() => {
+    const q = busqueda.trim().toLowerCase();
+    if (!q) return [];
+    const resultados = [];
+    perfumes.forEach((p) => {
+      if (p.activo === false) return;
+      const coincide = p.nombre?.toLowerCase().includes(q) || p.marca?.toLowerCase().includes(q);
+      if (!coincide) return;
+      if (p.tieneFrascoCompleto) resultados.push({ tipo: "frasco", key: `f-${p.id}`, perfume: p });
+      if (p.decant?.habilitado) resultados.push({ tipo: "decant", key: `d-${p.id}`, perfume: p });
+    });
+    accesorios.forEach((a) => {
+      if (a.activo === false) return;
+      if (a.nombre?.toLowerCase().includes(q)) resultados.push({ tipo: "accesorio", key: `a-${a.id}`, accesorio: a });
+    });
+    return resultados.slice(0, 8);
+  }, [busqueda, perfumes, accesorios]);
+
+  const manualGananciaBruta = ((Number(manualPrecio) || 0) - (Number(manualCosto) || 0)) * (Number(manualCantidad) || 1);
 
   const agregarManual = () => {
     const nombre = manualNombre.trim();
@@ -144,7 +167,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
       <div className="lg:col-span-3 space-y-4">
         <SectionCard title={`Productos en esta venta (${carrito.length + itemsManuales.length})`}>
           {carrito.length === 0 && itemsManuales.length === 0 ? (
-            <p className="text-sm text-neutral-400 py-4 text-center">Agrega perfumes desde el Catálogo, decants desde la pestaña Decants, o accesorios desde su pestaña — o escribe un producto manual abajo si no está en tu catálogo.</p>
+            <p className="text-sm text-neutral-400 py-4 text-center">Busca un producto de tu catálogo o agrega uno nuevo con el buscador de abajo.</p>
           ) : (
             <div className="space-y-2">
               {carrito.map((item, i) => (
@@ -181,21 +204,127 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
             </div>
           )}
           <div className="pt-3 mt-1 border-t border-neutral-100">
-            <p className="text-xs font-semibold text-neutral-600 mb-2">Agregar producto que no está en tu catálogo</p>
-            <div className="grid grid-cols-2 gap-2 mb-2">
-              <TextInput value={manualNombre} onChange={(e) => setManualNombre(e.target.value)} placeholder="Nombre del producto" />
-              <NumberInput value={manualCantidad} onChange={(e) => setManualCantidad(e.target.value)} placeholder="Cantidad" />
-              <NumberInput value={manualPrecio} onChange={(e) => setManualPrecio(e.target.value)} prefix="$" placeholder="Precio de venta c/u" />
-              <NumberInput value={manualCosto} onChange={(e) => setManualCosto(e.target.value)} prefix="$" placeholder="Costo c/u (opcional)" />
+            <p className="text-xs font-semibold text-neutral-700 mb-2">Agregar producto a esta venta</p>
+            <div className="flex gap-2 mb-3">
+              <button
+                type="button"
+                onClick={() => setModoAgregar("catalogo")}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${modoAgregar === "catalogo" ? "bg-ink text-white border-ink" : "border-bone-300 text-neutral-500 hover:border-ink"}`}
+              >
+                Buscar en mi catálogo
+              </button>
+              <button
+                type="button"
+                onClick={() => setModoAgregar("manual")}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${modoAgregar === "manual" ? "bg-ink text-white border-ink" : "border-bone-300 text-neutral-500 hover:border-ink"}`}
+              >
+                Producto fuera de inventario
+              </button>
             </div>
-            <button
-              type="button"
-              onClick={agregarManual}
-              disabled={!manualNombre.trim() || !(Number(manualPrecio) > 0)}
-              className="text-xs font-semibold text-neutral-700 hover:text-black disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              + Agregar a la venta
-            </button>
+
+            {modoAgregar === "catalogo" ? (
+              <div>
+                <div className="relative mb-2">
+                  <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-neutral-400" />
+                  <input
+                    value={busqueda}
+                    onChange={(e) => setBusqueda(e.target.value)}
+                    placeholder="Busca por nombre o marca (perfume, decant o accesorio)"
+                    className={`${inputClass} pl-8`}
+                  />
+                </div>
+                {busqueda.trim() === "" ? (
+                  <p className="text-xs text-neutral-400 py-1">Escribe para buscar en tu catálogo de perfumes, decants y accesorios.</p>
+                ) : resultadosBusqueda.length === 0 ? (
+                  <div className="text-xs text-neutral-500 py-1 space-y-1.5">
+                    <p>No encontramos "{busqueda}" en tu catálogo.</p>
+                    <button type="button" onClick={() => setModoAgregar("manual")} className="font-semibold text-neutral-700 hover:text-black">
+                      + Agregarlo como producto fuera de inventario
+                    </button>
+                  </div>
+                ) : (
+                  <div className="max-h-64 overflow-y-auto -mx-1 px-1">
+                    {resultadosBusqueda.map((r) => {
+                      if (r.tipo === "frasco") {
+                        const p = r.perfume;
+                        return (
+                          <div key={r.key} className="flex items-center justify-between gap-2 py-2 border-b border-neutral-100 last:border-0">
+                            <div className="min-w-0">
+                              <p className="text-sm text-neutral-800 truncate">{p.nombre} <span className="text-[10px] text-neutral-400 font-normal">· frasco completo</span></p>
+                              <p className="text-xs text-neutral-400">{money(p.precioVenta)} · costo {money(p.costoPromedio || p.precioCompra || 0)} · stock {p.cantidadDisponible ?? 0}</p>
+                            </div>
+                            <button type="button" onClick={() => addToCartFrasco(p)} className="text-xs font-semibold text-neutral-700 hover:text-black shrink-0">+ Agregar</button>
+                          </div>
+                        );
+                      }
+                      if (r.tipo === "accesorio") {
+                        const a = r.accesorio;
+                        return (
+                          <div key={r.key} className="flex items-center justify-between gap-2 py-2 border-b border-neutral-100 last:border-0">
+                            <div className="min-w-0">
+                              <p className="text-sm text-neutral-800 truncate">{a.nombre} <span className="text-[10px] text-neutral-400 font-normal">· accesorio</span></p>
+                              <p className="text-xs text-neutral-400">{money(a.precio)} · costo {money(a.costoPromedio || a.precioCompra || 0)} · stock {a.cantidadDisponible ?? 0}</p>
+                            </div>
+                            <button type="button" onClick={() => addToCartAccesorio(a)} className="text-xs font-semibold text-neutral-700 hover:text-black shrink-0">+ Agregar</button>
+                          </div>
+                        );
+                      }
+                      const p = r.perfume;
+                      const tamanos = p.decant.tamanos?.length ? p.decant.tamanos : TAMANOS_DECANT;
+                      return (
+                        <div key={r.key} className="py-2 border-b border-neutral-100 last:border-0">
+                          <p className="text-sm text-neutral-800 truncate">{p.nombre} <span className="text-[10px] text-neutral-400 font-normal">· decant · {Math.round(p.decant.mlDisponible || 0)} ml disponibles</span></p>
+                          <div className="flex flex-wrap gap-1.5 mt-1.5">
+                            {tamanos.map((t) => (
+                              <button
+                                key={t}
+                                type="button"
+                                onClick={() => addToCartDecant(p, t)}
+                                className="text-[11px] font-medium text-neutral-600 border border-bone-300 rounded-lg px-2 py-1 hover:border-ink hover:text-ink transition-colors"
+                              >
+                                {t}ml · {money(precioDecant(p.decant, t))}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="space-y-2.5">
+                <Field label="Nombre del producto">
+                  <TextInput value={manualNombre} onChange={(e) => setManualNombre(e.target.value)} placeholder="Ej. Vela aromática JACO SCENTS" />
+                </Field>
+                <div className="grid grid-cols-2 gap-2.5">
+                  <Field label="Precio de venta (por unidad)">
+                    <NumberInput value={manualPrecio} onChange={(e) => setManualPrecio(e.target.value)} prefix="$" placeholder="0" />
+                  </Field>
+                  <Field label="Costo (opcional, para la ganancia)">
+                    <NumberInput value={manualCosto} onChange={(e) => setManualCosto(e.target.value)} prefix="$" placeholder="0" />
+                  </Field>
+                </div>
+                <Field label="Cantidad">
+                  <NumberInput value={manualCantidad} onChange={(e) => setManualCantidad(e.target.value)} placeholder="1" />
+                </Field>
+                {Number(manualPrecio) > 0 && (
+                  <div className="rounded-lg bg-emerald-50 border border-emerald-100 px-3 py-2 space-y-0.5">
+                    <div className="flex justify-between text-xs text-emerald-800"><span>Ganancia bruta de este producto</span><span className="font-semibold">{money(manualGananciaBruta)}</span></div>
+                    <div className="flex justify-between text-xs text-emerald-800"><span>Ganancia neta de este producto</span><span className="font-semibold">{money(manualGananciaBruta)}</span></div>
+                    <p className="text-[10px] text-emerald-700/70">El descuento general de la venta (si le pones uno) se aplica al final, no aquí.</p>
+                  </div>
+                )}
+                <button
+                  type="button"
+                  onClick={agregarManual}
+                  disabled={!manualNombre.trim() || !(Number(manualPrecio) > 0)}
+                  className="text-xs font-semibold text-neutral-700 hover:text-black disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  + Agregar a la venta
+                </button>
+              </div>
+            )}
           </div>
         </SectionCard>
 
