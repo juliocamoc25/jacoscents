@@ -63,28 +63,35 @@ function DecantPublicCard({ perfume, onAddToCart, onOpenDetail }) {
             <div className="flex flex-wrap gap-1.5 mt-3">
               {tamanos.map((t) => {
                 const disponible = t <= mlDisponible;
+                const datosCarrito = { kind: "perfume", id: perfume.id, tipo: "decant", ml: t, cantidad: 1, nombre: `${perfume.nombre} (decant ${t}ml)`, precioUnitario: precioDecant(perfume.decant, t), imagenUrl: perfume.imagenUrl };
                 return disponible ? (
-                  <span key={t} className="flex items-center gap-1 rounded-lg border border-bone-300 pl-2.5 pr-1 py-1 hover:border-ink transition-colors">
+                  onAddToCart ? (
+                    <button
+                      key={t}
+                      onClick={(e) => { e.stopPropagation(); onAddToCart(datosCarrito); }}
+                      title="Agregar al pedido"
+                      aria-label={`Agregar decant de ${t}ml de ${perfume.nombre} al pedido`}
+                      className="group flex items-center gap-1 rounded-lg border border-bone-300 pl-2.5 pr-1 py-1 hover:border-ink hover:bg-ink transition-colors"
+                    >
+                      <span className="text-[11px] font-medium text-neutral-600 group-hover:text-white">
+                        {t}ml · {money(precioDecant(perfume.decant, t))}
+                      </span>
+                      <span className="w-5 h-5 flex items-center justify-center rounded-full text-neutral-400 group-hover:text-white">
+                        <Plus size={11} />
+                      </span>
+                    </button>
+                  ) : (
                     <a
+                      key={t}
                       href={whatsappLink(WHATSAPP_NUMBER, `Hola, quiero un decant de ${t}ml de "${perfume.nombre}"`)}
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="text-[11px] font-medium text-neutral-600 hover:text-ink"
+                      className="flex items-center gap-1 rounded-lg border border-bone-300 pl-2.5 pr-2.5 py-1 text-[11px] font-medium text-neutral-600 hover:border-ink hover:text-ink transition-colors"
                     >
                       {t}ml · {money(precioDecant(perfume.decant, t))}
                     </a>
-                    {onAddToCart && (
-                      <button
-                        onClick={(e) => { e.stopPropagation(); onAddToCart({ kind: "perfume", id: perfume.id, tipo: "decant", ml: t, cantidad: 1, nombre: `${perfume.nombre} (decant ${t}ml)`, precioUnitario: precioDecant(perfume.decant, t), imagenUrl: perfume.imagenUrl }); }}
-                        title="Agregar al pedido"
-                        aria-label="Agregar al pedido"
-                        className="w-5 h-5 flex items-center justify-center rounded-full text-neutral-400 hover:bg-ink hover:text-white transition-colors"
-                      >
-                        <Plus size={11} />
-                      </button>
-                    )}
-                  </span>
+                  )
                 ) : (
                   <span key={t} className="px-2.5 py-1.5 rounded-lg border border-bone-200 text-[11px] font-medium text-neutral-400 line-through cursor-not-allowed">
                     {t}ml
