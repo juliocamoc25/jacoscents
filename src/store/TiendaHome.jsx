@@ -1,13 +1,13 @@
-import React, { useState, useMemo } from "react";
-import { Droplet, Package, Gem, ArrowRight, Sparkles, ShieldCheck, Truck, MessageCircle, ChevronDown, Quote, Heart } from "lucide-react";
+mport React, { useState, useMemo } from "react";
+import { Droplet, Package, Gem, ArrowRight, Sparkles, ShieldCheck, Truck, MessageCircle, ChevronDown, Lightbulb } from "lucide-react";
 import { money } from "../utils";
-import { testimonios } from "../data/testimonios";
+import { tips } from "../data/tips";
 
 // Fotos de marca para el carrusel del hero. Viven en /public/img/hero así
 // que basta con reemplazar esos 3 archivos (mismos nombres) para actualizar
 // las fotos sin tocar código.
 const HERO_SLIDES = [
-  { src: "/img/hero/hero-1.jpeg", alt: "Decants JACO SCENTS junto a frascos originales" },
+  { src: "/img/hero/hero-1.jpg", alt: "Decants JACO SCENTS junto a frascos originales" },
   { src: "/img/hero/hero-2.jpg", alt: "Selección de perfumes originales JACO SCENTS" },
   { src: "/img/hero/hero-3.jpg", alt: "Decants de diseñador y nicho JACO SCENTS" },
 ];
@@ -233,8 +233,12 @@ function SobreNosotros({ onNavigate }) {
             Explorar el catálogo <ArrowRight size={14} />
           </button>
         </div>
-        <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-ink via-neutral-900 to-wine-700 jaco-hero-noise flex items-center justify-center">
-          <Heart size={40} className="text-gold-400/60" strokeWidth={1} />
+        <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-ink via-neutral-900 to-wine-700 jaco-hero-noise">
+          <img
+            src="/img/img_inicio.png"
+            alt="JACO SCENTS — perfumería y decants"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
@@ -261,20 +265,20 @@ function MarcasStrip({ perfumes }) {
   );
 }
 
-function Testimonios() {
-  if (!testimonios || testimonios.length === 0) return null;
+function Tips() {
+  if (!tips || tips.length === 0) return null;
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
       <div className="mb-10 text-center max-w-xl mx-auto">
-        <p className="text-[11px] font-semibold tracking-[0.3em] uppercase text-gold-700 mb-2">Clientes</p>
-        <h2 className="jaco-serif text-3xl sm:text-4xl font-semibold text-ink">Lo que dicen de nosotros</h2>
+        <p className="text-[11px] font-semibold tracking-[0.3em] uppercase text-gold-700 mb-2">Guía rápida</p>
+        <h2 className="jaco-serif text-3xl sm:text-4xl font-semibold text-ink">Consejos sobre perfumes y decants</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        {testimonios.map((t, i) => (
+        {tips.map((t, i) => (
           <div key={i} className="bg-white border border-bone-300 rounded-2xl p-5">
-            <Quote size={18} className="text-gold-400 mb-3" />
-            <p className="text-sm text-neutral-600 leading-relaxed mb-4">"{t.texto}"</p>
-            <p className="text-sm font-semibold text-ink">{t.nombre}{t.ciudad ? ` · ${t.ciudad}` : ""}</p>
+            <Lightbulb size={18} className="text-gold-400 mb-3" />
+            <p className="text-sm font-semibold text-ink mb-2">{t.titulo}</p>
+            <p className="text-sm text-neutral-600 leading-relaxed">{t.texto}</p>
           </div>
         ))}
       </div>
@@ -299,10 +303,10 @@ export default function TiendaHome({ perfumes, accesorios, onNavigate }) {
             <span className="w-6 h-px bg-gold-400" /> Perfumería &amp; Decants <span className="w-6 h-px bg-gold-400" />
           </span>
           <h1 className="jaco-display text-5xl sm:text-7xl font-bold text-white leading-[1.05] mb-6">
-           
+            Tu fragancia,<br /><span className="jaco-shimmer">sin el compromiso del frasco.</span>
           </h1>
           <p className="text-neutral-300 max-w-xl mx-auto text-sm sm:text-base mb-9">
-            
+            Perfumes 100% originales, decants exactos al mililitro y accesorios para llevar tu aroma a donde vayas.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <button onClick={() => onNavigate("decants")} className="px-6 py-3 rounded-full bg-gold-400 text-ink text-sm font-semibold hover:bg-gold-300 transition-colors">
@@ -347,7 +351,7 @@ export default function TiendaHome({ perfumes, accesorios, onNavigate }) {
         </div>
       </section>
 
-      <Testimonios />
+      <Tips />
 
       <Faq />
     </div>
