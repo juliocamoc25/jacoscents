@@ -25,13 +25,17 @@ function costoDeItem(item, perfumes, accesorios) {
 
 export default function VentasTab({ carrito, clientes, perfumes, accesorios, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket }) {
   const [clienteId, setClienteId] = useState("");
+  const [agregandoCliente, setAgregandoCliente] = useState(false);
+  const [clienteNuevoNombre, setClienteNuevoNombre] = useState("");
   const [descuento, setDescuento] = useState("");
   const [cupon, setCupon] = useState("");
   const [costoEnvio, setCostoEnvio] = useState("");
   const [metodoPago, setMetodoPago] = useState("Efectivo");
   const [estado, setEstado] = useState("Pagado");
   const [completando, setCompletando] = useState(false);
+  const [errorVenta, setErrorVenta] = useState("");
 
+  const totalProductos = carrito.reduce((s, i) => s + (Number(i.cantidad) || 0), 0);
   const subtotal = carrito.reduce((s, i) => s + i.subtotal, 0);
   const costoTotalEstimado = carrito.reduce((s, i) => s + costoDeItem(i, perfumes, accesorios), 0);
   const gananciaBrutaEstimada = subtotal - costoTotalEstimado;
@@ -40,10 +44,27 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
 
   const handleCompletar = async () => {
     setCompletando(true);
-    const ok = await onCompletar({ clienteId: clienteId || null, descuento: Number(descuento) || 0, cupon, costoEnvio: Number(costoEnvio) || 0, metodoPago, estado });
-    setCompletando(false);
-    if (ok) {
-      setClienteId(""); setDescuento(""); setCupon(""); setCostoEnvio(""); setMetodoPago("Efectivo"); setEstado("Pagado");
+    setErrorVenta("");
+    try {
+      const ok = await onCompletar({
+        clienteId: agregandoCliente ? null : (clienteId || null),
+        clienteInvitado: agregandoCliente && clienteNuevoNombre.trim() ? { nombre: clienteNuevoNombre.trim() } : null,
+        descuento: Number(descuento) || 0,
+        cupon,
+        costoEnvio: Number(costoEnvio) || 0,
+        metodoPago,
+        estado,
+      });
+      if (ok) {
+        setClienteId(""); setAgregandoCliente(false); setClienteNuevoNombre("");
+        setDescuento(""); setCupon(""); setCostoEnvio(""); setMetodoPago("Efectivo"); setEstado("Pagado");
+      } else {
+        setErrorVenta("No se pudo registrar la venta. Intenta de nuevo.");
+      }
+    } catch (err) {
+      setErrorVenta("Ocurrió un error al registrar la venta. Intenta de nuevo.");
+    } finally {
+      setCompletando(false);
     }
   };
 
@@ -150,10 +171,36 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
         <SectionCard title="Finalizar venta">
           <div className="space-y-3">
             <Field label="Cliente que compró">
-              <select value={clienteId} onChange={(e) => setClienteId(e.target.value)} className={inputClass}>
-                <option value="">Venta de mostrador (sin registrar cliente)</option>
-                {clientes.map((c) => <option key={c.id} value={c.id}>{c.nombre}</option>)}
-              </select>
+              {!agregandoCliente ? (
+                <div className="space-y-1.5">
+                  <select value={clienteId} onChange={(e) => setClienteId(e.target.value)} className={inputClass}>
+                    <option value="">Venta de mostrador (sin registrar cliente)</option>
+                    {clientes.map((c) => <option key={c.id} value={c.id}>{c.nombre}</option>)}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={() => { setAgregandoCliente(true); setClienteId(""); }}
+                    className="text-xs font-semibold text-neutral-500 hover:text-black"
+                  >
+                    + El cliente no está en la lista
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-1.5">
+                  <TextInput
+                    value={clienteNuevoNombre}
+                    onChange={(e) => setClienteNuevoNombre(e.target.value)}
+                    placeholder="Nombre del cliente nuevo"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => { setAgregandoCliente(false); setClienteNuevoNombre(""); }}
+                    className="text-xs font-semibold text-neutral-500 hover:text-black"
+                  >
+                    Elegir de la lista existente
+                  </button>
+                </div>
+              )}
             </Field>
             <div className="grid grid-cols-2 gap-3">
               <Field label="Descuento"><NumberInput value={descuento} onChange={(e) => setDescuento(e.target.value)} prefix="$" /></Field>
@@ -171,6 +218,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
               </select>
             </Field>
             <div className="pt-3 border-t border-neutral-200 space-y-1">
+              <div className="flex justify-between text-sm text-neutral-500"><span>Productos</span><span>{carrito.length} producto(s) · {totalProductos} unidad(es)</span></div>
               <div className="flex justify-between text-sm text-neutral-500"><span>Precio de venta (subtotal)</span><span>{money(subtotal)}</span></div>
               {Number(descuento) > 0 && <div className="flex justify-between text-sm text-neutral-500"><span>Descuento</span><span>-{money(Number(descuento))}</span></div>}
               {Number(costoEnvio) > 0 && <div className="flex justify-between text-sm text-neutral-500"><span>Envío</span><span>{money(Number(costoEnvio))}</span></div>}
@@ -181,6 +229,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
               <div className="flex justify-between text-xs text-emerald-800"><span>Bruta (antes de descuento)</span><span className="font-semibold">{money(gananciaBrutaEstimada)}</span></div>
               <div className="flex justify-between text-xs text-emerald-800"><span>Neta (lo que realmente te queda)</span><span className="font-semibold">{money(gananciaNetaEstimada)}</span></div>
             </div>
+            {errorVenta && <p className="text-xs text-red-600 text-center">{errorVenta}</p>}
             <button onClick={handleCompletar} disabled={carrito.length === 0 || completando} className="w-full py-3 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed">
               {completando ? "Registrando..." : "Completar venta"}
             </button>
