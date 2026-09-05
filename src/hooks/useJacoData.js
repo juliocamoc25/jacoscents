@@ -175,11 +175,12 @@ export function useJacoData() {
 
   const removeFromCart = (index) => setCarrito((prev) => prev.filter((_, i) => i !== index));
 
-  const completarVenta = async ({ clienteId, descuento, cupon, costoEnvio, metodoPago, estado }) => {
-    if (carrito.length === 0) return null;
+  const completarVenta = async ({ clienteId, clienteInvitado, itemsManuales, descuento, cupon, costoEnvio, metodoPago, estado }) => {
+    const items = [...carrito, ...(itemsManuales || [])];
+    if (items.length === 0) return null;
     const data = await accion(
       "completar-venta",
-      { items: carrito, clienteId, descuento, cupon, costoEnvio, metodoPago, estado },
+      { items, clienteId, clienteInvitado, descuento, cupon, costoEnvio, metodoPago, estado },
       "Venta registrada con éxito"
     );
     if (!data) return null;
