@@ -1,4 +1,4 @@
-mport React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { Droplet, Package, Gem, ArrowRight, Sparkles, ShieldCheck, Truck, MessageCircle, ChevronDown, Lightbulb } from "lucide-react";
 import { money } from "../utils";
 import { tips } from "../data/tips";
