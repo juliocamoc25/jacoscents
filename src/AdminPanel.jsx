@@ -173,7 +173,7 @@ export default function AdminPanel({ data, onExit, onLogout }) {
         {activeTab === "decants" && <DecantsTab perfumes={perfumes} onAbrir={(p) => setAbrirModal(p)} onVender={addToCartDecant} onGoTo={setActiveTab} />}
         {activeTab === "accesorios" && <AccesoriosTab accesorios={accesorios} onAdd={() => setAccesorioModal({ mode: "add" })} onEdit={(a) => setAccesorioModal({ mode: "edit", accesorio: a })} onDelete={pedirEliminarAccesorio} onVender={addToCartAccesorio} />}
         {activeTab === "pedidos" && <PedidosTab pedidosWeb={pedidosWeb} onConvertirEnVenta={pedirConvertirPedidoEnVenta} onCancelar={pedirCancelarPedido} onEliminar={pedirEliminarPedido} />}
-        {activeTab === "ventas" && <VentasTab carrito={carrito} clientes={clientes} perfumes={perfumes} accesorios={accesorios} onUpdateQty={updateCartQty} onRemove={removeFromCart} onCompletar={onCompletarVenta} ventas={ventas} onVerTicket={setTicketModal} />}
+        {activeTab === "ventas" && <VentasTab carrito={carrito} clientes={clientes} perfumes={perfumes} accesorios={accesorios} onUpdateQty={updateCartQty} onRemove={removeFromCart} onCompletar={onCompletarVenta} ventas={ventas} onVerTicket={setTicketModal} addToCartFrasco={addToCartFrasco} addToCartDecant={addToCartDecant} addToCartAccesorio={addToCartAccesorio} />}
         {activeTab === "clientes" && <ClientesTab clientes={clientes} ventas={ventas} onAdd={() => setClienteModal({ mode: "add" })} onEdit={(c) => setClienteModal({ mode: "edit", cliente: c })} onDelete={pedirEliminarCliente} />}
         {activeTab === "asistente" && <AsistenteTab perfumes={perfumes} clientes={clientes} ventas={ventas} />}
         {activeTab === "ajustes" && (
