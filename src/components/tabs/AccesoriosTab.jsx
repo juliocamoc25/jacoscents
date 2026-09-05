@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from "react";
-import { Gem, Plus, Search, Pencil, Trash2 } from "lucide-react";
+import { Gem, Plus, Search, Pencil, Trash2, ShoppingCart } from "lucide-react";
 import { money } from "../../utils";
 import { EmptyState } from "../common";
 import { Badge } from "../UI";
 
-export default function AccesoriosTab({ accesorios, onAdd, onEdit, onDelete }) {
+export default function AccesoriosTab({ accesorios, onAdd, onEdit, onDelete, onVender }) {
   const [search, setSearch] = useState("");
 
   const filtrados = useMemo(() => {
@@ -51,6 +51,9 @@ export default function AccesoriosTab({ accesorios, onAdd, onEdit, onDelete }) {
                     <Badge tone={agotado ? "error" : stockBajo ? "warning" : "neutral"}>{agotado ? "Agotado" : `${a.cantidadDisponible} disp.`}</Badge>
                   </div>
                   <div className="flex items-center gap-1 pt-2 border-t border-neutral-100">
+                    {onVender && (
+                      <button onClick={() => onVender(a)} disabled={agotado} title="Agregar a una venta" aria-label="Agregar a una venta" className="p-1.5 rounded-md hover:bg-neutral-100 text-neutral-600 disabled:opacity-30 disabled:cursor-not-allowed"><ShoppingCart size={13} /></button>
+                    )}
                     <button onClick={() => onEdit(a)} className="flex-1 py-1.5 rounded-md hover:bg-neutral-100 text-neutral-600 text-xs font-medium flex items-center justify-center gap-1"><Pencil size={12} /> Editar</button>
                     <button onClick={() => onDelete(a)} aria-label="Eliminar accesorio" className="p-1.5 rounded-md hover:bg-red-50 text-neutral-500 hover:text-red-600"><Trash2 size={14} /></button>
                   </div>

@@ -1,23 +1,50 @@
 import React, { useState } from "react";
-import { X, Download } from "lucide-react";
+import { X, Download, TrendingUp } from "lucide-react";
 import { money, fmtDate } from "../../utils";
 import { METODOS_PAGO, ESTADOS_VENTA } from "../../constants";
 import { SectionCard, Field, NumberInput, TextInput, Badge, inputClass } from "../UI";
 
-export default function VentasTab({ carrito, clientes, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket }) {
+// Estimado del lado del cliente para mostrar "ganancia bruta/neta" mientras
+// se arma la venta — el cálculo real y definitivo siempre lo hace el
+// servidor al completar la venta (esto es solo una vista previa).
+function costoDeItem(item, perfumes, accesorios) {
+  if (item.kind === "accesorio") {
+    const a = accesorios.find((x) => x.id === item.perfumeId);
+    const costoUnit = a?.costoPromedio || a?.precioCompra || 0;
+    return costoUnit * item.cantidad;
+  }
+  const p = perfumes.find((x) => x.id === item.perfumeId);
+  if (!p) return 0;
+  if (item.tipo === "frasco") {
+    const costoUnit = p.costoPromedio || p.precioCompra || 0;
+    return costoUnit * item.cantidad;
+  }
+  const costoPorMl = (p.costoPromedio || p.precioCompra || 0) / (p.presentacionMl || 1);
+  return costoPorMl * item.cantidad;
+}
+
+export default function VentasTab({ carrito, clientes, perfumes, accesorios, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket }) {
   const [clienteId, setClienteId] = useState("");
   const [descuento, setDescuento] = useState("");
   const [cupon, setCupon] = useState("");
   const [costoEnvio, setCostoEnvio] = useState("");
   const [metodoPago, setMetodoPago] = useState("Efectivo");
   const [estado, setEstado] = useState("Pagado");
+  const [completando, setCompletando] = useState(false);
 
   const subtotal = carrito.reduce((s, i) => s + i.subtotal, 0);
+  const costoTotalEstimado = carrito.reduce((s, i) => s + costoDeItem(i, perfumes, accesorios), 0);
+  const gananciaBrutaEstimada = subtotal - costoTotalEstimado;
+  const gananciaNetaEstimada = gananciaBrutaEstimada - (Number(descuento) || 0);
   const total = Math.max(0, subtotal - (Number(descuento) || 0) + (Number(costoEnvio) || 0));
 
-  const handleCompletar = () => {
-    onCompletar({ clienteId: clienteId || null, descuento: Number(descuento) || 0, cupon, costoEnvio: Number(costoEnvio) || 0, metodoPago, estado });
-    setClienteId(""); setDescuento(""); setCupon(""); setCostoEnvio(""); setMetodoPago("Efectivo"); setEstado("Pagado");
+  const handleCompletar = async () => {
+    setCompletando(true);
+    const ok = await onCompletar({ clienteId: clienteId || null, descuento: Number(descuento) || 0, cupon, costoEnvio: Number(costoEnvio) || 0, metodoPago, estado });
+    setCompletando(false);
+    if (ok) {
+      setClienteId(""); setDescuento(""); setCupon(""); setCostoEnvio(""); setMetodoPago("Efectivo"); setEstado("Pagado");
+    }
   };
 
   const historial = [...ventas].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 15);
@@ -35,12 +62,14 @@ export default function VentasTab({ carrito, clientes, onUpdateQty, onRemove, on
           const cli = clientes.find((c) => c.id === v.clienteId);
           return {
             Fecha: fmtDate(v.fecha),
-            Cliente: cli?.nombre || "Mostrador",
+            Cliente: cli?.nombre || v.clienteInvitado?.nombre || "Mostrador",
             Productos: v.items.map((it) => `${it.nombrePerfume} x${it.cantidad}`).join(", "),
             "Método de pago": v.metodoPago,
             Estado: v.estado,
             Descuento: v.descuento || 0,
             "Costo de envío": v.costoEnvio || 0,
+            "Ganancia bruta": v.gananciaBruta ?? "",
+            "Ganancia neta": v.ganancia ?? "",
             Total: v.total,
           };
         });
@@ -57,16 +86,16 @@ export default function VentasTab({ carrito, clientes, onUpdateQty, onRemove, on
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
       <div className="lg:col-span-3 space-y-4">
-        <SectionCard title={`Carrito (${carrito.length})`}>
+        <SectionCard title={`Productos en esta venta (${carrito.length})`}>
           {carrito.length === 0 ? (
-            <p className="text-sm text-neutral-400 py-8 text-center">Agrega perfumes desde el Catálogo o decants desde la pestaña Decants.</p>
+            <p className="text-sm text-neutral-400 py-8 text-center">Agrega perfumes desde el Catálogo, decants desde la pestaña Decants, o accesorios desde su pestaña — cada tarjeta tiene un botón para agregarla aquí.</p>
           ) : (
             <div className="space-y-2">
               {carrito.map((item, i) => (
                 <div key={item.id} className="flex items-center justify-between py-2 border-b border-neutral-100 last:border-0 gap-2">
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-neutral-800 truncate">{item.nombrePerfume}</p>
-                    <p className="text-xs text-neutral-400">{item.tipo === "decant" ? `Decant · ${item.cantidad} ml` : `${item.cantidad} frasco(s)`} · {money(item.precioUnitario)} c/u</p>
+                    <p className="text-xs text-neutral-400">{item.tipo === "decant" ? `Decant · ${item.cantidad} ml` : `${item.cantidad} ${item.kind === "accesorio" ? "pieza(s)" : "frasco(s)"}`} · {money(item.precioUnitario)} c/u</p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     {item.tipo === "frasco" && (
@@ -100,12 +129,12 @@ export default function VentasTab({ carrito, clientes, onUpdateQty, onRemove, on
               {historial.map((v) => {
                 const cli = clientes.find((c) => c.id === v.clienteId);
                 return (
-                  <button key={v.id} onClick={() => onVerTicket(v)} className="w-full flex items-center justify-between py-2 border-b border-neutral-100 last:border-0 text-left hover:bg-neutral-50 rounded-lg px-2 -mx-2">
-                    <div>
-                      <p className="text-sm text-neutral-800">{cli?.nombre || "Mostrador"}</p>
-                      <p className="text-xs text-neutral-400">{fmtDate(v.fecha)} · {v.items.length} producto(s)</p>
+                  <button key={v.id} onClick={() => onVerTicket(v)} className="w-full flex items-center justify-between py-2.5 border-b border-neutral-100 last:border-0 text-left hover:bg-neutral-50 rounded-lg px-2 -mx-2">
+                    <div className="min-w-0">
+                      <p className="text-sm text-neutral-800 truncate">{cli?.nombre || v.clienteInvitado?.nombre || "Mostrador"}{v.pedidoOrigenId && <span className="text-[10px] text-neutral-400 font-normal"> · desde pedido web</span>}</p>
+                      <p className="text-xs text-neutral-400 truncate">{fmtDate(v.fecha)} · {v.items.length} producto(s){v.gananciaBruta != null && ` · ganancia ${money(v.ganancia)}`}</p>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right shrink-0 pl-2">
                       <p className="text-sm font-semibold">{money(v.total)}</p>
                       <Badge tone={v.estado === "Pagado" ? "success" : v.estado === "Cancelado" ? "error" : "neutral"}>{v.estado}</Badge>
                     </div>
@@ -120,9 +149,9 @@ export default function VentasTab({ carrito, clientes, onUpdateQty, onRemove, on
       <div className="lg:col-span-2">
         <SectionCard title="Finalizar venta">
           <div className="space-y-3">
-            <Field label="Cliente">
+            <Field label="Cliente que compró">
               <select value={clienteId} onChange={(e) => setClienteId(e.target.value)} className={inputClass}>
-                <option value="">Venta de mostrador</option>
+                <option value="">Venta de mostrador (sin registrar cliente)</option>
                 {clientes.map((c) => <option key={c.id} value={c.id}>{c.nombre}</option>)}
               </select>
             </Field>
@@ -142,10 +171,19 @@ export default function VentasTab({ carrito, clientes, onUpdateQty, onRemove, on
               </select>
             </Field>
             <div className="pt-3 border-t border-neutral-200 space-y-1">
-              <div className="flex justify-between text-sm text-neutral-500"><span>Subtotal</span><span>{money(subtotal)}</span></div>
-              <div className="flex justify-between text-lg font-bold"><span>Total</span><span>{money(total)}</span></div>
+              <div className="flex justify-between text-sm text-neutral-500"><span>Precio de venta (subtotal)</span><span>{money(subtotal)}</span></div>
+              {Number(descuento) > 0 && <div className="flex justify-between text-sm text-neutral-500"><span>Descuento</span><span>-{money(Number(descuento))}</span></div>}
+              {Number(costoEnvio) > 0 && <div className="flex justify-between text-sm text-neutral-500"><span>Envío</span><span>{money(Number(costoEnvio))}</span></div>}
+              <div className="flex justify-between text-lg font-bold pt-1"><span>Total a cobrar</span><span>{money(total)}</span></div>
             </div>
-            <button onClick={handleCompletar} disabled={carrito.length === 0} className="w-full py-3 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed">Completar venta</button>
+            <div className="rounded-lg bg-emerald-50 border border-emerald-100 px-3 py-2.5 space-y-1">
+              <p className="text-[10px] font-semibold text-emerald-700 uppercase tracking-widest flex items-center gap-1"><TrendingUp size={11} /> Ganancia estimada</p>
+              <div className="flex justify-between text-xs text-emerald-800"><span>Bruta (antes de descuento)</span><span className="font-semibold">{money(gananciaBrutaEstimada)}</span></div>
+              <div className="flex justify-between text-xs text-emerald-800"><span>Neta (lo que realmente te queda)</span><span className="font-semibold">{money(gananciaNetaEstimada)}</span></div>
+            </div>
+            <button onClick={handleCompletar} disabled={carrito.length === 0 || completando} className="w-full py-3 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed">
+              {completando ? "Registrando..." : "Completar venta"}
+            </button>
           </div>
         </SectionCard>
       </div>

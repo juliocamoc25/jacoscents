@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LayoutDashboard, Package, Droplet, ShoppingCart, Users, Sparkles, Gem, Settings, ArrowLeft, ShoppingBag, RefreshCw, LogOut } from "lucide-react";
-import { cx } from "./utils";
+import { cx, money } from "./utils";
 
 import DashboardTab from "./components/tabs/DashboardTab";
 import CatalogoTab from "./components/tabs/CatalogoTab";
@@ -38,8 +38,8 @@ export default function AdminPanel({ data, onExit, onLogout }) {
     guardarCliente, eliminarCliente,
     guardarAccesorio, eliminarAccesorio,
     exportarDatos, restaurarDatos, borrarTodo,
-    addToCartFrasco, addToCartDecant, updateCartQty, removeFromCart, completarVenta,
-    actualizarEstadoPedidoWeb, eliminarPedidoWeb,
+    addToCartFrasco, addToCartDecant, addToCartAccesorio, updateCartQty, removeFromCart, completarVenta,
+    actualizarEstadoPedidoWeb, eliminarPedidoWeb, convertirPedidoEnVenta,
   } = data;
 
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -75,6 +75,7 @@ export default function AdminPanel({ data, onExit, onLogout }) {
   const onCompletarVenta = async (payload) => {
     const v = await completarVenta(payload);
     if (v) setTicketModal(v);
+    return v;
   };
 
   const pedirEliminarPerfume = (perfume) => {
@@ -96,6 +97,32 @@ export default function AdminPanel({ data, onExit, onLogout }) {
       title: "Eliminar accesorio",
       message: `¿Seguro que quieres eliminar "${accesorio.nombre}"?`,
       onConfirm: async () => { await eliminarAccesorio(accesorio.id); setConfirmDialog(null); },
+    });
+  };
+
+  const pedirConvertirPedidoEnVenta = (pedido) => {
+    setConfirmDialog({
+      title: "Confirmar venta",
+      message: `Se va a registrar una venta por ${pedido.total ? money(pedido.total) : "el total del pedido"} a nombre de "${pedido.envio?.nombre}" y se descontará el inventario correspondiente. ¿Ya te confirmó el pago?`,
+      onConfirm: async () => {
+        const venta = await convertirPedidoEnVenta(pedido);
+        setConfirmDialog(null);
+        if (venta) setTicketModal(venta);
+      },
+    });
+  };
+  const pedirCancelarPedido = (pedido) => {
+    setConfirmDialog({
+      title: "Cancelar pedido",
+      message: `"${pedido.envio?.nombre}" quedará marcado como cancelado. No se registra ninguna venta ni se toca el inventario.`,
+      onConfirm: async () => { await actualizarEstadoPedidoWeb(pedido.id, "cancelado"); setConfirmDialog(null); },
+    });
+  };
+  const pedirEliminarPedido = (pedido) => {
+    setConfirmDialog({
+      title: "Eliminar pedido",
+      message: `¿Seguro que quieres eliminar el pedido de "${pedido.envio?.nombre}"? Esta acción no se puede deshacer.`,
+      onConfirm: async () => { await eliminarPedidoWeb(pedido.id); setConfirmDialog(null); },
     });
   };
 
@@ -144,9 +171,9 @@ export default function AdminPanel({ data, onExit, onLogout }) {
         {activeTab === "dashboard" && <DashboardTab perfumes={perfumes} clientes={clientes} ventas={ventas} onGoTo={setActiveTab} />}
         {activeTab === "catalogo" && <CatalogoTab perfumes={perfumes} onAdd={() => setPerfumeModal({ mode: "add" })} onEdit={(p) => setPerfumeModal({ mode: "edit", perfume: p })} onDelete={pedirEliminarPerfume} onDuplicate={duplicarPerfume} onAjustar={(p) => setAjusteModal(p)} onAddCart={addToCartFrasco} onImport={() => setImportModal(true)} />}
         {activeTab === "decants" && <DecantsTab perfumes={perfumes} onAbrir={(p) => setAbrirModal(p)} onVender={addToCartDecant} onGoTo={setActiveTab} />}
-        {activeTab === "accesorios" && <AccesoriosTab accesorios={accesorios} onAdd={() => setAccesorioModal({ mode: "add" })} onEdit={(a) => setAccesorioModal({ mode: "edit", accesorio: a })} onDelete={pedirEliminarAccesorio} />}
-        {activeTab === "pedidos" && <PedidosTab pedidosWeb={pedidosWeb} onMarcarAtendido={(id) => actualizarEstadoPedidoWeb(id, "atendido")} onEliminar={eliminarPedidoWeb} />}
-        {activeTab === "ventas" && <VentasTab carrito={carrito} clientes={clientes} onUpdateQty={updateCartQty} onRemove={removeFromCart} onCompletar={onCompletarVenta} ventas={ventas} onVerTicket={setTicketModal} />}
+        {activeTab === "accesorios" && <AccesoriosTab accesorios={accesorios} onAdd={() => setAccesorioModal({ mode: "add" })} onEdit={(a) => setAccesorioModal({ mode: "edit", accesorio: a })} onDelete={pedirEliminarAccesorio} onVender={addToCartAccesorio} />}
+        {activeTab === "pedidos" && <PedidosTab pedidosWeb={pedidosWeb} onConvertirEnVenta={pedirConvertirPedidoEnVenta} onCancelar={pedirCancelarPedido} onEliminar={pedirEliminarPedido} />}
+        {activeTab === "ventas" && <VentasTab carrito={carrito} clientes={clientes} perfumes={perfumes} accesorios={accesorios} onUpdateQty={updateCartQty} onRemove={removeFromCart} onCompletar={onCompletarVenta} ventas={ventas} onVerTicket={setTicketModal} />}
         {activeTab === "clientes" && <ClientesTab clientes={clientes} ventas={ventas} onAdd={() => setClienteModal({ mode: "add" })} onEdit={(c) => setClienteModal({ mode: "edit", cliente: c })} onDelete={pedirEliminarCliente} />}
         {activeTab === "asistente" && <AsistenteTab perfumes={perfumes} clientes={clientes} ventas={ventas} />}
         {activeTab === "ajustes" && (

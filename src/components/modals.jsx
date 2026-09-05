@@ -459,7 +459,7 @@ export function TicketModal({ open, onClose, venta, cliente }) {
           <p className="text-xs text-neutral-500 mt-1">{new Date(venta.fecha).toLocaleString("es-MX")}</p>
           <p className="text-xs text-neutral-500">Ticket #{venta.id.slice(-6).toUpperCase()}</p>
         </div>
-        <div className="text-sm text-neutral-700">Cliente: <span className="font-medium">{cliente?.nombre || "Mostrador"}</span></div>
+        <div className="text-sm text-neutral-700">Cliente: <span className="font-medium">{cliente?.nombre || venta.clienteInvitado?.nombre || "Mostrador"}</span></div>
         <div className="space-y-2">
           {venta.items.map((it, i) => (
             <div key={i} className="flex justify-between text-sm gap-3">

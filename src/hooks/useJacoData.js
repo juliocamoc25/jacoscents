@@ -138,7 +138,7 @@ export function useJacoData() {
   const addToCartFrasco = (perfume) => {
     const enCarrito = carrito.filter((i) => i.perfumeId === perfume.id && i.tipo === "frasco").reduce((s, i) => s + i.cantidad, 0);
     if (perfume.cantidadDisponible - enCarrito < 1) { showToast("Sin stock disponible", "error"); return; }
-    setCarrito((prev) => [...prev, { id: uid(), perfumeId: perfume.id, nombrePerfume: perfume.nombre, marca: perfume.marca, tipo: "frasco", cantidad: 1, precioUnitario: perfume.precioVenta, subtotal: perfume.precioVenta }]);
+    setCarrito((prev) => [...prev, { id: uid(), kind: "perfume", perfumeId: perfume.id, nombrePerfume: perfume.nombre, marca: perfume.marca, tipo: "frasco", cantidad: 1, precioUnitario: perfume.precioVenta, subtotal: perfume.precioVenta }]);
     showToast(`${perfume.nombre} agregado a la venta`);
   };
 
@@ -146,18 +146,27 @@ export function useJacoData() {
     const mlEnCarrito = carrito.filter((i) => i.perfumeId === perfume.id && i.tipo === "decant").reduce((s, i) => s + i.cantidad, 0);
     if ((perfume.decant.mlDisponible || 0) - mlEnCarrito < ml) { showToast("No hay suficiente ml disponible", "error"); return; }
     const precio = precioDecant(perfume.decant, ml);
-    setCarrito((prev) => [...prev, { id: uid(), perfumeId: perfume.id, nombrePerfume: perfume.nombre, marca: perfume.marca, tipo: "decant", cantidad: ml, precioUnitario: precio / ml, subtotal: precio }]);
+    setCarrito((prev) => [...prev, { id: uid(), kind: "perfume", perfumeId: perfume.id, nombrePerfume: perfume.nombre, marca: perfume.marca, tipo: "decant", cantidad: ml, precioUnitario: precio / ml, subtotal: precio }]);
     showToast(`Decant de ${ml}ml agregado a la venta`);
+  };
+
+  const addToCartAccesorio = (accesorio) => {
+    const enCarrito = carrito.filter((i) => i.perfumeId === accesorio.id && i.kind === "accesorio").reduce((s, i) => s + i.cantidad, 0);
+    if (accesorio.cantidadDisponible - enCarrito < 1) { showToast("Sin stock disponible", "error"); return; }
+    setCarrito((prev) => [...prev, { id: uid(), kind: "accesorio", perfumeId: accesorio.id, nombrePerfume: accesorio.nombre, marca: "", tipo: "frasco", cantidad: 1, precioUnitario: accesorio.precio, subtotal: accesorio.precio }]);
+    showToast(`${accesorio.nombre} agregado a la venta`);
   };
 
   const updateCartQty = (index, delta) => {
     setCarrito((prev) => {
       const item = prev[index];
       if (!item || item.tipo !== "frasco") return prev;
-      const perfume = perfumes.find((p) => p.id === item.perfumeId);
-      const otherQty = prev.filter((it, i) => i !== index && it.perfumeId === item.perfumeId && it.tipo === "frasco").reduce((s, it) => s + it.cantidad, 0);
+      const stockDisponible = item.kind === "accesorio"
+        ? accesorios.find((a) => a.id === item.perfumeId)?.cantidadDisponible
+        : perfumes.find((p) => p.id === item.perfumeId)?.cantidadDisponible;
+      const otherQty = prev.filter((it, i) => i !== index && it.perfumeId === item.perfumeId && it.tipo === "frasco" && it.kind === item.kind).reduce((s, it) => s + it.cantidad, 0);
       const nuevaCant = Math.max(1, item.cantidad + delta);
-      if (perfume && (otherQty + nuevaCant) > perfume.cantidadDisponible) { showToast("Stock insuficiente", "error"); return prev; }
+      if (stockDisponible != null && (otherQty + nuevaCant) > stockDisponible) { showToast("Stock insuficiente", "error"); return prev; }
       const nuevos = [...prev];
       nuevos[index] = { ...item, cantidad: nuevaCant, subtotal: item.precioUnitario * nuevaCant };
       return nuevos;
@@ -194,6 +203,19 @@ export function useJacoData() {
   const actualizarEstadoPedidoWeb = (id, estado) => accion("actualizar-estado-pedido", { id, estado });
   const eliminarPedidoWeb = (id) => accion("eliminar-pedido", { id });
 
+  // Convierte un pedido de la tienda pública directamente en una venta
+  // registrada (con su descuento en inventario correspondiente), sin tener
+  // que volver a armar el carrito a mano. El pedido queda marcado como
+  // "atendido" y enlazado a la venta resultante.
+  const convertirPedidoEnVenta = async (pedido, { metodoPago, estado } = {}) => {
+    const data = await accion(
+      "convertir-pedido-en-venta",
+      { pedidoId: pedido.id, metodoPago: metodoPago || pedido.envio?.metodoPago, estado: estado || "Pagado" },
+      "Pedido convertido en venta"
+    );
+    return data?.ventaCompletada || null;
+  };
+
   return {
     perfumes, clientes, ventas, movimientos, accesorios, carrito, pedidosWeb, loading, toast,
     adminReady, loadingAdmin, cargarDatosAdmin, cerrarSesionAdmin,
@@ -201,8 +223,8 @@ export function useJacoData() {
     guardarCliente, eliminarCliente,
     guardarAccesorio, eliminarAccesorio,
     exportarDatos, restaurarDatos, borrarTodo,
-    addToCartFrasco, addToCartDecant, updateCartQty, removeFromCart, completarVenta,
-    crearPedidoWeb, actualizarEstadoPedidoWeb, eliminarPedidoWeb,
+    addToCartFrasco, addToCartDecant, addToCartAccesorio, updateCartQty, removeFromCart, completarVenta,
+    crearPedidoWeb, actualizarEstadoPedidoWeb, eliminarPedidoWeb, convertirPedidoEnVenta,
     showToast,
   };
 }
