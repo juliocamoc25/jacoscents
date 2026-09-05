@@ -189,6 +189,14 @@ function precioDecant(decant, tamanoMl) {
 async function resolverItemVenta(item, collections) {
   const { perfumes, accesorios } = collections;
 
+  if (item.tipo === "manual") {
+    // Producto que no existe en el catálogo (venta hecha fuera de la
+    // página). No hay perfumeId ni inventario que descontar — el costo
+    // viene tal cual lo capturó quien hizo la venta.
+    const costoUnit = Number(item.costoUnitario) || 0;
+    return { item: { ...item, costoUnitarioSnapshot: costoUnit, costoTotalSnapshot: costoUnit * item.cantidad } };
+  }
+
   if (item.kind === "accesorio") {
     const res = await accesorios.findOneAndUpdate(
       { _id: item.perfumeId, cantidadDisponible: { $gte: item.cantidad } },
@@ -259,6 +267,7 @@ async function completarVenta({ items, clienteId, clienteInvitado, descuento, cu
   };
   await ventas.insertOne(nuevaVenta);
   for (const i of itemsFinal) {
+    if (i.tipo === "manual") continue; // no hay inventario que registrar
     await crearMovimiento(movimientos, {
       perfumeId: i.perfumeId, nombrePerfume: i.nombrePerfume, tipo: "salida", cantidad: i.cantidad,
       motivo: `Venta ${i.tipo === "decant" ? "(decant " + i.cantidad + "ml)" : "(" + i.cantidad + (i.kind === "accesorio" ? " accesorio(s))" : " frasco(s))")}`,
