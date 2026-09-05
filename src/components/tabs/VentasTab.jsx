@@ -8,6 +8,9 @@ import { SectionCard, Field, NumberInput, TextInput, Badge, inputClass } from ".
 // se arma la venta — el cálculo real y definitivo siempre lo hace el
 // servidor al completar la venta (esto es solo una vista previa).
 function costoDeItem(item, perfumes, accesorios) {
+  if (item.tipo === "manual") {
+    return (Number(item.costoUnitario) || 0) * item.cantidad;
+  }
   if (item.kind === "accesorio") {
     const a = accesorios.find((x) => x.id === item.perfumeId);
     const costoUnit = a?.costoPromedio || a?.precioCompra || 0;
@@ -35,9 +38,39 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
   const [completando, setCompletando] = useState(false);
   const [errorVenta, setErrorVenta] = useState("");
 
-  const totalProductos = carrito.reduce((s, i) => s + (Number(i.cantidad) || 0), 0);
-  const subtotal = carrito.reduce((s, i) => s + i.subtotal, 0);
-  const costoTotalEstimado = carrito.reduce((s, i) => s + costoDeItem(i, perfumes, accesorios), 0);
+  const [itemsManuales, setItemsManuales] = useState([]);
+  const [manualNombre, setManualNombre] = useState("");
+  const [manualCantidad, setManualCantidad] = useState("1");
+  const [manualPrecio, setManualPrecio] = useState("");
+  const [manualCosto, setManualCosto] = useState("");
+
+  const agregarManual = () => {
+    const nombre = manualNombre.trim();
+    const cantidad = Number(manualCantidad) || 1;
+    const precioUnitario = Number(manualPrecio) || 0;
+    if (!nombre || precioUnitario <= 0 || cantidad <= 0) return;
+    const costoUnitario = Number(manualCosto) || 0;
+    setItemsManuales((prev) => [
+      ...prev,
+      {
+        id: `manual-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+        tipo: "manual",
+        nombrePerfume: nombre,
+        cantidad,
+        precioUnitario,
+        costoUnitario,
+        subtotal: precioUnitario * cantidad,
+      },
+    ]);
+    setManualNombre(""); setManualCantidad("1"); setManualPrecio(""); setManualCosto("");
+  };
+
+  const quitarManual = (idx) => setItemsManuales((prev) => prev.filter((_, i) => i !== idx));
+
+  const itemsCombinados = [...carrito, ...itemsManuales];
+  const totalProductos = itemsCombinados.reduce((s, i) => s + (Number(i.cantidad) || 0), 0);
+  const subtotal = itemsCombinados.reduce((s, i) => s + i.subtotal, 0);
+  const costoTotalEstimado = itemsCombinados.reduce((s, i) => s + costoDeItem(i, perfumes, accesorios), 0);
   const gananciaBrutaEstimada = subtotal - costoTotalEstimado;
   const gananciaNetaEstimada = gananciaBrutaEstimada - (Number(descuento) || 0);
   const total = Math.max(0, subtotal - (Number(descuento) || 0) + (Number(costoEnvio) || 0));
@@ -49,6 +82,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
       const ok = await onCompletar({
         clienteId: agregandoCliente ? null : (clienteId || null),
         clienteInvitado: agregandoCliente && clienteNuevoNombre.trim() ? { nombre: clienteNuevoNombre.trim() } : null,
+        itemsManuales,
         descuento: Number(descuento) || 0,
         cupon,
         costoEnvio: Number(costoEnvio) || 0,
@@ -57,6 +91,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
       });
       if (ok) {
         setClienteId(""); setAgregandoCliente(false); setClienteNuevoNombre("");
+        setItemsManuales([]);
         setDescuento(""); setCupon(""); setCostoEnvio(""); setMetodoPago("Efectivo"); setEstado("Pagado");
       } else {
         setErrorVenta("No se pudo registrar la venta. Intenta de nuevo.");
@@ -107,9 +142,9 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
       <div className="lg:col-span-3 space-y-4">
-        <SectionCard title={`Productos en esta venta (${carrito.length})`}>
-          {carrito.length === 0 ? (
-            <p className="text-sm text-neutral-400 py-8 text-center">Agrega perfumes desde el Catálogo, decants desde la pestaña Decants, o accesorios desde su pestaña — cada tarjeta tiene un botón para agregarla aquí.</p>
+        <SectionCard title={`Productos en esta venta (${carrito.length + itemsManuales.length})`}>
+          {carrito.length === 0 && itemsManuales.length === 0 ? (
+            <p className="text-sm text-neutral-400 py-4 text-center">Agrega perfumes desde el Catálogo, decants desde la pestaña Decants, o accesorios desde su pestaña — o escribe un producto manual abajo si no está en tu catálogo.</p>
           ) : (
             <div className="space-y-2">
               {carrito.map((item, i) => (
@@ -131,8 +166,37 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
                   </div>
                 </div>
               ))}
+              {itemsManuales.map((item, i) => (
+                <div key={item.id} className="flex items-center justify-between py-2 border-b border-neutral-100 last:border-0 gap-2">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm text-neutral-800 truncate">{item.nombrePerfume} <span className="text-[10px] text-neutral-400 font-normal">· manual</span></p>
+                    <p className="text-xs text-neutral-400">{item.cantidad} unidad(es) · {money(item.precioUnitario)} c/u</p>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-sm font-semibold w-16 text-right">{money(item.subtotal)}</span>
+                    <button onClick={() => quitarManual(i)} aria-label="Quitar producto manual" className="p-1 text-neutral-400 hover:text-red-600"><X size={15} /></button>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
+          <div className="pt-3 mt-1 border-t border-neutral-100">
+            <p className="text-xs font-semibold text-neutral-600 mb-2">Agregar producto que no está en tu catálogo</p>
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              <TextInput value={manualNombre} onChange={(e) => setManualNombre(e.target.value)} placeholder="Nombre del producto" />
+              <NumberInput value={manualCantidad} onChange={(e) => setManualCantidad(e.target.value)} placeholder="Cantidad" />
+              <NumberInput value={manualPrecio} onChange={(e) => setManualPrecio(e.target.value)} prefix="$" placeholder="Precio de venta c/u" />
+              <NumberInput value={manualCosto} onChange={(e) => setManualCosto(e.target.value)} prefix="$" placeholder="Costo c/u (opcional)" />
+            </div>
+            <button
+              type="button"
+              onClick={agregarManual}
+              disabled={!manualNombre.trim() || !(Number(manualPrecio) > 0)}
+              className="text-xs font-semibold text-neutral-700 hover:text-black disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              + Agregar a la venta
+            </button>
+          </div>
         </SectionCard>
 
         <SectionCard
@@ -218,7 +282,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
               </select>
             </Field>
             <div className="pt-3 border-t border-neutral-200 space-y-1">
-              <div className="flex justify-between text-sm text-neutral-500"><span>Productos</span><span>{carrito.length} producto(s) · {totalProductos} unidad(es)</span></div>
+              <div className="flex justify-between text-sm text-neutral-500"><span>Productos</span><span>{carrito.length + itemsManuales.length} producto(s) · {totalProductos} unidad(es)</span></div>
               <div className="flex justify-between text-sm text-neutral-500"><span>Precio de venta (subtotal)</span><span>{money(subtotal)}</span></div>
               {Number(descuento) > 0 && <div className="flex justify-between text-sm text-neutral-500"><span>Descuento</span><span>-{money(Number(descuento))}</span></div>}
               {Number(costoEnvio) > 0 && <div className="flex justify-between text-sm text-neutral-500"><span>Envío</span><span>{money(Number(costoEnvio))}</span></div>}
@@ -230,7 +294,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
               <div className="flex justify-between text-xs text-emerald-800"><span>Neta (lo que realmente te queda)</span><span className="font-semibold">{money(gananciaNetaEstimada)}</span></div>
             </div>
             {errorVenta && <p className="text-xs text-red-600 text-center">{errorVenta}</p>}
-            <button onClick={handleCompletar} disabled={carrito.length === 0 || completando} className="w-full py-3 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed">
+            <button onClick={handleCompletar} disabled={itemsCombinados.length === 0 || completando} className="w-full py-3 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-30 disabled:cursor-not-allowed">
               {completando ? "Registrando..." : "Completar venta"}
             </button>
           </div>
