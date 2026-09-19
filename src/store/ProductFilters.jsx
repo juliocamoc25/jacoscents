@@ -24,7 +24,8 @@ export function useProductFilters(perfumes) {
 
   const apply = (p) => {
     const q = busqueda.trim().toLowerCase();
-    const coincideBusqueda = !q || p.nombre?.toLowerCase().includes(q) || (p.marca || p.casaPerfumera || "").toLowerCase().includes(q);
+    const camposBusqueda = [p.nombre, p.marca || p.casaPerfumera, p.notas, p.notasSalida, p.notasCorazon, p.notasFondo];
+    const coincideBusqueda = !q || camposBusqueda.filter(Boolean).some((f) => String(f).toLowerCase().includes(q));
     return (
       coincideBusqueda &&
       (!marca || (p.marca || p.casaPerfumera) === marca) &&

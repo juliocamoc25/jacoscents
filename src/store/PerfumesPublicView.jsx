@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Search, Package } from "lucide-react";
+import { Package } from "lucide-react";
 import ProductPublicCard from "./ProductPublicCard";
 import ProductDetailModal from "./ProductDetailModal";
 import { EmptyState } from "../components/common";
@@ -8,21 +8,18 @@ import { stockStateOf } from "../utils";
 import { ProductFilters, useProductFilters } from "./ProductFilters";
 
 export default function PerfumesPublicView({ perfumes, onAddToCart }) {
-  const [search, setSearch] = useState("");
   const [genero, setGenero] = useState("");
   const [seleccionado, setSeleccionado] = useState(null);
   const filters = useProductFilters(perfumes);
 
   const visibles = useMemo(() => {
-    const q = search.toLowerCase().trim();
     return perfumes.filter((p) => {
       if (p.activo === false) return false;
       if (!p.tieneFrascoCompleto) return false; // este catálogo es solo frascos completos; el resto vive en Decants
-      const matchQ = !q || [p.nombre, p.marca, p.casaPerfumera, p.notas, p.notasSalida, p.notasCorazon, p.notasFondo].filter(Boolean).some((f) => String(f).toLowerCase().includes(q));
       const matchGenero = !genero || p.genero === genero;
-      return matchQ && matchGenero && filters.apply(p);
+      return matchGenero && filters.apply(p);
     });
-  }, [perfumes, search, genero, filters]);
+  }, [perfumes, genero, filters]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
@@ -32,20 +29,16 @@ export default function PerfumesPublicView({ perfumes, onAddToCart }) {
         <p className="text-sm text-neutral-500 mt-2">Frascos completos, 100% originales y sellados.</p>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between mb-8">
-        <div className="relative flex-1 max-w-md">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
-          <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Buscar perfume o marca..." className="w-full pl-9 pr-3 py-2.5 rounded-full border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 bg-white" />
-        </div>
-        <div className="flex gap-2 flex-wrap">
-          <button onClick={() => setGenero("")} className={`px-3.5 py-2 rounded-full text-xs font-semibold border ${!genero ? "bg-ink text-white border-ink" : "border-bone-300 text-neutral-500"}`}>Todos</button>
-          {GENEROS.map((g) => (
-            <button key={g} onClick={() => setGenero(g)} className={`px-3.5 py-2 rounded-full text-xs font-semibold border ${genero === g ? "bg-ink text-white border-ink" : "border-bone-300 text-neutral-500"}`}>{g}</button>
-          ))}
-        </div>
+      <div className="flex justify-center gap-2 flex-wrap mb-6">
+        <button onClick={() => setGenero("")} className={`px-3.5 py-2 rounded-full text-xs font-semibold border ${!genero ? "bg-ink text-white border-ink" : "border-bone-300 text-neutral-500"}`}>Todos</button>
+        {GENEROS.map((g) => (
+          <button key={g} onClick={() => setGenero(g)} className={`px-3.5 py-2 rounded-full text-xs font-semibold border ${genero === g ? "bg-ink text-white border-ink" : "border-bone-300 text-neutral-500"}`}>{g}</button>
+        ))}
       </div>
 
-      <ProductFilters {...filters} />
+      <div className="flex justify-center">
+        <ProductFilters {...filters} />
+      </div>
 
       {visibles.length === 0 ? (
         <EmptyState icon={Package} title="No hay perfumes que coincidan" subtitle="Prueba con otra búsqueda o quita los filtros." />
