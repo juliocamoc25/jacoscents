@@ -3,7 +3,7 @@ import { Droplet, Plus } from "lucide-react";
 import DecantCard from "../DecantCard";
 import { EmptyState } from "../common";
 
-export default function DecantsTab({ perfumes, onAbrir, onVender, onGoTo }) {
+export default function DecantsTab({ perfumes, onAbrir, onVender, onGoTo, onToggleAgotadoManual }) {
   const habilitados = perfumes.filter((p) => p.decant?.habilitado);
 
   const AddBar = () => (
@@ -27,7 +27,7 @@ export default function DecantsTab({ perfumes, onAbrir, onVender, onGoTo }) {
     <div>
       <AddBar />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {habilitados.map((p) => <DecantCard key={p.id} perfume={p} onAbrir={onAbrir} onVender={onVender} />)}
+        {habilitados.map((p) => <DecantCard key={p.id} perfume={p} onAbrir={onAbrir} onVender={onVender} onToggleAgotadoManual={onToggleAgotadoManual} />)}
       </div>
     </div>
   );

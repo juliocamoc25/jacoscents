@@ -4,7 +4,7 @@ import PerfumeCard from "../PerfumeCard";
 import { EmptyState } from "../common";
 import { GENEROS } from "../../constants";
 
-export default function CatalogoTab({ perfumes, onAdd, onEdit, onDelete, onDuplicate, onAjustar, onAddCart, onImport }) {
+export default function CatalogoTab({ perfumes, onAdd, onEdit, onDelete, onDuplicate, onAjustar, onAddCart, onImport, onToggleActivo, onToggleAgotadoManual }) {
   const [search, setSearch] = useState("");
   const [filtroGenero, setFiltroGenero] = useState("");
 
@@ -42,7 +42,7 @@ export default function CatalogoTab({ perfumes, onAdd, onEdit, onDelete, onDupli
         )
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-          {filtrados.map((p) => <PerfumeCard key={p.id} perfume={p} onEdit={onEdit} onDelete={onDelete} onDuplicate={onDuplicate} onAjustar={onAjustar} onAddCart={onAddCart} />)}
+          {filtrados.map((p) => <PerfumeCard key={p.id} perfume={p} onEdit={onEdit} onDelete={onDelete} onDuplicate={onDuplicate} onAjustar={onAjustar} onAddCart={onAddCart} onToggleActivo={onToggleActivo} onToggleAgotadoManual={onToggleAgotadoManual} />)}
         </div>
       )}
     </div>
