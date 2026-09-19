@@ -1,11 +1,14 @@
 import React from "react";
-import { Droplet, ShoppingCart, Package2, Pencil, Copy, Trash2 } from "lucide-react";
+import { Droplet, ShoppingCart, Package2, Pencil, Copy, Trash2, EyeOff, Eye } from "lucide-react";
 import { money } from "../utils";
 import { Badge } from "./UI";
 
-export default function PerfumeCard({ perfume, onEdit, onDelete, onDuplicate, onAjustar, onAddCart }) {
+export default function PerfumeCard({ perfume, onEdit, onDelete, onDuplicate, onAjustar, onAddCart, onToggleActivo, onToggleAgotadoManual }) {
   const stockBajo = perfume.cantidadDisponible <= (perfume.cantidadMinima || 0);
-  const agotado = perfume.cantidadDisponible === 0;
+  const sinStock = perfume.cantidadDisponible === 0;
+  const agotadoManual = perfume.agotadoManual === true;
+  const agotado = sinStock || agotadoManual;
+  const puedeMarcarAgotado = !sinStock && !!onToggleAgotadoManual; // si ya no hay stock, no hace falta forzarlo
   return (
     <div className="bg-white border border-neutral-200 rounded-xl overflow-hidden hover:border-neutral-300 transition-colors">
       <div className="aspect-square bg-neutral-50 flex items-center justify-center relative">
@@ -18,7 +21,7 @@ export default function PerfumeCard({ perfume, onEdit, onDelete, onDuplicate, on
             onError={(e) => { e.currentTarget.style.display = "none"; }}
           />
         )}
-        {!perfume.activo && <span className="absolute top-2 left-2 bg-neutral-900 text-white text-[10px] px-2 py-0.5 rounded-full">Inactivo</span>}
+        {!perfume.activo && <span className="absolute top-2 left-2 bg-neutral-900 text-white text-[10px] px-2 py-0.5 rounded-full">Suspendido</span>}
         {perfume.destacado && <span className="absolute bottom-2 left-2 bg-gold-500 text-ink text-[10px] px-2 py-0.5 rounded-full font-semibold">★ Destacado</span>}
         {perfume.decant?.habilitado && <span className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded-full">Decants</span>}
       </div>
@@ -27,13 +30,34 @@ export default function PerfumeCard({ perfume, onEdit, onDelete, onDuplicate, on
         <h4 className="text-sm font-semibold text-neutral-900 truncate mb-1">{perfume.nombre}</h4>
         <div className="flex items-center justify-between mb-2 gap-2">
           <span className="text-sm font-bold">{money(perfume.precioVenta)}</span>
-          <Badge tone={agotado ? "error" : stockBajo ? "warning" : "neutral"}>{agotado ? "Agotado" : `${perfume.cantidadDisponible} en stock`}</Badge>
+          {puedeMarcarAgotado ? (
+            <button
+              onClick={() => onToggleAgotadoManual(perfume)}
+              title={agotadoManual ? "Marcado como agotado manualmente — clic para quitarlo" : "Hay stock, pero puedes marcarlo como agotado manualmente"}
+            >
+              <Badge tone={agotado ? "error" : stockBajo ? "warning" : "neutral"}>
+                {agotadoManual ? "Agotado (manual)" : `${perfume.cantidadDisponible} en stock`}
+              </Badge>
+            </button>
+          ) : (
+            <Badge tone={agotado ? "error" : stockBajo ? "warning" : "neutral"}>{agotado ? "Agotado" : `${perfume.cantidadDisponible} en stock`}</Badge>
+          )}
         </div>
         <div className="flex items-center gap-1 pt-2 border-t border-neutral-100">
           <button onClick={() => onAddCart(perfume)} disabled={agotado} title="Agregar a venta" className="flex-1 py-1.5 rounded-md bg-black text-white text-xs font-medium hover:bg-neutral-800 disabled:opacity-30 flex items-center justify-center gap-1">
             <ShoppingCart size={12} /> Vender
           </button>
           <button onClick={() => onAjustar(perfume)} title="Ajustar inventario" aria-label="Ajustar inventario" className="p-1.5 rounded-md hover:bg-neutral-100 text-neutral-500"><Package2 size={14} /></button>
+          {onToggleActivo && (
+            <button
+              onClick={() => onToggleActivo(perfume)}
+              title={perfume.activo ? "Suspender del catálogo público" : "Reactivar en el catálogo público"}
+              aria-label={perfume.activo ? "Suspender del catálogo público" : "Reactivar en el catálogo público"}
+              className={`p-1.5 rounded-md hover:bg-neutral-100 ${perfume.activo ? "text-neutral-500" : "text-amber-600"}`}
+            >
+              {perfume.activo ? <EyeOff size={14} /> : <Eye size={14} />}
+            </button>
+          )}
           <button onClick={() => onEdit(perfume)} title="Editar" aria-label="Editar" className="p-1.5 rounded-md hover:bg-neutral-100 text-neutral-500"><Pencil size={14} /></button>
           <button onClick={() => onDuplicate(perfume)} title="Duplicar" aria-label="Duplicar" className="p-1.5 rounded-md hover:bg-neutral-100 text-neutral-500"><Copy size={14} /></button>
           <button onClick={() => onDelete(perfume)} title="Eliminar" aria-label="Eliminar" className="p-1.5 rounded-md hover:bg-red-50 text-neutral-500 hover:text-red-600"><Trash2 size={14} /></button>
