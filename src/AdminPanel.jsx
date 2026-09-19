@@ -56,6 +56,15 @@ export default function AdminPanel({ data, onExit, onLogout }) {
     const ok = await guardarPerfume(formData, perfumeModal?.mode === "edit" ? perfumeModal.perfume.id : null);
     if (ok) setPerfumeModal(null);
   };
+  const onToggleActivoPerfume = (perfume) => {
+    guardarPerfume({ ...perfume, activo: !perfume.activo }, perfume.id);
+  };
+  const onToggleAgotadoManualFrasco = (perfume) => {
+    guardarPerfume({ ...perfume, agotadoManual: !perfume.agotadoManual }, perfume.id);
+  };
+  const onToggleAgotadoManualDecant = (perfume) => {
+    guardarPerfume({ ...perfume, decant: { ...perfume.decant, agotadoManual: !perfume.decant?.agotadoManual } }, perfume.id);
+  };
   const onGuardarCliente = async (formData) => {
     const ok = await guardarCliente(formData, clienteModal?.mode === "edit" ? clienteModal.cliente.id : null);
     if (ok) setClienteModal(null);
@@ -169,8 +178,8 @@ export default function AdminPanel({ data, onExit, onLogout }) {
 
       <main className="max-w-7xl mx-auto px-4 py-5">
         {activeTab === "dashboard" && <DashboardTab perfumes={perfumes} clientes={clientes} ventas={ventas} onGoTo={setActiveTab} />}
-        {activeTab === "catalogo" && <CatalogoTab perfumes={perfumes} onAdd={() => setPerfumeModal({ mode: "add" })} onEdit={(p) => setPerfumeModal({ mode: "edit", perfume: p })} onDelete={pedirEliminarPerfume} onDuplicate={duplicarPerfume} onAjustar={(p) => setAjusteModal(p)} onAddCart={addToCartFrasco} onImport={() => setImportModal(true)} />}
-        {activeTab === "decants" && <DecantsTab perfumes={perfumes} onAbrir={(p) => setAbrirModal(p)} onVender={addToCartDecant} onGoTo={setActiveTab} />}
+        {activeTab === "catalogo" && <CatalogoTab perfumes={perfumes} onAdd={() => setPerfumeModal({ mode: "add" })} onEdit={(p) => setPerfumeModal({ mode: "edit", perfume: p })} onDelete={pedirEliminarPerfume} onDuplicate={duplicarPerfume} onAjustar={(p) => setAjusteModal(p)} onAddCart={addToCartFrasco} onImport={() => setImportModal(true)} onToggleActivo={onToggleActivoPerfume} onToggleAgotadoManual={onToggleAgotadoManualFrasco} />}
+        {activeTab === "decants" && <DecantsTab perfumes={perfumes} onAbrir={(p) => setAbrirModal(p)} onVender={addToCartDecant} onGoTo={setActiveTab} onToggleAgotadoManual={onToggleAgotadoManualDecant} />}
         {activeTab === "accesorios" && <AccesoriosTab accesorios={accesorios} onAdd={() => setAccesorioModal({ mode: "add" })} onEdit={(a) => setAccesorioModal({ mode: "edit", accesorio: a })} onDelete={pedirEliminarAccesorio} onVender={addToCartAccesorio} />}
         {activeTab === "pedidos" && <PedidosTab pedidosWeb={pedidosWeb} onConvertirEnVenta={pedirConvertirPedidoEnVenta} onCancelar={pedirCancelarPedido} onEliminar={pedirEliminarPedido} />}
         {activeTab === "ventas" && <VentasTab carrito={carrito} clientes={clientes} perfumes={perfumes} accesorios={accesorios} onUpdateQty={updateCartQty} onRemove={removeFromCart} onCompletar={onCompletarVenta} ventas={ventas} onVerTicket={setTicketModal} addToCartFrasco={addToCartFrasco} addToCartDecant={addToCartDecant} addToCartAccesorio={addToCartAccesorio} />}
