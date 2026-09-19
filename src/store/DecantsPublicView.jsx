@@ -17,7 +17,7 @@ function DecantPublicCard({ perfume, onAddToCart, onOpenDetail }) {
   const tamanos = perfume.decant.tamanos?.length ? perfume.decant.tamanos : TAMANOS_DECANT;
   const precioMin = tamanos.length ? precioDecant(perfume.decant, Math.min(...tamanos)) : null;
   const mlDisponible = perfume.decant.mlDisponible || 0;
-  const agotado = mlDisponible <= 0;
+  const agotado = mlDisponible <= 0 || perfume.decant.agotadoManual === true;
 
   return (
     <div className="bg-white border border-bone-300 rounded-2xl overflow-hidden shadow-lux-sm hover:shadow-lux hover:-translate-y-1 transition-all duration-300">

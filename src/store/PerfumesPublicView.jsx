@@ -63,7 +63,7 @@ export default function PerfumesPublicView({ perfumes, onAddToCart }) {
               meta={p.presentacionMl ? `${p.presentacionMl} ml` : null}
               calificacion={p.calificacion}
               onAdd={onAddToCart ? () => onAddToCart({ kind: "perfume", id: p.id, tipo: "frasco", cantidad: 1, nombre: p.nombre, precioUnitario: p.precioVenta, imagenUrl: p.imagenUrl }) : null}
-              stockState={stockStateOf(p.cantidadDisponible, p.cantidadMinima)}
+              stockState={stockStateOf(p.agotadoManual ? 0 : p.cantidadDisponible, p.cantidadMinima)}
               whatsappMessage={`Hola, me interesa el perfume "${p.nombre}"`}
               onClick={() => setSeleccionado(p)}
             />
