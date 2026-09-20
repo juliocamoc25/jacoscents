@@ -129,15 +129,28 @@ export function Modal({ open, onClose, title, children, maxWidth = "max-w-lg" })
 
 export function ConfirmDialog({ open, title, message, onConfirm, onCancel }) {
   useLockBodyScroll(open);
+  const [submitting, setSubmitting] = React.useState(false);
+  React.useEffect(() => { if (open) setSubmitting(false); }, [open]);
   if (!open) return null;
+  const handleConfirm = async () => {
+    if (submitting) return; // evita disparar dos veces la misma acción con doble clic
+    setSubmitting(true);
+    try {
+      await onConfirm();
+    } finally {
+      setSubmitting(false); // si el diálogo sigue abierto (el padre no lo cerró), se puede reintentar
+    }
+  };
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
       <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-5">
         <h3 className="text-base font-semibold text-neutral-900 mb-2">{title}</h3>
         <p className="text-sm text-neutral-600 mb-5">{message}</p>
         <div className="flex gap-3">
-          <button onClick={onCancel} className="flex-1 py-2.5 rounded-lg border border-neutral-300 text-neutral-700 font-medium hover:bg-neutral-50">Cancelar</button>
-          <button onClick={onConfirm} className="flex-1 py-2.5 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700">Eliminar</button>
+          <button onClick={onCancel} disabled={submitting} className="flex-1 py-2.5 rounded-lg border border-neutral-300 text-neutral-700 font-medium hover:bg-neutral-50 disabled:opacity-50 disabled:cursor-not-allowed">Cancelar</button>
+          <button onClick={handleConfirm} disabled={submitting} className="flex-1 py-2.5 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed">
+            {submitting ? "Procesando..." : "Eliminar"}
+          </button>
         </div>
       </div>
     </div>,
