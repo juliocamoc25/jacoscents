@@ -20,6 +20,13 @@ function pick(obj, campos) {
 }
 
 export default async function handler(req, res) {
+  // Igual que en /api/admin: esta respuesta nunca debe quedar guardada en
+  // caché en ningún punto intermedio (CDN, proxy, navegador) — la tienda
+  // pública siempre debe reflejar el inventario más reciente.
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0");
+  res.setHeader("Pragma", "no-cache");
+  res.setHeader("Expires", "0");
+
   const { perfumes, accesorios, pedidos } = await getCollections();
 
   if (req.method === "GET") {
