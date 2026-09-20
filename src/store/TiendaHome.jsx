@@ -235,7 +235,7 @@ function SobreNosotros({ onNavigate }) {
         </div>
         <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-ink via-neutral-900 to-wine-700 jaco-hero-noise">
           <img
-            src="/img/img_inicio.jpg"
+            src="/img/img_inicio.png"
             alt="JACO SCENTS — perfumería y decants"
             className="w-full h-full object-cover"
           />
