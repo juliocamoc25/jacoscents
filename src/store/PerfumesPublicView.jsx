@@ -13,12 +13,14 @@ export default function PerfumesPublicView({ perfumes, onAddToCart }) {
   const filters = useProductFilters(perfumes);
 
   const visibles = useMemo(() => {
-    return perfumes.filter((p) => {
-      if (p.activo === false) return false;
-      if (!p.tieneFrascoCompleto) return false; // este catálogo es solo frascos completos; el resto vive en Decants
-      const matchGenero = !genero || p.genero === genero;
-      return matchGenero && filters.apply(p);
-    });
+    return perfumes
+      .filter((p) => {
+        if (p.activo === false) return false;
+        if (!p.tieneFrascoCompleto) return false; // este catálogo es solo frascos completos; el resto vive en Decants
+        const matchGenero = !genero || p.genero === genero;
+        return matchGenero && filters.apply(p);
+      })
+      .sort((a, b) => (a.nombre || "").localeCompare(b.nombre || "", "es"));
   }, [perfumes, genero, filters]);
 
   return (

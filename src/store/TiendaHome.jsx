@@ -7,7 +7,7 @@ import { tips } from "../data/tips";
 // que basta con reemplazar esos 3 archivos (mismos nombres) para actualizar
 // las fotos sin tocar código.
 const HERO_SLIDES = [
-  { src: "/img/hero/hero-1.jpeg", alt: "Decants JACO SCENTS junto a frascos originales" },
+  { src: "/img/hero/hero-1.jpg", alt: "Decants JACO SCENTS junto a frascos originales" },
   { src: "/img/hero/hero-2.jpg", alt: "Selección de perfumes originales JACO SCENTS" },
   { src: "/img/hero/hero-3.jpg", alt: "Decants de diseñador y nicho JACO SCENTS" },
 ];
@@ -91,7 +91,7 @@ const ACCENTS = [
   "from-[#1c1512] via-wine-700 to-ink",
 ];
 
-function ShowcaseCarousel({ items, curated, onOpen }) {
+function ShowcaseCarousel({ items, curated, onOpen, overlapHero = false }) {
   const trackRef = React.useRef(null);
   const pausedRef = React.useRef(false);
 
@@ -110,7 +110,7 @@ function ShowcaseCarousel({ items, curated, onOpen }) {
 
   if (!items.length) return null;
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-16 sm:-mt-24 relative z-10">
+    <section className={`max-w-7xl mx-auto px-4 sm:px-6 relative z-10 ${overlapHero ? "-mt-16 sm:-mt-24" : "pt-2 pb-6"}`}>
       <div className="flex items-center justify-between mb-3 px-1">
         <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-gold-400">
           <Sparkles size={13} /> {curated ? "Destacados" : "Recién llegados"}
@@ -235,7 +235,7 @@ function SobreNosotros({ onNavigate }) {
         </div>
         <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-ink via-neutral-900 to-wine-700 jaco-hero-noise">
           <img
-            src="/img/img_inicio.png"
+            src="/img/img_inicio.jpg"
             alt="JACO SCENTS — perfumería y decants"
             className="w-full h-full object-cover"
           />
@@ -292,7 +292,12 @@ export default function TiendaHome({ perfumes, accesorios, onNavigate }) {
   const accesoriosCount = accesorios.filter((a) => a.activo !== false).length;
   const activos = perfumes.filter((p) => p.activo !== false && p.tieneFrascoCompleto);
   const marcados = activos.filter((p) => p.destacado);
-  const destacados = (marcados.length ? marcados : activos).slice(0, 8);
+  const destacados = marcados.slice(0, 8);
+  // "Recién llegados" incluye tanto frascos completos como decants —
+  // el backend ya manda los perfumes ordenados del más reciente al más viejo.
+  const recienLlegadosBase = perfumes.filter((p) => p.activo !== false && (p.tieneFrascoCompleto || p.decant?.habilitado));
+  const recienLlegados = recienLlegadosBase.slice(0, 8);
+  const irADetalle = (p) => onNavigate(p.tieneFrascoCompleto ? "perfumes" : "decants");
 
   return (
     <div>
@@ -303,10 +308,10 @@ export default function TiendaHome({ perfumes, accesorios, onNavigate }) {
             <span className="w-6 h-px bg-gold-400" /> Perfumería &amp; Decants <span className="w-6 h-px bg-gold-400" />
           </span>
           <h1 className="jaco-display text-5xl sm:text-7xl font-bold text-white leading-[1.05] mb-6">
-            <span className="jaco-shimmer"></span>
+            Tu fragancia,<br /><span className="jaco-shimmer">sin el compromiso del frasco.</span>
           </h1>
           <p className="text-neutral-300 max-w-xl mx-auto text-sm sm:text-base mb-9">
-          
+            Perfumes 100% originales, decants exactos al mililitro y accesorios para llevar tu aroma a donde vayas.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <button onClick={() => onNavigate("decants")} className="px-6 py-3 rounded-full bg-gold-400 text-ink text-sm font-semibold hover:bg-gold-300 transition-colors">
@@ -319,7 +324,14 @@ export default function TiendaHome({ perfumes, accesorios, onNavigate }) {
         </div>
       </section>
 
-      <ShowcaseCarousel items={destacados} curated={marcados.length > 0} onOpen={() => onNavigate("perfumes")} />
+      {destacados.length > 0 ? (
+        <>
+          <ShowcaseCarousel items={destacados} curated overlapHero onOpen={irADetalle} />
+          <ShowcaseCarousel items={recienLlegados} curated={false} onOpen={irADetalle} />
+        </>
+      ) : (
+        <ShowcaseCarousel items={recienLlegados} curated={false} overlapHero onOpen={irADetalle} />
+      )}
 
       <TrustBar />
 

@@ -8,6 +8,7 @@ import ProductDetailModal from "./ProductDetailModal";
 import RatingStars from "../components/RatingStars";
 
 const SUBTABS = [
+  { id: "Todos", label: "Todos" },
   { id: "Masculino", label: "Hombre" },
   { id: "Femenino", label: "Mujer" },
   { id: "Unisex", label: "Unisex" },
@@ -110,7 +111,7 @@ function DecantPublicCard({ perfume, onAddToCart, onOpenDetail }) {
 }
 
 export default function DecantsPublicView({ perfumes, onAddToCart }) {
-  const [tab, setTab] = useState("Masculino");
+  const [tab, setTab] = useState("Todos");
   const [seleccionado, setSeleccionado] = useState(null);
   const filters = useProductFilters(perfumes);
 
@@ -120,9 +121,11 @@ export default function DecantsPublicView({ perfumes, onAddToCart }) {
   );
   // Si un perfume no tiene género válido asignado, lo mostramos en Unisex en
   // vez de que desaparezca silenciosamente del catálogo.
-  const visibles = habilitados.filter((p) =>
-    (tab === "Unisex" ? p.genero === "Unisex" || !GENEROS.includes(p.genero) : p.genero === tab) && filters.apply(p)
-  );
+  const visibles = habilitados
+    .filter((p) =>
+      (tab === "Todos" ? true : tab === "Unisex" ? p.genero === "Unisex" || !GENEROS.includes(p.genero) : p.genero === tab) && filters.apply(p)
+    )
+    .sort((a, b) => (a.nombre || "").localeCompare(b.nombre || "", "es"));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
