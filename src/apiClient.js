@@ -37,7 +37,7 @@ export function logout() {
 }
 
 export async function fetchPublicCatalog() {
-  const res = await fetch("/api/public");
+  const res = await fetch("/api/public", { cache: "no-store" });
   if (!res.ok) throw new Error("No se pudo cargar el catálogo");
   return res.json();
 }
@@ -47,6 +47,7 @@ export async function crearPedidoPublico(payload) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ action: "crear-pedido", payload }),
+    cache: "no-store",
   });
   const data = await parseJsonSafe(res);
   if (!res.ok) throw new Error(data?.error || "No se pudo enviar el pedido");
@@ -55,7 +56,7 @@ export async function crearPedidoPublico(payload) {
 
 export async function fetchAdminData() {
   const token = getToken();
-  const res = await fetch("/api/admin", { headers: { Authorization: `Bearer ${token}` } });
+  const res = await fetch("/api/admin", { headers: { Authorization: `Bearer ${token}` }, cache: "no-store" });
   if (res.status === 401) { clearToken(); throw new Error("SESSION_EXPIRED"); }
   if (!res.ok) throw new Error("No se pudo cargar la información del panel");
   return res.json();
@@ -69,6 +70,7 @@ export async function runAdminAction(action, payload) {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
     body: JSON.stringify({ action, payload }),
+    cache: "no-store",
   });
   const data = await parseJsonSafe(res);
   if (res.status === 401) { clearToken(); throw new Error("SESSION_EXPIRED"); }
