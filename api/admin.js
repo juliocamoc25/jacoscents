@@ -5,6 +5,13 @@ import { isAuthorized } from "./_lib/auth.js";
 import { store } from "./_lib/store.js";
 
 export default async function handler(req, res) {
+  // Nunca se debe cachear esta respuesta en ningún punto intermedio
+  // (CDN, proxy, navegador) — siempre debe reflejar el estado más
+  // reciente de la base de datos.
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0");
+  res.setHeader("Pragma", "no-cache");
+  res.setHeader("Expires", "0");
+
   if (!isAuthorized(req)) {
     return res.status(401).json({ error: "No autorizado. Inicia sesión de nuevo." });
   }
