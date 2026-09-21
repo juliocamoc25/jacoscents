@@ -308,10 +308,10 @@ export default function TiendaHome({ perfumes, accesorios, onNavigate }) {
             <span className="w-6 h-px bg-gold-400" /> Perfumería &amp; Decants <span className="w-6 h-px bg-gold-400" />
           </span>
           <h1 className="jaco-display text-5xl sm:text-7xl font-bold text-white leading-[1.05] mb-6">
-            Tu fragancia,<br /><span className="jaco-shimmer">sin el compromiso del frasco.</span>
+            Tu fragancia favorita,<br />a tu alcance<span className="jaco-shimmer">.</span>
           </h1>
-          <p className="text-neutral-300 max-w-xl mx-auto text-sm sm:text-base mb-9">
-            Perfumes 100% originales, decants exactos al mililitro y accesorios para llevar tu aroma a donde vayas.
+          <p className="text-neutral-300 max-w-xl mx-auto text-s.m sm:text-base mb-9">
+            
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <button onClick={() => onNavigate("decants")} className="px-6 py-3 rounded-full bg-gold-400 text-ink text-sm font-semibold hover:bg-gold-300 transition-colors">
