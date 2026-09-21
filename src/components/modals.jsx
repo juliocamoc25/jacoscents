@@ -182,6 +182,18 @@ export function PerfumeFormModal({ open, onClose, onSave, initial }) {
             <Field label="Precio de venta" required><NumberInput value={form.precioVenta} onChange={set("precioVenta")} prefix="$" /></Field>
             <Field label="Cantidad disponible (frascos)" required><NumberInput value={form.cantidadDisponible} onChange={set("cantidadDisponible")} /></Field>
             <div className="sm:col-span-2">
+              <label className="flex items-center gap-2 text-sm text-neutral-700">
+                <input
+                  type="checkbox"
+                  checked={form.tieneFrascoCompleto || false}
+                  onChange={set("tieneFrascoCompleto")}
+                  className="w-4 h-4 accent-red-600"
+                />
+                Vender también en frasco completo (aparece en la sección "Perfumes" de la tienda)
+              </label>
+              <p className="text-[11px] text-neutral-400 mt-1">Si solo quieres venderlo en decants, deja esto sin marcar y activa "Venta en decants" más abajo.</p>
+            </div>
+            <div className="sm:col-span-2">
               <ImageField value={form.imagenUrl} onChange={(v) => setForm((prev) => ({ ...prev, imagenUrl: v }))} label="Foto del perfume" folder="perfumes" slugSource={`${form.marca || ""} ${form.nombre || ""}`.trim()} />
             </div>
           </div>
