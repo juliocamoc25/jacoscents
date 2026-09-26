@@ -146,9 +146,40 @@ async function guardarCliente(payload, editingId) {
   const { clientes } = await getCollections();
   if (editingId) {
     await clientes.updateOne({ _id: editingId }, { $set: payload });
-  } else {
-    await clientes.insertOne({ _id: uid(), ...payload, _creadoEn: Date.now() });
+    return { id: editingId, ...payload };
   }
+  const _id = uid();
+  await clientes.insertOne({ _id, ...payload, _creadoEn: Date.now() });
+  return { id: _id, ...payload };
+}
+
+// Busca un cliente existente por teléfono (si tiene) para no duplicar el
+// registro cada vez que la misma persona compra o hace un pedido; si no
+// existe, lo crea. Se usa tanto al vender de mostrador con "cliente nuevo"
+// como al recibir un pedido de la tienda pública.
+async function buscarOCrearCliente({ nombre, telefono, direccion, ciudad, estado } = {}) {
+  if (!nombre) return null;
+  const { clientes } = await getCollections();
+  const telefonoLimpio = (telefono || "").trim();
+  if (telefonoLimpio) {
+    const existente = await clientes.findOne({ telefono: telefonoLimpio });
+    if (existente) return existente._id;
+  }
+  const _id = uid();
+  await clientes.insertOne({
+    _id,
+    nombre,
+    telefono: telefonoLimpio,
+    correo: "",
+    instagram: "",
+    facebook: "",
+    ciudad: ciudad || "",
+    estado: estado || "",
+    direccion: direccion || "",
+    notas: "",
+    _creadoEn: Date.now(),
+  });
+  return _id;
 }
 
 async function eliminarCliente(id) {
@@ -304,8 +335,8 @@ async function convertirPedidoEnVenta(pedidoId, { metodoPago, estado }) {
 
   const resultado = await completarVenta({
     items,
-    clienteId: null,
-    clienteInvitado: { nombre: pedido.envio?.nombre || "", telefono: pedido.envio?.telefono || "" },
+    clienteId: pedido.clienteId || null,
+    clienteInvitado: pedido.clienteId ? null : { nombre: pedido.envio?.nombre || "", telefono: pedido.envio?.telefono || "" },
     descuento: 0,
     cupon: "",
     costoEnvio: 0,
@@ -324,9 +355,64 @@ async function convertirPedidoEnVenta(pedidoId, { metodoPago, estado }) {
    inventario todavía) — el dueño la confirma por WhatsApp y luego registra
    la venta real desde el panel cuando el pago esté confirmado. */
 
+// Endpoint público sin contraseña — cualquiera puede llamarlo, así que aquí
+// (y no solo en el formulario del navegador) se valida y sanea lo mínimo
+// necesario: nombre/teléfono presentes, límites de longitud razonables, y
+// que los items tengan la forma esperada. Esto evita que datos vacíos,
+// maliciosos o con formato inesperado lleguen a MongoDB.
+function saneaTexto(v, max) {
+  return String(v ?? "").trim().slice(0, max);
+}
+
 async function crearPedidoWeb(pedido) {
   const { pedidos } = await getCollections();
-  const doc = { _id: uid(), fecha: nowIso(), estado: "pendiente", ...pedido, _creadoEn: Date.now() };
+  const envioIn = pedido?.envio || {};
+  const nombre = saneaTexto(envioIn.nombre, 100);
+  const telefono = saneaTexto(envioIn.telefono, 30);
+  if (!nombre || !telefono) return { error: "Nombre y teléfono son necesarios para tu pedido." };
+
+  const items = Array.isArray(pedido?.items) ? pedido.items.slice(0, 50) : [];
+  if (items.length === 0) return { error: "El pedido no tiene productos." };
+
+  const esRecoger = envioIn.entrega === "recoger";
+  if (!esRecoger && !saneaTexto(envioIn.direccion, 200)) {
+    return { error: "La dirección es necesaria para pedidos con envío a domicilio." };
+  }
+
+  const direccion = saneaTexto(envioIn.direccion, 200);
+  const ciudad = saneaTexto(envioIn.ciudad, 100);
+  // Registra (o reconoce, si ya existe por teléfono) al cliente que hace el
+  // pedido, para que tu lista de Clientes se mantenga al día sin captura manual.
+  const clienteId = await buscarOCrearCliente({ nombre, telefono, direccion, ciudad });
+
+  const doc = {
+    _id: uid(),
+    fecha: nowIso(),
+    estado: "pendiente",
+    clienteId,
+    items: items.map((it) => ({
+      perfumeId: saneaTexto(it?.perfumeId, 60),
+      nombre: saneaTexto(it?.nombre, 200),
+      tipo: it?.tipo === "decant" ? "decant" : "frasco",
+      ml: it?.ml ? Math.max(0, Number(it.ml) || 0) : null,
+      cantidad: Math.max(1, Number(it?.cantidad) || 1),
+      precioUnitario: Math.max(0, Number(it?.precioUnitario) || 0),
+    })),
+    total: Math.max(0, Number(pedido?.total) || 0),
+    envio: {
+      nombre,
+      telefono,
+      entrega: esRecoger ? "recoger" : "domicilio",
+      direccion,
+      colonia: saneaTexto(envioIn.colonia, 100),
+      ciudad,
+      codigoPostal: saneaTexto(envioIn.codigoPostal, 10),
+      referencias: saneaTexto(envioIn.referencias, 200),
+      metodoPago: saneaTexto(envioIn.metodoPago, 40),
+      notas: saneaTexto(envioIn.notas, 300),
+    },
+    _creadoEn: Date.now(),
+  };
   await pedidos.insertOne(doc);
   const { _id, _creadoEn, ...rest } = doc;
   return { id: _id, ...rest };
