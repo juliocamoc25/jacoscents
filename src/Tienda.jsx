@@ -7,6 +7,8 @@ import AccesoriosPublicView from "./store/AccesoriosPublicView";
 import BusquedaView from "./store/BusquedaView";
 import RecomendadorView from "./store/RecomendadorView";
 import CartModal from "./store/CartModal";
+import TerminosCondicionesView from "./store/TerminosCondicionesView";
+import AvisoPrivacidadView from "./store/AvisoPrivacidadView";
 import { usePublicCart } from "./hooks/usePublicCart";
 import { money, whatsappLink } from "./utils";
 import { WHATSAPP_NUMBER } from "./constants";
@@ -37,26 +39,31 @@ export default function Tienda({ perfumes, accesorios, onRequestAdmin, crearPedi
       `Total: ${money(items.reduce((s, i) => s + i.precioUnitario * i.cantidad, 0))}`,
       `Método de pago: ${envio.metodoPago}`,
       "",
-      "Datos de envío:",
+      envio.entrega === "recoger" ? "Voy a recoger en persona." : "Datos de envío:",
       `${envio.nombre} · ${envio.telefono}`,
-      [envio.direccion, envio.colonia, envio.ciudad, envio.codigoPostal].filter(Boolean).join(", "),
+      envio.entrega === "recoger" ? "" : [envio.direccion, envio.colonia, envio.ciudad, envio.codigoPostal].filter(Boolean).join(", "),
       envio.referencias ? `Referencias: ${envio.referencias}` : "",
       envio.notas ? `Notas: ${envio.notas}` : "",
     ].filter(Boolean).join("\n");
   };
 
-  const onSubmitOrder = (envio) => {
+  // Devuelve true/false para que CartModal sepa si de verdad se guardó el
+  // pedido antes de abrir WhatsApp, limpiar el carrito y mostrar "listo" —
+  // antes esto pasaba sin importar si crearPedidoWeb fallaba o no.
+  const onSubmitOrder = async (envio) => {
     const items = cart.items;
     if (crearPedidoWeb) {
-      crearPedidoWeb({
+      const pedidoGuardado = await crearPedidoWeb({
         items: items.map((it) => ({ perfumeId: it.id, nombre: it.nombre, tipo: it.tipo, ml: it.ml || null, cantidad: it.cantidad, precioUnitario: it.precioUnitario })),
         total: cart.total,
         envio,
       });
+      if (!pedidoGuardado) return false;
     }
     const mensaje = armarMensajePedido(items, envio);
     window.open(whatsappLink(WHATSAPP_NUMBER, mensaje), "_blank");
     cart.clear();
+    return true;
   };
 
   return (
@@ -67,8 +74,10 @@ export default function Tienda({ perfumes, accesorios, onRequestAdmin, crearPedi
       {page === "accesorios" && <AccesoriosPublicView accesorios={accesorios} onAddToCart={cart.add} />}
       {page === "buscar" && <BusquedaView query={query} perfumes={perfumes} accesorios={accesorios} onAddToCart={cart.add} />}
       {page === "recomendador" && <RecomendadorView perfumes={perfumes} onNavigate={setPage} />}
+      {page === "terminos" && <TerminosCondicionesView onNavigate={setPage} />}
+      {page === "privacidad" && <AvisoPrivacidadView onNavigate={setPage} />}
 
-      <CartModal open={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onSubmitOrder={onSubmitOrder} />
+      <CartModal open={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onSubmitOrder={onSubmitOrder} onNavigate={setPage} />
     </StoreLayout>
   );
 }
