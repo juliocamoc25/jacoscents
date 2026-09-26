@@ -46,9 +46,11 @@ export default async function handler(req, res) {
         if (r?.error) return res.status(400).json({ error: r.error });
         break;
       }
-      case "guardar-cliente":
-        await store.guardarCliente(payload.data, payload.editingId || null);
-        break;
+      case "guardar-cliente": {
+        const clienteGuardado = await store.guardarCliente(payload.data, payload.editingId || null);
+        const data = await store.getAllData();
+        return res.status(200).json({ ...data, clienteGuardado });
+      }
       case "eliminar-cliente":
         await store.eliminarCliente(payload.id);
         break;
