@@ -110,8 +110,13 @@ export function useJacoData() {
     accion("abrir-decant", { perfumeId, ml }, "Frasco abierto para decants");
 
   /* ---- Clientes ---- */
-  const guardarCliente = (data, editingId) =>
-    accion("guardar-cliente", { data, editingId }, editingId ? "Cliente actualizado" : "Cliente agregado");
+  // Regresa el cliente guardado (con su id) para que quien llame — por
+  // ejemplo, "agregar cliente nuevo" desde la pantalla de Ventas — pueda
+  // seleccionarlo de inmediato sin tener que ir a la pestaña de Clientes.
+  const guardarCliente = async (data, editingId) => {
+    const resultado = await accion("guardar-cliente", { data, editingId }, editingId ? "Cliente actualizado" : "Cliente agregado");
+    return resultado?.clienteGuardado || null;
+  };
   const eliminarCliente = (id) => accion("eliminar-cliente", { id }, "Cliente eliminado");
 
   /* ---- Accesorios ---- */
