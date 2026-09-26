@@ -50,10 +50,12 @@ function CartStep({ cart, onClose, onCheckout }) {
   );
 }
 
-function CheckoutStep({ cart, onBack, onConfirm }) {
-  const [form, setForm] = useState({ nombre: "", telefono: "", direccion: "", colonia: "", ciudad: "", codigoPostal: "", referencias: "", metodoPago: METODOS_PAGO[0], notas: "" });
+function CheckoutStep({ cart, onBack, onConfirm, enviando, onVerPagina }) {
+  const [form, setForm] = useState({ entrega: "domicilio", nombre: "", telefono: "", direccion: "", colonia: "", ciudad: "", codigoPostal: "", referencias: "", metodoPago: METODOS_PAGO[0], notas: "" });
+  const [aceptaTerminos, setAceptaTerminos] = useState(false);
   const [error, setError] = useState("");
   const set = (k) => (e) => setForm((prev) => ({ ...prev, [k]: e.target.value }));
+  const esRecoger = form.entrega === "recoger";
 
   const submit = () => {
     const nombre = sanitizeText(form.nombre, 100);
@@ -62,44 +64,77 @@ function CheckoutStep({ cart, onBack, onConfirm }) {
     const colonia = sanitizeText(form.colonia, 100);
     const codigoPostal = sanitizeText(form.codigoPostal, 10);
     const referencias = sanitizeText(form.referencias, 200);
-    if (!nombre || !telefono || !direccion) {
-      setError("Nombre, teléfono y dirección son necesarios para poder enviarte tu pedido.");
+    if (!nombre || !telefono) {
+      setError("Nombre y teléfono son necesarios para poder confirmarte tu pedido.");
       return;
     }
+    if (!esRecoger && !direccion) {
+      setError("La dirección es necesaria para poder enviarte tu pedido.");
+      return;
+    }
+    if (!aceptaTerminos) {
+      setError("Necesitas aceptar los términos y condiciones para continuar.");
+      return;
+    }
+    setError("");
     onConfirm({ ...form, nombre, telefono, direccion, colonia, codigoPostal, referencias });
   };
 
   return (
     <div className="space-y-3">
+      <div className="flex gap-2 p-1 bg-bone-100 rounded-lg">
+        <button
+          type="button"
+          onClick={() => setForm((prev) => ({ ...prev, entrega: "domicilio" }))}
+          className={`flex-1 py-2 rounded-md text-sm font-semibold transition-colors ${!esRecoger ? "bg-white shadow-sm text-ink" : "text-neutral-500"}`}
+        >
+          Envío a domicilio
+        </button>
+        <button
+          type="button"
+          onClick={() => setForm((prev) => ({ ...prev, entrega: "recoger" }))}
+          className={`flex-1 py-2 rounded-md text-sm font-semibold transition-colors ${esRecoger ? "bg-white shadow-sm text-ink" : "text-neutral-500"}`}
+        >
+          Recojo en persona
+        </button>
+      </div>
+      {esRecoger && <p className="text-xs text-neutral-500">Perfecto — solo necesitamos tu nombre y teléfono para apartarte tu pedido y coordinar contigo cuándo pasar por él.</p>}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="sm:col-span-2">
           <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Nombre completo</label>
           <input value={form.nombre} onChange={set("nombre")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
         </div>
-        <div>
+        <div className={esRecoger ? "sm:col-span-2" : ""}>
           <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Teléfono</label>
           <input value={form.telefono} onChange={set("telefono")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
         </div>
-        <div>
-          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Código postal</label>
-          <input value={form.codigoPostal} onChange={set("codigoPostal")} inputMode="numeric" placeholder="Ej. 58000" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
-        </div>
-        <div className="sm:col-span-2">
-          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Dirección de envío</label>
-          <input value={form.direccion} onChange={set("direccion")} placeholder="Calle y número" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
-        </div>
-        <div>
-          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Colonia</label>
-          <input value={form.colonia} onChange={set("colonia")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
-        </div>
-        <div>
-          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Ciudad</label>
-          <input value={form.ciudad} onChange={set("ciudad")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
-        </div>
-        <div className="sm:col-span-2">
-          <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Entre calles / referencias</label>
-          <input value={form.referencias} onChange={set("referencias")} placeholder="Ej. entre calle X y Y, casa de portón negro" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
-        </div>
+
+        {!esRecoger && (
+          <>
+            <div>
+              <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Código postal</label>
+              <input value={form.codigoPostal} onChange={set("codigoPostal")} inputMode="numeric" placeholder="Ej. 58000" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+            </div>
+            <div className="sm:col-span-2">
+              <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Dirección de envío</label>
+              <input value={form.direccion} onChange={set("direccion")} placeholder="Calle y número" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Colonia</label>
+              <input value={form.colonia} onChange={set("colonia")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Ciudad</label>
+              <input value={form.ciudad} onChange={set("ciudad")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+            </div>
+            <div className="sm:col-span-2">
+              <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Entre calles / referencias</label>
+              <input value={form.referencias} onChange={set("referencias")} placeholder="Ej. entre calle X y Y, casa de portón negro" className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
+            </div>
+          </>
+        )}
+
         <div className="sm:col-span-2">
           <label className="block text-xs font-medium text-neutral-500 uppercase tracking-wide mb-1">Método de pago</label>
           <select value={form.metodoPago} onChange={set("metodoPago")} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm bg-white">
@@ -111,10 +146,23 @@ function CheckoutStep({ cart, onBack, onConfirm }) {
           <textarea value={form.notas} onChange={set("notas")} rows={2} className="w-full px-3 py-2.5 rounded-lg border border-bone-300 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400" />
         </div>
       </div>
+
+      <label className="flex items-start gap-2 text-xs text-neutral-600 pt-1">
+        <input type="checkbox" checked={aceptaTerminos} onChange={(e) => setAceptaTerminos(e.target.checked)} className="w-4 h-4 mt-0.5 accent-black shrink-0" />
+        <span>
+          Acepto los{" "}
+          <button type="button" onClick={() => onVerPagina("terminos")} className="underline hover:text-black">Términos y condiciones</button>
+          {" "}y el{" "}
+          <button type="button" onClick={() => onVerPagina("privacidad")} className="underline hover:text-black">Aviso de privacidad</button>.
+        </span>
+      </label>
+
       {error && <p className="text-xs text-red-600">{error}</p>}
       <div className="flex gap-3 pt-2">
-        <button onClick={onBack} className="flex-1 py-2.5 rounded-lg border border-bone-300 text-neutral-700 font-medium hover:bg-bone-50">Regresar</button>
-        <button onClick={submit} className="flex-1 py-2.5 rounded-lg bg-black text-white font-medium hover:bg-neutral-800">Enviar pedido</button>
+        <button onClick={onBack} disabled={enviando} className="flex-1 py-2.5 rounded-lg border border-bone-300 text-neutral-700 font-medium hover:bg-bone-50 disabled:opacity-50">Regresar</button>
+        <button onClick={submit} disabled={enviando} className="flex-1 py-2.5 rounded-lg bg-black text-white font-medium hover:bg-neutral-800 disabled:opacity-60">
+          {enviando ? "Enviando..." : "Enviar pedido"}
+        </button>
       </div>
     </div>
   );
@@ -131,14 +179,25 @@ function DoneStep({ onClose }) {
   );
 }
 
-export default function CartModal({ open, onClose, cart, onSubmitOrder }) {
+export default function CartModal({ open, onClose, cart, onSubmitOrder, onNavigate }) {
   const [step, setStep] = useState("cart"); // cart | checkout | done
+  const [enviando, setEnviando] = useState(false);
 
   const close = () => { onClose(); setTimeout(() => setStep("cart"), 300); };
 
-  const confirmar = (envio) => {
-    onSubmitOrder(envio);
-    setStep("done");
+  const confirmar = async (envio) => {
+    setEnviando(true);
+    const ok = await onSubmitOrder(envio);
+    setEnviando(false);
+    // Si falló, nos quedamos en "checkout" — el toast de error ya se muestra
+    // desde useJacoData, y el cliente puede corregir e intentar de nuevo sin
+    // perder lo que ya había escrito.
+    if (ok) setStep("done");
+  };
+
+  const verPagina = (pagina) => {
+    close();
+    onNavigate?.(pagina);
   };
 
   const titulos = { cart: "Tu pedido", checkout: "Datos de envío", done: "" };
@@ -146,7 +205,7 @@ export default function CartModal({ open, onClose, cart, onSubmitOrder }) {
   return (
     <Modal open={open} onClose={close} title={titulos[step]} maxWidth="max-w-lg">
       {step === "cart" && <CartStep cart={cart} onClose={close} onCheckout={() => setStep("checkout")} />}
-      {step === "checkout" && <CheckoutStep cart={cart} onBack={() => setStep("cart")} onConfirm={confirmar} />}
+      {step === "checkout" && <CheckoutStep cart={cart} onBack={() => setStep("cart")} onConfirm={confirmar} enviando={enviando} onVerPagina={verPagina} />}
       {step === "done" && <DoneStep onClose={close} />}
     </Modal>
   );
