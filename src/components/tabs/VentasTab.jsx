@@ -26,10 +26,13 @@ function costoDeItem(item, perfumes, accesorios) {
   return costoPorMl * item.cantidad;
 }
 
-export default function VentasTab({ carrito, clientes, perfumes, accesorios, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket, addToCartFrasco, addToCartDecant, addToCartAccesorio }) {
+export default function VentasTab({ carrito, clientes, perfumes, accesorios, onUpdateQty, onRemove, onCompletar, ventas, onVerTicket, addToCartFrasco, addToCartDecant, addToCartAccesorio, guardarCliente }) {
   const [clienteId, setClienteId] = useState("");
   const [agregandoCliente, setAgregandoCliente] = useState(false);
   const [clienteNuevoNombre, setClienteNuevoNombre] = useState("");
+  const [clienteNuevoTelefono, setClienteNuevoTelefono] = useState("");
+  const [guardandoCliente, setGuardandoCliente] = useState(false);
+  const [errorCliente, setErrorCliente] = useState("");
   const [descuento, setDescuento] = useState("");
   const [cupon, setCupon] = useState("");
   const [costoEnvio, setCostoEnvio] = useState("");
@@ -90,6 +93,29 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
 
   const quitarManual = (idx) => setItemsManuales((prev) => prev.filter((_, i) => i !== idx));
 
+  const guardarClienteNuevo = async () => {
+    const nombre = clienteNuevoNombre.trim();
+    if (!nombre) { setErrorCliente("Ponle un nombre al cliente."); return; }
+    if (!guardarCliente) { setErrorCliente("No se puede guardar el cliente en este momento."); return; }
+    setGuardandoCliente(true);
+    setErrorCliente("");
+    try {
+      const cliente = await guardarCliente({ nombre, telefono: clienteNuevoTelefono.trim() }, null);
+      if (cliente?.id) {
+        setClienteId(cliente.id);
+        setAgregandoCliente(false);
+        setClienteNuevoNombre("");
+        setClienteNuevoTelefono("");
+      } else {
+        setErrorCliente("No se pudo guardar el cliente. Intenta de nuevo.");
+      }
+    } catch (err) {
+      setErrorCliente("No se pudo guardar el cliente. Intenta de nuevo.");
+    } finally {
+      setGuardandoCliente(false);
+    }
+  };
+
   const itemsCombinados = [...carrito, ...itemsManuales];
   const totalProductos = itemsCombinados.reduce((s, i) => s + (Number(i.cantidad) || 0), 0);
   const subtotal = itemsCombinados.reduce((s, i) => s + i.subtotal, 0);
@@ -103,8 +129,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
     setErrorVenta("");
     try {
       const ok = await onCompletar({
-        clienteId: agregandoCliente ? null : (clienteId || null),
-        clienteInvitado: agregandoCliente && clienteNuevoNombre.trim() ? { nombre: clienteNuevoNombre.trim() } : null,
+        clienteId: clienteId || null,
         itemsManuales,
         descuento: Number(descuento) || 0,
         cupon,
@@ -113,7 +138,7 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
         estado,
       });
       if (ok) {
-        setClienteId(""); setAgregandoCliente(false); setClienteNuevoNombre("");
+        setClienteId("");
         setItemsManuales([]);
         setDescuento(""); setCupon(""); setCostoEnvio(""); setMetodoPago("Efectivo"); setEstado("Pagado");
       } else {
@@ -372,26 +397,43 @@ export default function VentasTab({ carrito, clientes, perfumes, accesorios, onU
                   </select>
                   <button
                     type="button"
-                    onClick={() => { setAgregandoCliente(true); setClienteId(""); }}
+                    onClick={() => { setAgregandoCliente(true); setErrorCliente(""); }}
                     className="text-xs font-semibold text-neutral-500 hover:text-black"
                   >
-                    + El cliente no está en la lista
+                    + Agregar cliente nuevo
                   </button>
                 </div>
               ) : (
-                <div className="space-y-1.5">
+                <div className="space-y-1.5 rounded-lg border border-neutral-200 p-2.5">
                   <TextInput
                     value={clienteNuevoNombre}
                     onChange={(e) => setClienteNuevoNombre(e.target.value)}
-                    placeholder="Nombre del cliente nuevo"
+                    placeholder="Nombre del cliente"
                   />
-                  <button
-                    type="button"
-                    onClick={() => { setAgregandoCliente(false); setClienteNuevoNombre(""); }}
-                    className="text-xs font-semibold text-neutral-500 hover:text-black"
-                  >
-                    Elegir de la lista existente
-                  </button>
+                  <TextInput
+                    value={clienteNuevoTelefono}
+                    onChange={(e) => setClienteNuevoTelefono(e.target.value)}
+                    placeholder="Teléfono (opcional)"
+                  />
+                  {errorCliente && <p className="text-xs text-red-600">{errorCliente}</p>}
+                  <div className="flex items-center gap-3 pt-0.5">
+                    <button
+                      type="button"
+                      onClick={guardarClienteNuevo}
+                      disabled={guardandoCliente || !clienteNuevoNombre.trim()}
+                      className="text-xs font-semibold text-neutral-900 hover:text-black disabled:opacity-40 disabled:cursor-not-allowed"
+                    >
+                      {guardandoCliente ? "Guardando..." : "Guardar cliente"}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => { setAgregandoCliente(false); setClienteNuevoNombre(""); setClienteNuevoTelefono(""); setErrorCliente(""); }}
+                      className="text-xs font-semibold text-neutral-500 hover:text-black"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <p className="text-[10px] text-neutral-400">Se guarda directo en tu lista de Clientes — no hace falta ir a esa pestaña.</p>
                 </div>
               )}
             </Field>
