@@ -42,6 +42,7 @@ export default async function handler(req, res) {
     const { action, payload } = req.body || {};
     if (action === "crear-pedido") {
       const pedido = await store.crearPedidoWeb(payload);
+      if (pedido?.error) return res.status(400).json({ error: pedido.error });
       return res.status(200).json({ pedido });
     }
     return res.status(400).json({ error: "Acción no reconocida" });
