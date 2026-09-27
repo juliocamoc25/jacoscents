@@ -323,7 +323,7 @@ async function convertirPedidoEnVenta(pedidoId, { metodoPago, estado }) {
     const precioUnitario = esDecant ? (it.precioUnitario || 0) / (it.ml || 1) : (it.precioUnitario || 0);
     return {
       kind: it.kind === "accesorio" ? "accesorio" : "perfume",
-      perfumeId: it.id,
+      perfumeId: it.perfumeId,
       nombrePerfume: it.nombre,
       marca: "",
       tipo: it.tipo || "frasco",
@@ -392,6 +392,7 @@ async function crearPedidoWeb(pedido) {
     clienteId,
     items: items.map((it) => ({
       perfumeId: saneaTexto(it?.perfumeId, 60),
+      kind: it?.kind === "accesorio" ? "accesorio" : "perfume",
       nombre: saneaTexto(it?.nombre, 200),
       tipo: it?.tipo === "decant" ? "decant" : "frasco",
       ml: it?.ml ? Math.max(0, Number(it.ml) || 0) : null,
