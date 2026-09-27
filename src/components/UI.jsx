@@ -127,7 +127,7 @@ export function Modal({ open, onClose, title, children, maxWidth = "max-w-lg" })
   );
 }
 
-export function ConfirmDialog({ open, title, message, onConfirm, onCancel }) {
+export function ConfirmDialog({ open, title, message, onConfirm, onCancel, confirmLabel = "Eliminar", tone = "danger" }) {
   useLockBodyScroll(open);
   const [submitting, setSubmitting] = React.useState(false);
   React.useEffect(() => { if (open) setSubmitting(false); }, [open]);
@@ -148,8 +148,12 @@ export function ConfirmDialog({ open, title, message, onConfirm, onCancel }) {
         <p className="text-sm text-neutral-600 mb-5">{message}</p>
         <div className="flex gap-3">
           <button onClick={onCancel} disabled={submitting} className="flex-1 py-2.5 rounded-lg border border-neutral-300 text-neutral-700 font-medium hover:bg-neutral-50 disabled:opacity-50 disabled:cursor-not-allowed">Cancelar</button>
-          <button onClick={handleConfirm} disabled={submitting} className="flex-1 py-2.5 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed">
-            {submitting ? "Procesando..." : "Eliminar"}
+          <button
+            onClick={handleConfirm}
+            disabled={submitting}
+            className={`flex-1 py-2.5 rounded-lg text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed ${tone === "danger" ? "bg-red-600 hover:bg-red-700" : "bg-black hover:bg-neutral-800"}`}
+          >
+            {submitting ? "Procesando..." : confirmLabel}
           </button>
         </div>
       </div>
