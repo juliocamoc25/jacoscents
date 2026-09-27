@@ -54,7 +54,7 @@ export default function Tienda({ perfumes, accesorios, onRequestAdmin, crearPedi
     const items = cart.items;
     if (crearPedidoWeb) {
       const pedidoGuardado = await crearPedidoWeb({
-        items: items.map((it) => ({ perfumeId: it.id, nombre: it.nombre, tipo: it.tipo, ml: it.ml || null, cantidad: it.cantidad, precioUnitario: it.precioUnitario })),
+        items: items.map((it) => ({ perfumeId: it.id, kind: it.kind, nombre: it.nombre, tipo: it.tipo, ml: it.ml || null, cantidad: it.cantidad, precioUnitario: it.precioUnitario })),
         total: cart.total,
         envio,
       });

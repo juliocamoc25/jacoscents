@@ -113,6 +113,8 @@ export default function AdminPanel({ data, onExit, onLogout }) {
     setConfirmDialog({
       title: "Confirmar venta",
       message: `Se va a registrar una venta por ${pedido.total ? money(pedido.total) : "el total del pedido"} a nombre de "${pedido.envio?.nombre}" y se descontará el inventario correspondiente. ¿Ya te confirmó el pago?`,
+      confirmLabel: "Confirmar venta",
+      tone: "neutral",
       onConfirm: async () => {
         const venta = await convertirPedidoEnVenta(pedido);
         setConfirmDialog(null);
@@ -124,6 +126,8 @@ export default function AdminPanel({ data, onExit, onLogout }) {
     setConfirmDialog({
       title: "Cancelar pedido",
       message: `"${pedido.envio?.nombre}" quedará marcado como cancelado. No se registra ninguna venta ni se toca el inventario.`,
+      confirmLabel: "Cancelar pedido",
+      tone: "neutral",
       onConfirm: async () => { await actualizarEstadoPedidoWeb(pedido.id, "cancelado"); setConfirmDialog(null); },
     });
   };
@@ -200,7 +204,7 @@ export default function AdminPanel({ data, onExit, onLogout }) {
       <AjusteInventarioModal open={!!ajusteModal} onClose={() => setAjusteModal(null)} perfume={ajusteModal} onSave={onAjustarInventario} />
       <AbrirDecantModal open={!!abrirModal} onClose={() => setAbrirModal(null)} perfume={abrirModal} onSave={onAbrirDecant} />
       <TicketModal open={!!ticketModal} onClose={() => setTicketModal(null)} venta={ticketModal} cliente={clientes.find((c) => c.id === ticketModal?.clienteId)} />
-      <ConfirmDialog open={!!confirmDialog} title={confirmDialog?.title} message={confirmDialog?.message} onConfirm={confirmDialog?.onConfirm} onCancel={() => setConfirmDialog(null)} />
+      <ConfirmDialog open={!!confirmDialog} title={confirmDialog?.title} message={confirmDialog?.message} onConfirm={confirmDialog?.onConfirm} onCancel={() => setConfirmDialog(null)} confirmLabel={confirmDialog?.confirmLabel} tone={confirmDialog?.tone} />
     </div>
   );
 }
