@@ -132,11 +132,15 @@ export default function StoreLayout({ page, onNavigate, onRequestAdmin, onSearch
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10 px-4 sm:px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+        <div className="border-t border-white/10 px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 max-w-7xl mx-auto">
           <p className="text-[11px] text-neutral-500">© {new Date().getFullYear()} JACO SCENTS</p>
-          <button onClick={onRequestAdmin} className="flex items-center gap-1 text-[11px] text-neutral-600 hover:text-neutral-300">
-            <Lock size={11} /> Acceso administrador
-          </button>
+          <div className="flex items-center gap-4">
+            <button onClick={() => onNavigate("terminos")} className="text-[11px] text-neutral-500 hover:text-neutral-300">Términos y condiciones</button>
+            <button onClick={() => onNavigate("privacidad")} className="text-[11px] text-neutral-500 hover:text-neutral-300">Aviso de privacidad</button>
+            <button onClick={onRequestAdmin} className="flex items-center gap-1 text-[11px] text-neutral-600 hover:text-neutral-300">
+              <Lock size={11} /> Acceso administrador
+            </button>
+          </div>
         </div>
       </footer>
 
